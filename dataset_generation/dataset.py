@@ -61,6 +61,71 @@ def symptoms(row):
 
 df["Symptoms"] = df.apply(symptoms, axis=1)
 
+import random
+
+
+
+# sentence templates
+templates = [
+    "The patient reports {}.",
+    "Patient complains of {} since this morning.",
+    "Individual presenting with {}.",
+    "Patient arrived with symptoms of {}.",
+    "The person is experiencing {} and came to the hospital.",
+    "Patient states they have been having {}.",
+    "Primary complaint: {}.",
+    "Patient reports suffering from {} for the past few hours."
+]
+
+# optional expansions
+extra_context = [
+    "",
+    " The condition started suddenly.",
+    " Symptoms have been worsening.",
+    " There is significant discomfort.",
+    " The issue began earlier today.",
+    " Pain intensity is increasing.",
+    " The patient looks distressed.",
+]
+
+def expand_symptom(symptom):
+    base = symptom.lower()
+    sentence = random.choice(templates).format(base)
+    sentence += random.choice(extra_context)
+    return sentence
+
+# Apply transformation
+df["Symptoms"] = df["Symptoms"].apply(expand_symptom)
+
+
+# mapping rules
+def recommend_department(symptom):
+
+    symptom = str(symptom).lower()
+
+    if "chest" in symptom:
+        return "Cardiology"
+
+    elif "breath" in symptom:
+        return "Pulmonology"
+
+    elif "fatigue" in symptom:
+        return "General Medicine"
+
+    elif "headache" in symptom:
+        return "Neurology"
+
+    else:
+        return "General Medicine"
+
+# create new column
+df["Department"] = df["Symptoms"].apply(recommend_department)
+
+
+
+
+
+
 # Vital signs
 
 np.random.seed(42)
