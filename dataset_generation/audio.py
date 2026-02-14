@@ -1,4 +1,4 @@
-import dataset_generation.read_audio as ra
+import read_audio as ra
 import sounddevice as sd
 from scipy.io.wavfile import write
 
