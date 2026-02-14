@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - User Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background squares */
+        .bg-squares {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+
+        .square {
+            position: absolute;
+            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+            border: 1px solid rgba(129, 140, 248, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0);
+        }
+
+        .square:hover {
+            background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+            transform: scale(1.1);
+            opacity: 0.8;
+            z-index: 10;
+        }
+
+        /* Bring content above squares */
+        nav, .mx-auto {
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card hover effects for content boxes */
+        .content-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        /* Modern scrollbar styling */
+        .modern-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modern-scroll::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 10px;
+        }
+        .modern-scroll::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #818cf8 0%, #6366f1 100%);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .modern-scroll::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #a5b4fc 0%, #818cf8 100%);
+            box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        }
+        /* Firefox scrollbar */
+        .modern-scroll {
+            scrollbar-color: #818cf8 transparent;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Squares -->
+    <div class="bg-squares" id="bg-squares"></div>
+
+    <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" id="mobile-menu-btn" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 hidden">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Analytics</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Settings</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">View notifications</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Profile dropdown -->
+        <div class="relative ml-3">
+          <button id="profile-btn" class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+          </button>
+
+          <div id="profile-menu" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 shadow-lg">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Your profile</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Settings</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden block sm:hidden">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Analytics</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Settings</a>
+    </div>
+  </div>
+</nav>
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Header -->
+  <div class="mb-12">
+    <h1 class="text-3xl font-bold text-white">Welcome Back!</h1>
+    <p class="mt-2 text-gray-400">Here's what's happening with your account today.</p>
+  </div>
+
+  <!-- Statistics Cards -->
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+    <!-- Card 1 -->
+    <div class="stat-card bg-gray-800/30 rounded-lg p-6 border border-gray-700/50">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-gray-400 text-sm">Total Users</p>
+          <p class="text-white text-3xl font-bold mt-2">2,456</p>
+          <p class="text-green-400 text-xs mt-2">↑ 12% from last month</p>
+        </div>
+        <div class="bg-indigo-500/20 rounded-lg p-3">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-indigo-400">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="stat-card bg-gray-800/30 rounded-lg p-6 border border-gray-700/50">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-gray-400 text-sm">Active Sessions</p>
+          <p class="text-white text-3xl font-bold mt-2">458</p>
+          <p class="text-green-400 text-xs mt-2">↑ 8% from last week</p>
+        </div>
+        <div class="bg-green-500/20 rounded-lg p-3">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-green-400">
+            <path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zm0-2V4c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v7h2V5h12v7h2z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="stat-card bg-gray-800/30 rounded-lg p-6 border border-gray-700/50">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-gray-400 text-sm">Revenue</p>
+          <p class="text-white text-3xl font-bold mt-2">$12,450</p>
+          <p class="text-red-400 text-xs mt-2">↓ 3% from last month</p>
+        </div>
+        <div class="bg-yellow-500/20 rounded-lg p-3">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-yellow-400">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="stat-card bg-gray-800/30 rounded-lg p-6 border border-gray-700/50">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-gray-400 text-sm">Conversion Rate</p>
+          <p class="text-white text-3xl font-bold mt-2">3.24%</p>
+          <p class="text-green-400 text-xs mt-2">↑ 0.5% from last month</p>
+        </div>
+        <div class="bg-purple-500/20 rounded-lg p-3">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-purple-400">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2V17zm4 0h-2V7h2V17zm4 0h-2v-4h2V17z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Tables Section -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+    <!-- Recent Activity -->
+    <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700/50 content-card">
+      <h2 class="text-lg font-semibold text-white mb-4">Recent Activity</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
+          <div>
+            <p class="text-white text-sm">User Registration</p>
+            <p class="text-gray-500 text-xs">2 hours ago</p>
+          </div>
+          <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">New</span>
+        </div>
+        <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
+          <div>
+            <p class="text-white text-sm">Payment Received</p>
+            <p class="text-gray-500 text-xs">5 hours ago</p>
+          </div>
+          <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Success</span>
+        </div>
+        <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
+          <div>
+            <p class="text-white text-sm">System Update</p>
+            <p class="text-gray-500 text-xs">1 day ago</p>
+          </div>
+          <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">Pending</span>
+        </div>
+        <div class="flex items-center justify-between py-3">
+          <div>
+            <p class="text-white text-sm">Database Backup</p>
+            <p class="text-gray-500 text-xs">3 days ago</p>
+          </div>
+          <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">Complete</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Health Condition - Centered -->
+    <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700/50 lg:col-span-1 content-card">
+      <h2 class="text-lg font-semibold text-white mb-6">User Health Condition</h2>
+      <div class="space-y-6">
+        
+        <!-- Health Metric 1: Physical Health -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-white text-sm font-medium">Physical Health</label>
+            <span class="text-indigo-400 text-sm font-semibold" id="physical-value">78%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
+            <div id="physical-bar" class="bg-gradient-to-r from-indigo-400 to-indigo-600 h-3 rounded-full transition-all duration-300" style="width: 78%"></div>
+          </div>
+          <input id="physical-input" type="range" min="0" max="100" value="78" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+        </div>
+
+        <!-- Health Metric 2: Mental Health -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-white text-sm font-medium">Mental Health</label>
+            <span class="text-green-400 text-sm font-semibold" id="mental-value">85%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
+            <div id="mental-bar" class="bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full transition-all duration-300" style="width: 85%"></div>
+          </div>
+          <input id="mental-input" type="range" min="0" max="100" value="85" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-green-500" />
+        </div>
+
+        <!-- Health Metric 3: Sleep Quality -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-white text-sm font-medium">Sleep Quality</label>
+            <span class="text-purple-400 text-sm font-semibold" id="sleep-value">72%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
+            <div id="sleep-bar" class="bg-gradient-to-r from-purple-400 to-purple-600 h-3 rounded-full transition-all duration-300" style="width: 72%"></div>
+          </div>
+          <input id="sleep-input" type="range" min="0" max="100" value="72" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-purple-500" />
+        </div>
+
+        <!-- Health Metric 4: Stress Level (Inverse) -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-white text-sm font-medium">Stress Level (Lower is Better)</label>
+            <span class="text-red-400 text-sm font-semibold" id="stress-value">35%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
+            <div id="stress-bar" class="bg-gradient-to-r from-red-400 to-red-600 h-3 rounded-full transition-all duration-300" style="width: 35%"></div>
+          </div>
+          <input id="stress-input" type="range" min="0" max="100" value="35" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-500" />
+        </div>
+
+        <!-- Health Metric 5: Activity Level -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-white text-sm font-medium">Activity Level</label>
+            <span class="text-yellow-400 text-sm font-semibold" id="activity-value">68%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
+            <div id="activity-bar" class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full transition-all duration-300" style="width: 68%"></div>
+          </div>
+          <input id="activity-input" type="range" min="0" max="100" value="68" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-yellow-500" />
+        </div>
+
+        <!-- Overall Health Score -->
+        <div class="mt-8 pt-6 border-t border-gray-700/30">
+          <div class="flex items-center justify-between mb-3">
+            <label class="text-white text-sm font-medium">Overall Health Score</label>
+            <span class="text-green-400 text-lg font-bold" id="overall-score">77.6%</span>
+          </div>
+          <div class="w-full bg-gray-700/30 rounded-full h-4 overflow-hidden">
+            <div id="overall-bar" class="bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full transition-all duration-300" style="width: 77.6%"></div>
+          </div>
+          <p class="text-gray-400 text-xs mt-2">Average of all health metrics</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Command Box -->
+    <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700/50 content-card">
+      <h2 class="text-lg font-semibold text-white mb-4">Chat Assistant</h2>
+      <div class="flex gap-2">
+        <input id="chat-search-input" type="text" placeholder="Ask me anything..." class="flex-1 bg-gray-700/30 text-white placeholder-gray-500 rounded-lg px-4 py-3 border border-gray-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <button id="chat-open-btn" class="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-400 px-6 py-3 rounded-lg transition font-semibold">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16414422 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4312088 C3.03521743,10.5883061 3.19218622,10.7454035 3.50612381,10.7454035 L16.6915026,11.5308905 C16.6915026,11.5308905 17.1624089,11.5308905 17.1624089,12.0021827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700/50 content-card">
+    <h2 class="text-lg font-semibold text-white mb-6">Quick Actions</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <button class="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-400 px-4 py-3 rounded-lg transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="size-6 mx-auto mb-2">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+        </svg>
+        <p class="text-sm font-semibold">Add User</p>
+      </button>
+      <button class="bg-green-500/20 hover:bg-green-500/30 text-green-400 px-4 py-3 rounded-lg transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="size-6 mx-auto mb-2">
+          <path d="M19 12h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2zM7 9h10V7H7v2zm10 6H7v2h10v-2z" />
+        </svg>
+        <p class="text-sm font-semibold">Generate Report</p>
+      </button>
+      <button class="bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 px-4 py-3 rounded-lg transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="size-6 mx-auto mb-2">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+        </svg>
+        <p class="text-sm font-semibold">Settings</p>
+      </button>
+      <button class="bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 px-4 py-3 rounded-lg transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="size-6 mx-auto mb-2">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+        </svg>
+        <p class="text-sm font-semibold">View Docs</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Chatbot Button -->
+<button id="floating-chat-btn" class="fixed bottom-8 right-8 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40">
+  <svg viewBox="0 0 24 24" fill="currentColor" class="size-6">
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+  </svg>
+</button>
+
+<!-- Chat Modal -->
+<div id="chat-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-end sm:items-center justify-end sm:justify-end">
+  <div class="bg-gray-900 rounded-lg shadow-xl w-full sm:w-96 h-screen sm:h-[600px] flex flex-col border border-gray-700/50 sm:mr-8 sm:mb-8">
+    <!-- Chat Header -->
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 px-6 py-4 rounded-t-lg flex items-center justify-between">
+      <h3 class="text-white font-semibold flex items-center gap-2">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+        </svg>
+        Chat Assistant
+      </h3>
+      <button id="close-chat-btn" class="text-white hover:text-gray-200 transition">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-6">
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Chat Messages -->
+    <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4">
+      <div class="flex justify-start">
+        <div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-xs">
+          <p class="text-sm">Hi! I'm your assistant. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div class="border-t border-gray-700/50 p-4">
+      <div class="flex gap-2">
+        <input id="modal-chat-input" type="text" placeholder="Type your message..." class="flex-1 bg-gray-800 text-white placeholder-gray-500 rounded-lg px-3 py-2 border border-gray-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" />
+        <button id="send-chat-btn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
+            <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16414422 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4312088 C3.03521743,10.5883061 3.19218622,10.7454035 3.50612381,10.7454035 L16.6915026,11.5308905 C16.6915026,11.5308905 17.1624089,11.5308905 17.1624089,12.0021827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-gray-700/50 bg-gray-800/30 mt-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div>
+        <div class="flex items-center mb-4">
+          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+          <span class="ml-2 text-white font-semibold">Dashboard</span>
+        </div>
+        <p class="text-gray-400 text-sm">Your comprehensive analytics and health monitoring platform.</p>
+      </div>
+
+      <!-- Product Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Features</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Pricing</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Security</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">About</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Blog</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Careers</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Cookies</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">License</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-700/50 pt-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <!-- Social Links -->
+        <div class="flex space-x-6 mb-4 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.29 20v-7.1h-2.37V9.4h2.37V7.57c0-2.33 1.43-3.6 3.5-3.6 1 0 1.85.07 2.1.1v2.43h-1.44c-1.13 0-1.35.54-1.35 1.32V9.4h2.7l-.35 3.5h-2.35V20h-2.88z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.42.2 12.6-7.14a4.5 4.5 0 00.08-.5" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.834 8.207 11.437.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-gray-500 text-sm">
+          <p>&copy; 2026 Dashboard Analytics. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  // Profile dropdown toggle
+  const profileBtn = document.getElementById('profile-btn');
+  const profileMenu = document.getElementById('profile-menu');
+
+  profileBtn.addEventListener('click', function() {
+    profileMenu.classList.toggle('hidden');
+  });
+
+  // Close profile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+      profileMenu.classList.add('hidden');
+    }
+  });
+
+  // Health Metrics Update Functionality
+  const healthInputs = {
+    physical: document.getElementById('physical-input'),
+    mental: document.getElementById('mental-input'),
+    sleep: document.getElementById('sleep-input'),
+    stress: document.getElementById('stress-input'),
+    activity: document.getElementById('activity-input')
+  };
+
+  const healthBars = {
+    physical: document.getElementById('physical-bar'),
+    mental: document.getElementById('mental-bar'),
+    sleep: document.getElementById('sleep-bar'),
+    stress: document.getElementById('stress-bar'),
+    activity: document.getElementById('activity-bar')
+  };
+
+  const healthValues = {
+    physical: document.getElementById('physical-value'),
+    mental: document.getElementById('mental-value'),
+    sleep: document.getElementById('sleep-value'),
+    stress: document.getElementById('stress-value'),
+    activity: document.getElementById('activity-value')
+  };
+
+  function updateHealthScore() {
+    const physicalVal = parseInt(healthInputs.physical.value);
+    const mentalVal = parseInt(healthInputs.mental.value);
+    const sleepVal = parseInt(healthInputs.sleep.value);
+    const stressVal = parseInt(healthInputs.stress.value);
+    const activityVal = parseInt(healthInputs.activity.value);
+
+    // Calculate overall score (stress is inverse, so 100 - stress)
+    const overall = (physicalVal + mentalVal + sleepVal + (100 - stressVal) + activityVal) / 5;
+
+    document.getElementById('overall-score').textContent = overall.toFixed(1) + '%';
+    document.getElementById('overall-bar').style.width = overall + '%';
+
+    // Change color based on score
+    const overallScoreElement = document.getElementById('overall-score');
+    const overallBar = document.getElementById('overall-bar');
+    
+    if (overall < 40) {
+      // Red - Poor Health
+      overallScoreElement.className = 'text-red-400 text-lg font-bold';
+      overallBar.className = 'bg-gradient-to-r from-red-400 to-red-600 h-4 rounded-full transition-all duration-300';
+    } else if (overall < 60) {
+      // Orange - Fair Health
+      overallScoreElement.className = 'text-orange-400 text-lg font-bold';
+      overallBar.className = 'bg-gradient-to-r from-orange-400 to-orange-600 h-4 rounded-full transition-all duration-300';
+    } else if (overall < 75) {
+      // Yellow - Good Health
+      overallScoreElement.className = 'text-yellow-400 text-lg font-bold';
+      overallBar.className = 'bg-gradient-to-r from-yellow-400 to-yellow-600 h-4 rounded-full transition-all duration-300';
+    } else {
+      // Green - Excellent Health
+      overallScoreElement.className = 'text-green-400 text-lg font-bold';
+      overallBar.className = 'bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full transition-all duration-300';
+    }
+  }
+
+  // Add event listeners to all health inputs
+  Object.keys(healthInputs).forEach(key => {
+    healthInputs[key].addEventListener('input', function() {
+      const value = this.value;
+      healthBars[key].style.width = value + '%';
+      healthValues[key].textContent = value + '%';
+      updateHealthScore();
+    });
+  });
+
+  // Initialize overall score on page load
+  updateHealthScore();
+
+  // Background Squares Animation
+  const squareSize = 50;
+  const gap = 10;
+  const bgSquares = document.getElementById('bg-squares');
+  const squareGrid = [];
+
+  // Create grid of squares
+  function createSquareGrid() {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight + 200; // Add extra for scrolling
+    
+    for (let x = 0; x < screenWidth; x += squareSize + gap) {
+      for (let y = 0; y < screenHeight; y += squareSize + gap) {
+        const square = document.createElement('div');
+        square.className = 'square';
+        square.style.width = squareSize + 'px';
+        square.style.height = squareSize + 'px';
+        square.style.left = x + 'px';
+        square.style.top = y + 'px';
+        bgSquares.appendChild(square);
+        squareGrid.push({
+          element: square,
+          x: x + squareSize / 2,
+          y: y + squareSize / 2,
+          distance: 0
+        });
+      }
+    }
+  }
+
+  // Update square effects based on cursor position
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY + window.scrollY;
+
+    squareGrid.forEach(item => {
+      const dx = mouseX - item.x;
+      const dy = mouseY - item.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      item.distance = distance;
+
+      const maxDistance = 300;
+      const influence = Math.max(0, 1 - distance / maxDistance);
+
+      item.element.style.opacity = 0.15 + influence * 0.4;
+      
+      if (influence > 0.1) {
+        item.element.style.boxShadow = `0 0 ${20 + influence * 20}px rgba(99, 102, 241, ${0.3 + influence * 0.5})`;
+        item.element.style.transform = `scale(${1 + influence * 0.2})`;
+      } else {
+        item.element.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0)';
+        item.element.style.transform = 'scale(1)';
+      }
+    });
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    bgSquares.innerHTML = '';
+    squareGrid.length = 0;
+    createSquareGrid();
+  });
+
+  // Initialize squares on load
+  createSquareGrid();
+
+  // Chatbot Functionality
+  const floatingChatBtn = document.getElementById('floating-chat-btn');
+  const chatModal = document.getElementById('chat-modal');
+  const closeChatBtn = document.getElementById('close-chat-btn');
+  const chatOpenBtn = document.getElementById('chat-open-btn');
+  const chatSearchInput = document.getElementById('chat-search-input');
+  const modalChatInput = document.getElementById('modal-chat-input');
+  const sendChatBtn = document.getElementById('send-chat-btn');
+  const chatMessages = document.getElementById('chat-messages');
+
+  // Open chat from floating button
+  floatingChatBtn.addEventListener('click', function() {
+    chatModal.classList.remove('hidden');
+    modalChatInput.focus();
+  });
+
+  // Open chat from command box
+  chatOpenBtn.addEventListener('click', function() {
+    if (chatSearchInput.value.trim()) {
+      chatModal.classList.remove('hidden');
+      modalChatInput.value = chatSearchInput.value;
+      chatSearchInput.value = '';
+      handleChatMessage(modalChatInput.value);
+      modalChatInput.focus();
+    } else {
+      chatModal.classList.remove('hidden');
+      modalChatInput.focus();
+    }
+  });
+
+  // Close chat modal
+  closeChatBtn.addEventListener('click', function() {
+    chatModal.classList.add('hidden');
+  });
+
+  // Close modal when clicking outside
+  chatModal.addEventListener('click', function(event) {
+    if (event.target === chatModal) {
+      chatModal.classList.add('hidden');
+    }
+  });
+
+  // Send message from modal
+  sendChatBtn.addEventListener('click', function() {
+    const message = modalChatInput.value.trim();
+    if (message) {
+      handleChatMessage(message);
+      modalChatInput.value = '';
+      modalChatInput.focus();
+    }
+  });
+
+  // Send message on Enter key
+  modalChatInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      const message = modalChatInput.value.trim();
+      if (message) {
+        handleChatMessage(message);
+        modalChatInput.value = '';
+      }
+    }
+  });
+
+  // Chat search on Enter key
+  chatSearchInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      chatOpenBtn.click();
+    }
+  });
+
+  function handleChatMessage(userMessage) {
+    // Add user message
+    const userDiv = document.createElement('div');
+    userDiv.className = 'flex justify-end';
+    userDiv.innerHTML = `<div class="bg-indigo-600 text-white px-4 py-2 rounded-lg max-w-xs">
+      <p class="text-sm">${userMessage}</p>
+    </div>`;
+    chatMessages.appendChild(userDiv);
+
+    // Redirect to chat page after first message
+    if (chatMessages.children.length === 2) {
+      // 1 initial bot message + 1 user message = 2 children
+      setTimeout(() => {
+        window.location.href = 'chat.html?message=' + encodeURIComponent(userMessage);
+      }, 300);
+    }
+
+    // Simulate bot response
+    setTimeout(() => {
+      const botDiv = document.createElement('div');
+      botDiv.className = 'flex justify-start';
+      
+      let botResponse = '';
+      const lowerMessage = userMessage.toLowerCase();
+
+      if (lowerMessage.includes('health') || lowerMessage.includes('score')) {
+        botResponse = 'Your overall health score is 77.6% which is excellent! Keep up the great work. You can adjust your health metrics in the dashboard above to see real-time changes.';
+      } else if (lowerMessage.includes('dashboard') || lowerMessage.includes('home')) {
+        botResponse = 'You can navigate back to the main dashboard by clicking the Dashboard link in the navigation menu at the top of the page.';
+      } else if (lowerMessage.includes('help') || lowerMessage.includes('support')) {
+        botResponse = 'I can help you with health metrics, analytics, reports, and navigation. Feel free to ask me anything!';
+      } else if (lowerMessage.includes('activity') || lowerMessage.includes('recent')) {
+        botResponse = 'Your recent activity shows various user registrations, payments, and system updates. Check the Recent Activity panel to see all your latest events.';
+      } else if (lowerMessage.includes('settings') || lowerMessage.includes('preference')) {
+        botResponse = 'You can access settings from the navigation menu at the top. Click on Settings to customize your preferences.';
+      } else {
+        botResponse = 'That\'s a great question! I\'m here to help you navigate the dashboard and understand your health metrics. Is there anything specific you\'d like to know?';
+      }
+
+      botDiv.innerHTML = `<div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-xs">
+        <p class="text-sm">${botResponse}</p>
+      </div>`;
+      chatMessages.appendChild(botDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 500);
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+</script>
+</body>
+</html>
