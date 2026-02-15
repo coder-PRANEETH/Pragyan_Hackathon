@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Monitoring System - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff6bcb 0%, #f9a8d4 20%, #818cf8 50%, #38bdf8 80%, #0f172a 100%);
+      background-size: 200% 200%;
+      background-position: 0% 50%;
+      animation: bgGradientMove 16s ease-in-out infinite alternate;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    @keyframes bgGradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    /* Animated background gradient overlay */
+    .bg-animated {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 30%, #ff6bcbcc 0, #ff6bcb00 60%),
+        radial-gradient(circle at 80% 70%, #38bdf8cc 0, #38bdf800 60%),
+        radial-gradient(circle at 50% 90%, #818cf8cc 0, #818cf800 60%),
+        radial-gradient(circle at 70% 20%, #f9a8d4cc 0, #f9a8d400 60%);
+      animation: bgMove 18s ease-in-out infinite alternate;
+      opacity: 0.8;
+      mix-blend-mode: lighten;
+    }
+    @keyframes bgMove {
+      0% {
+        background-position: 20% 30%, 80% 70%, 50% 90%, 70% 20%;
+      }
+      100% {
+        background-position: 30% 40%, 70% 60%, 60% 80%, 60% 30%;
+      }
+    }
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(18px) saturate(180%);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.37), 0 2px 8px 0 rgba(255,107,203,0.08);
+      border: 1px solid rgba(255,255,255,0.13);
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    .floating-shape {
+      position: absolute;
+      z-index: 0;
+      filter: blur(32px);
+      opacity: 0.5;
+      pointer-events: none;
+      animation: float 8s ease-in-out infinite alternate;
+    }
+    .floating-shape2 {
+      animation-delay: 2s;
+    }
+    .floating-shape3 {
+      animation-delay: 4s;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-40px) scale(1.08); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) both;
+    }
+    .animate-fade-in-slow {
+      animation: fadeIn 2.2s cubic-bezier(.4,0,.2,1) both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: none; }
+    }
+    .glass:hover, .glass:focus-within {
+      box-shadow: 0 12px 40px 0 rgba(255,107,203,0.18), 0 2px 8px 0 rgba(99,102,241,0.12);
+      border-color: #f472b6;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+    .dashboard-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      will-change: transform;
+    }
+    .dashboard-card.active {
+      box-shadow: 0 12px 40px 0 rgba(244,114,182,0.18), 0 2px 8px 0 rgba(129,140,248,0.18);
+    }
+  </style>
+  <script>
+  // Parallax hover effect for dashboard cards
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.dashboard-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 8;
+        const rotateY = ((x - centerX) / centerX) * -8;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+        card.classList.add('active');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.classList.remove('active');
+      });
+    });
+
+    // Floating shapes follow mouse for subtle effect
+    const shapes = document.querySelectorAll('.floating-shape');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+      shapes.forEach((shape, i) => {
+        const factor = (i + 1) * 10;
+        shape.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+      });
+    });
+  });
+  </script>
+  </style>
+</head>
+<body>
+  <!-- Animated Background Gradient Overlay -->
+  <div class="bg-animated"></div>
+  <!-- Animated Floating Shapes -->
+  <div class="floating-shape left-[-120px] top-[-80px] w-[320px] h-[320px] rounded-full bg-pink-400/40 floating-shape1"></div>
+  <div class="floating-shape right-[-100px] top-[200px] w-[220px] h-[220px] rounded-full bg-indigo-400/40 floating-shape2"></div>
+  <div class="floating-shape left-[60vw] bottom-[-120px] w-[260px] h-[260px] rounded-full bg-indigo-900/40 floating-shape3"></div>
+
+  <!-- Attractive Header -->
+  <header class="relative z-10">
+    <div class="absolute inset-0 h-48 bg-gradient-to-r from-pink-400/40 via-indigo-500/40 to-indigo-900/40 blur-2xl opacity-60 pointer-events-none"></div>
+    <nav class="relative glass after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 mt-6 mx-auto max-w-4xl">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-20 items-center justify-between">
+          <div class="flex shrink-0 items-center">
+            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" class="h-12 w-auto rounded-full shadow-lg border-2 border-pink-400" />
+            <span class="ml-4 text-2xl sm:text-3xl font-extrabold text-white tracking-wide drop-shadow-lg whitespace-nowrap">Health Monitoring System</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-2 sm:space-x-4 w-full justify-center">
+              <a href="#" class="rounded-lg bg-indigo-500/80 px-4 sm:px-5 py-2 text-sm sm:text-base font-semibold text-white shadow transition hover:bg-indigo-600">Dashboard</a>
+              <a href="#" class="rounded-lg bg-pink-500/80 px-4 sm:px-5 py-2 text-sm sm:text-base font-semibold text-white shadow transition hover:bg-pink-600">Profile</a>
+              <a href="#" class="rounded-lg bg-indigo-900/60 px-4 sm:px-5 py-2 text-sm sm:text-base font-semibold text-white shadow transition hover:bg-indigo-800">Settings</a>
+            </div>
+          </div>
+          <!-- Mobile nav toggle -->
+          <div class="sm:hidden flex items-center">
+            <button id="mobile-nav-toggle" class="text-white focus:outline-none p-2 rounded-lg bg-indigo-500/80 hover:bg-indigo-600 transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile nav menu -->
+        <div id="mobile-nav-menu" class="sm:hidden hidden mt-2">
+          <div class="flex flex-col gap-2 bg-indigo-900/80 rounded-xl p-4">
+            <a href="#" class="rounded-lg bg-indigo-500/80 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-indigo-600">Dashboard</a>
+            <a href="#" class="rounded-lg bg-pink-500/80 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-pink-600">Profile</a>
+            <a href="#" class="rounded-lg bg-indigo-900/60 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-indigo-800">Settings</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mx-auto max-w-4xl px-2 sm:px-4 lg:px-8 mt-8">
+      <div class="flex flex-col items-center justify-center text-center">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white drop-shadow-lg mb-2 animate-fade-in">Empowering Your Health</h1>
+        <p class="text-base sm:text-lg text-indigo-100 mb-4 animate-fade-in-slow">Monitor, analyze, and improve your well-being with real-time insights and beautiful visualizations.</p>
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-2 animate-fade-in-slow">
+          <span class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 via-indigo-400 to-indigo-500 text-white font-semibold shadow animate-pulse">Live Data</span>
+          <span class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500 via-pink-400 to-indigo-900 text-white font-semibold shadow animate-pulse">Personalized Insights</span>
+          <span class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-900 via-indigo-500 to-pink-400 text-white font-semibold shadow animate-pulse">Secure & Private</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="mx-auto max-w-4xl px-2 sm:px-4 lg:px-8 py-8 sm:py-12">
+      <div class="glass p-4 sm:p-8 shadow-xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 animate-fade-in">Your Health Dashboard</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+          <!-- Chart 1: Heart Rate -->
+          <div class="dashboard-card rounded-2xl bg-gradient-to-br from-pink-500/30 to-pink-400/10 p-4 sm:p-6 shadow-lg relative overflow-hidden">
+            <div class="absolute right-4 top-4 w-8 h-8 bg-pink-400/30 rounded-full blur-xl"></div>
+            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Heart Rate (bpm)</h3>
+            <canvas id="heartRateChart" height="180"></canvas>
+          </div>
+          <!-- Chart 2: Blood Pressure -->
+          <div class="dashboard-card rounded-2xl bg-gradient-to-br from-indigo-500/30 to-indigo-400/10 p-4 sm:p-6 shadow-lg relative overflow-hidden">
+            <div class="absolute left-4 bottom-4 w-8 h-8 bg-indigo-400/30 rounded-full blur-xl"></div>
+            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Blood Pressure (mmHg)</h3>
+            <canvas id="bpChart" height="180"></canvas>
+          </div>
+          <!-- Chart 3: Steps -->
+          <div class="dashboard-card rounded-2xl bg-gradient-to-br from-indigo-900/30 to-indigo-400/10 p-4 sm:p-6 shadow-lg relative overflow-hidden">
+            <div class="absolute left-4 top-4 w-8 h-8 bg-indigo-900/30 rounded-full blur-xl"></div>
+            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Steps (Today)</h3>
+            <canvas id="stepsChart" height="180"></canvas>
+          </div>
+          <!-- Chart 4: Sleep Hours -->
+          <div class="dashboard-card rounded-2xl bg-gradient-to-br from-pink-400/30 to-pink-200/10 p-4 sm:p-6 shadow-lg relative overflow-hidden">
+            <div class="absolute right-4 bottom-4 w-8 h-8 bg-pink-200/30 rounded-full blur-xl"></div>
+            <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Sleep Hours (Last 7 Days)</h3>
+            <canvas id="sleepChart" height="180"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Attractive Footer -->
+  <footer class="mt-12 sm:mt-16 relative z-10 w-full">
+    <div class="w-full bg-gradient-to-r from-pink-400/30 via-indigo-900/60 to-indigo-400/30 py-0">
+      <div class="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8">
+        <div class="glass flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 shadow-xl relative overflow-hidden w-full">
+          <div class="absolute left-[-60px] top-[-40px] w-32 sm:w-40 h-32 sm:h-40 bg-pink-400/30 rounded-full blur-2xl"></div>
+          <div class="absolute right-[-60px] bottom-[-40px] w-32 sm:w-40 h-32 sm:h-40 bg-indigo-400/30 rounded-full blur-2xl"></div>
+          <div class="flex items-center gap-3 mb-4 md:mb-0 z-10">
+            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" class="h-8 w-auto rounded-full shadow border-2 border-pink-400" />
+            <span class="text-base sm:text-lg font-bold text-white">Health Monitoring System</span>
+          </div>
+          <div class="flex flex-wrap gap-2 sm:gap-4 z-10 justify-center">
+            <a href="#" class="text-indigo-200 hover:text-pink-400 transition text-sm sm:text-base">About</a>
+            <a href="#" class="text-indigo-200 hover:text-pink-400 transition text-sm sm:text-base">Contact</a>
+            <a href="#" class="text-indigo-200 hover:text-pink-400 transition text-sm sm:text-base">Privacy Policy</a>
+          </div>
+          <div class="text-indigo-200 mt-4 md:mt-0 text-xs sm:text-sm z-10 text-center">&copy; 2026 Health Monitoring System. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('mobile-nav-toggle');
+    const navMenu = document.getElementById('mobile-nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+  <script>
+    // Heart Rate Chart
+    new Chart(document.getElementById('heartRateChart'), {
+      type: 'line',
+      data: {
+        labels: ['6am', '9am', '12pm', '3pm', '6pm', '9pm'],
+        datasets: [{
+          label: 'Heart Rate',
+          data: [72, 78, 80, 76, 74, 70],
+          borderColor: '#f472b6',
+          backgroundColor: 'rgba(244,114,182,0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: false, ticks: { color: '#fff' } },
+          x: { ticks: { color: '#fff' } }
+        }
+      }
+    });
+    // Blood Pressure Chart
+    new Chart(document.getElementById('bpChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Systolic',
+          data: [120, 122, 118, 121, 119, 117, 120],
+          backgroundColor: '#818cf8'
+        }, {
+          label: 'Diastolic',
+          data: [80, 82, 78, 81, 79, 77, 80],
+          backgroundColor: '#f472b6'
+        }]
+      },
+      options: {
+        plugins: { legend: { labels: { color: '#fff' } } },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: '#fff' } },
+          x: { ticks: { color: '#fff' } }
+        }
+      }
+    });
+    // Steps Chart
+    new Chart(document.getElementById('stepsChart'), {
+      type: 'line',
+      data: {
+        labels: ['6am', '9am', '12pm', '3pm', '6pm', '9pm'],
+        datasets: [{
+          label: 'Steps',
+          data: [500, 2000, 4000, 6000, 8000, 10000],
+          borderColor: '#818cf8',
+          backgroundColor: 'rgba(129,140,248,0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: '#fff' } },
+          x: { ticks: { color: '#fff' } }
+        }
+      }
+    });
+    // Sleep Chart
+    new Chart(document.getElementById('sleepChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Sleep Hours',
+          data: [7, 6.5, 8, 7.5, 6, 8, 7],
+          backgroundColor: '#f9a8d4'
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: '#fff' } },
+          x: { ticks: { color: '#fff' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
