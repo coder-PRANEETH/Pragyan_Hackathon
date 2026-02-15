@@ -7,8 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-        background: linear-gradient(135deg, #ff6bcb 0%, #6366f1 40%, #0f172a 100%);
-        background-attachment: fixed;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        position: relative;
+        overflow-x: hidden;
+        transition: background 0.5s;
+      }
+      body.light-mode {
+        background: linear-gradient(135deg, #f9fafb 0%, #f3e8ff 100%);
       }
       .glass {
         background: rgba(30, 41, 59, 0.6);
@@ -17,9 +22,149 @@
         box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.37);
         border: 1px solid rgba(255,255,255,0.1);
       }
+      /* Animated background gradient hover effect */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s, background 0.5s;
+        background: radial-gradient(circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(129,140,248,0.18) 0%, rgba(244,114,182,0.12) 40%, transparent 80%);
+      }
+      body.bg-glow::before {
+        opacity: 1;
+      }
+      .toggle-switch {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(31,41,55,0.7);
+        border-radius: 9999px;
+        padding: 0.5rem 1.25rem;
+        box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
+        transition: background 0.3s;
+      }
+      .light-mode .toggle-switch {
+        background: rgba(244,114,182,0.15);
+      }
+      .toggle-slider {
+        width: 48px;
+        height: 28px;
+        background: #818cf8;
+        border-radius: 9999px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(129,140,248,0.10);
+      }
+      .toggle-slider.light {
+        background: #f472b6;
+      }
+      .toggle-knob {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: left 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, box-shadow 0.2s;
+      }
+      .toggle-slider.light .toggle-knob {
+        left: 23px;
+        background: #fffbe9;
+      }
+      .toggle-slider:active .toggle-knob {
+        box-shadow: 0 0 0 8px rgba(129,140,248,0.15);
+        transition: box-shadow 0.2s;
+      }
+      .toggle-knob.ripple {
+        animation: ripple-effect 0.4s;
+      }
+      @keyframes ripple-effect {
+        0% { box-shadow: 0 0 0 0 rgba(129,140,248,0.25); }
+        100% { box-shadow: 0 0 0 16px rgba(129,140,248,0); }
+      }
+      .toggle-emoji {
+        font-size: 1.3rem;
+        transition: color 0.3s, transform 0.3s;
+      }
+      .toggle-emoji.active {
+        transform: scale(1.2) rotate(-10deg);
+        color: #fbbf24;
+        filter: drop-shadow(0 2px 8px #fbbf24aa);
+      }
+      /* Animated background squares */
+      .bg-squares {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.15;
+      }
+      .square {
+        position: absolute;
+        background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+        border: 1px solid rgba(129, 140, 248, 0.3);
+        transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0);
+      }
+      .square.bg-hover {
+        background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
+        box-shadow: 0 0 40px 10px rgba(129,140,248,0.35), 0 0 0 4px #818cf833;
+        transform: scale(1.18) rotate(-2deg);
+        opacity: 0.92;
+        z-index: 10;
+      }
+      nav, .mx-auto {
+        position: relative;
+        z-index: 1;
+      }
+      /* Modern scrollbar styling */
+      .modern-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .modern-scroll::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+      }
+      .modern-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #818cf8 0%, #6366f1 100%);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .modern-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #a5b4fc 0%, #818cf8 100%);
+        box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+      }
+      .modern-scroll {
+        scrollbar-color: #818cf8 transparent;
+        scrollbar-width: thin;
+      }
     </style>
 </head>
 <body>
+        <!-- Light/Dark Mode Toggle Switch -->
+        <div class="toggle-switch" id="toggle-switch">
+          <span class="toggle-emoji" id="toggle-emoji">🌙</span>
+          <div class="toggle-slider" id="toggle-slider">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
+        </div>
+        <!-- Animated Background Squares -->
+        <div class="bg-squares" id="bg-squares"></div>
     <nav class="relative glass after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 mt-6 mx-auto max-w-4xl">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -280,38 +425,148 @@
 </div>
 
 <script>
-  // Mobile menu toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
+    // Animated background glow effect on page hover
+    document.addEventListener('mousemove', function(e) {
+      document.body.classList.add('bg-glow');
+      document.body.style.setProperty('--mouse-x', e.clientX + 'px');
+      document.body.style.setProperty('--mouse-y', e.clientY + window.scrollY + 'px');
+    });
+    document.addEventListener('mouseleave', function() {
+      document.body.classList.remove('bg-glow');
+    });
 
-  mobileMenuBtn.addEventListener('click', function() {
-    mobileMenu.classList.toggle('hidden');
-    menuIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  });
-
-  // Profile dropdown toggle
-  const profileBtn = document.getElementById('profile-btn');
-  const profileMenu = document.getElementById('profile-menu');
-
-  profileBtn.addEventListener('click', function() {
-    profileMenu.classList.toggle('hidden');
-  });
-
-  // Close profile menu when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
-      profileMenu.classList.add('hidden');
+    // Animated background squares
+    const bgSquares = document.getElementById('bg-squares');
+    const squareGrid = [];
+    function createSquareGrid() {
+      const cols = 10;
+      const rows = 6;
+      const w = window.innerWidth / cols;
+      const h = window.innerHeight / rows;
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          const square = document.createElement('div');
+          square.className = 'square';
+          square.style.left = (i * w) + 'px';
+          square.style.top = (j * h) + 'px';
+          square.style.width = w + 'px';
+          square.style.height = h + 'px';
+          bgSquares.appendChild(square);
+          squareGrid.push({ element: square, x: i * w + w / 2, y: j * h + h / 2 });
+        }
+      }
     }
-  });
+    createSquareGrid();
+    document.addEventListener('mousemove', function(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY + window.scrollY;
+      squareGrid.forEach(item => {
+        const dx = mouseX - item.x;
+        const dy = mouseY - item.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxDistance = 80;
+        if (distance < maxDistance) {
+          item.element.classList.add('bg-hover');
+        } else {
+          item.element.classList.remove('bg-hover');
+        }
+      });
+    });
+    window.addEventListener('resize', function() {
+      bgSquares.innerHTML = '';
+      squareGrid.length = 0;
+      createSquareGrid();
+    });
 
-  // Form submission
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Form saved successfully!');
-  });
+    // Light/Dark Mode Toggle
+    const toggleSwitch = document.getElementById('toggle-switch');
+    const toggleSlider = document.getElementById('toggle-slider');
+    const body = document.body;
+    const emojiMoon = document.getElementById('toggle-emoji');
+    const emojiSun = document.getElementById('toggle-emoji-sun');
+    function setTheme(isLight) {
+      if (isLight) {
+        body.classList.add('light-mode');
+        toggleSlider.classList.add('light');
+        emojiMoon.style.opacity = '0.4';
+        emojiSun.style.opacity = '1';
+      } else {
+        body.classList.remove('light-mode');
+        toggleSlider.classList.remove('light');
+        emojiMoon.style.opacity = '1';
+        emojiSun.style.opacity = '0.4';
+      }
+      // Update all cards and text for theme
+      const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+      textEls.forEach(el => {
+        if (isLight) {
+          el.style.color = '#312e81';
+          el.style.background = '';
+        } else {
+          el.style.color = '';
+          el.style.background = '';
+        }
+      });
+    }
+    toggleSwitch.addEventListener('click', function() {
+      const isLight = !body.classList.contains('light-mode');
+      setTheme(isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      // Animate knob ripple
+      const knob = toggleSlider.querySelector('.toggle-knob');
+      knob.classList.remove('ripple');
+      void knob.offsetWidth;
+      knob.classList.add('ripple');
+      // Animate emoji
+      if (isLight) {
+        emojiSun.classList.add('active');
+        emojiMoon.classList.remove('active');
+      } else {
+        emojiMoon.classList.add('active');
+        emojiSun.classList.remove('active');
+      }
+      setTimeout(() => {
+        knob.classList.remove('ripple');
+      }, 400);
+    });
+    if (body.classList.contains('light-mode')) {
+      emojiSun.classList.add('active');
+      emojiMoon.classList.remove('active');
+    } else {
+      emojiMoon.classList.add('active');
+      emojiSun.classList.remove('active');
+    }
+    if (localStorage.getItem('theme') === 'light') {
+      setTheme(true);
+    } else {
+      setTheme(false);
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+    // Profile dropdown toggle
+    const profileBtn = document.getElementById('profile-btn');
+    const profileMenu = document.getElementById('profile-menu');
+    profileBtn.addEventListener('click', function() {
+      profileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', function(event) {
+      if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+        profileMenu.classList.add('hidden');
+      }
+    });
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Form saved successfully!');
+    });
 </script>
 </body>
 </html>
