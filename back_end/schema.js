@@ -34,3 +34,4 @@ const doctorSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 module.exports = { userSchema, doctorSchema };
+    

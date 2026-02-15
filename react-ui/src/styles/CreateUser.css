@@ -38,7 +38,7 @@
   padding: 10px 14px;
   border-radius: 10px;
   border: none;
-  background: rgba(236, 72, 153, 0.2);
+  background: rgb(123, 209, 206);
   color: white;
   outline: none;
   transition: 0.3s ease;
@@ -69,4 +69,8 @@
 .create-user button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+option {
+  background-color: black;
+  cursor: pointer;
 }
