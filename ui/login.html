@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - My Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1f2937 0%, #6366f1 40%, #a5b4fc 100%);
+        position: relative;
+        overflow-x: hidden;
+      }
+      /* Abstract shapes for background */
+      .shape {
+        position: absolute;
+        z-index: 1;
+        filter: blur(18px);
+        opacity: 0.7;
+      }
+      .shape-left {
+        left: 0;
+        top: 10%;
+      }
+      .shape-right {
+        right: 0;
+        bottom: 10%;
+      }
+      .health-img {
+        position: absolute;
+        z-index: 2;
+        width: 180px;
+        height: auto;
+        top: 18%;
+      }
+      .health-img-left {
+        left: 32px;
+      }
+      .health-img-right {
+        right: 32px;
+      }
+      @media (max-width: 900px) {
+        .health-img { display: none; }
+      }
+    </style>
+</head>
+<body>
+    
+    <!-- Abstract shapes for background -->
+    <div class="shape shape-left" style="width:320px;height:320px;background:radial-gradient(circle at 60% 40%,#a5b4fc 0%,#6366f1 80%,transparent 100%);"></div>
+    <div class="shape shape-right" style="width:320px;height:320px;background:radial-gradient(circle at 40% 60%,#818cf8 0%,#a5b4fc 80%,transparent 100%);"></div>
+
+    <!-- Removed health-related images for a cleaner look -->
+
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 relative z-10">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="mx-auto h-12 w-auto animate-pulse" />
+        <h2 class="mt-10 text-center text-4xl font-extrabold tracking-tight text-white drop-shadow-lg animate-fade-in">Sign in to your account</h2>
+      </div>
+
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form action="#" method="POST" class="space-y-6 bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-8 animate-fade-in">
+          <div>
+            <label for="email" class="block text-sm font-medium text-indigo-200">Email address</label>
+            <div class="mt-2">
+              <input id="email" type="email" name="email" required autocomplete="email" class="block w-full rounded-xl bg-white/20 px-3 py-2 text-base text-white outline-1 outline-white/10 placeholder:text-indigo-200 focus:outline-2 focus:outline-indigo-500 font-medium transition-all duration-300 focus:bg-white/30" />
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label for="password" class="block text-sm font-medium text-indigo-200">Password</label>
+              <div class="text-sm">
+                <a href="#" class="font-semibold text-indigo-300 hover:text-indigo-200">Forgot password?</a>
+              </div>
+            </div>
+            <div class="mt-2">
+              <input id="password" type="password" name="password" required autocomplete="current-password" class="block w-full rounded-xl bg-white/20 px-3 py-2 text-base text-white outline-1 outline-white/10 placeholder:text-indigo-200 focus:outline-2 focus:outline-indigo-500 font-medium transition-all duration-300 focus:bg-white/30" />
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="flex w-full justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 px-3 py-2 text-lg font-semibold text-white hover:from-pink-500 hover:to-indigo-500 shadow-xl transition-all duration-300 animate-bounce">Sign in</button>
+          </div>
+        </form>
+
+        <p class="mt-10 text-center text-sm text-indigo-200 animate-fade-in">
+          Don't have an account?
+          <a href="file:///C:/Users/danie/Pragyan_Hackathon/ui/admin.html" class="font-semibold text-indigo-300 hover:text-indigo-200">Register</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Custom Animations -->
+    <style>
+      @keyframes fade-in {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 1s ease;
+      }
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-bounce {
+        animation: bounce 1.2s infinite;
+      }
+    </style>
+</body>
+</html>
