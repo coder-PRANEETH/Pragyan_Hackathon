@@ -1,0 +1,1509 @@
+Age,Gender,Symptoms,Blood_Pressure,Heart_Rate,Temperature,Pre-Existing_Conditions,Risk_Level,Department
+34,1,Patient states they have been having severe fatigue. The patient looks distressed.,114,85,97.0,None,0,Neurology
+42,0,Individual presenting with breathlessness. The patient looks distressed.,145,59,97.7,None,2,Cardiology
+65,1,Individual presenting with chest discomfort. Pain intensity is increasing.,120,66,98.2,None,0,Cardiology
+44,0,The patient reports chest discomfort. Symptoms have been worsening.,111,63,96.6,None,2,Cardiology
+0,0,The patient reports chest discomfort. Symptoms have been worsening.,110,74,100.5,None,0,Neurology
+34,1,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,102,74,98.0,None,2,Neurology
+57,0,The patient reports headache. The condition started suddenly.,115,71,96.4,None,0,Pulmonology
+37,1,The person is experiencing headache and came to the hospital.,112,62,97.7,None,0,Cardiology
+0,0,Primary complaint: headache. Pain intensity is increasing.,102,60,97.4,None,0,Neurology
+45,0,Primary complaint: severe fatigue. The issue began earlier today.,144,103,97.9,Heart Disease,1,General Medicine
+50,1,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,114,83,96.6,None,0,Neurology
+48,0,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,118,74,101.0,None,0,Pulmonology
+42,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,100,82,100.3,None,0,Cardiology
+59,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,108,61,96.9,Heart Disease,1,Neurology
+52,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,116,105,97.9,Cardiac Issue,2,Cardiology
+29,0,Individual presenting with chest discomfort. Pain intensity is increasing.,101,71,97.8,None,0,Cardiology
+37,1,Patient complains of headache since this morning.,119,67,99.2,None,0,Pulmonology
+55,1,Patient complains of breathlessness since this morning. There is significant discomfort.,103,80,96.2,None,0,Neurology
+11,0,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,114,68,100.5,None,0,Neurology
+10,1,Patient complains of breathlessness since this morning. There is significant discomfort.,111,63,97.6,None,0,Cardiology
+44,1,Primary complaint: severe fatigue. The condition started suddenly.,137,79,99.0,None,0,Neurology
+18,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,116,63,97.9,None,0,Neurology
+3,1,The patient reports breathlessness. There is significant discomfort.,120,67,98.4,None,0,Neurology
+44,0,Patient reports suffering from breathlessness for the past few hours. Symptoms have been worsening.,104,57,98.3,None,0,Neurology
+51,0,Patient states they have been having chest discomfort. There is significant discomfort.,147,73,97.9,None,2,Neurology
+33,0,Patient complains of chest discomfort since this morning. There is significant discomfort.,112,68,99.6,None,0,Cardiology
+72,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,141,113,98.0,Heart Disease,1,Cardiology
+4,0,Patient complains of breathlessness since this morning. The issue began earlier today.,113,60,97.1,None,0,Neurology
+56,0,The person is experiencing headache and came to the hospital. The issue began earlier today.,111,74,96.7,None,0,Cardiology
+50,1,Individual presenting with headache. The condition started suddenly.,108,79,99.3,Heart Disease,1,Cardiology
+7,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,106,68,100.2,None,0,Neurology
+50,0,Patient states they have been having chest discomfort. The issue began earlier today.,115,80,100.5,Cardiac Issue,1,Cardiology
+51,0,The person is experiencing headache and came to the hospital. The patient looks distressed.,107,72,97.8,None,0,Neurology
+52,0,Patient complains of chest discomfort since this morning. Symptoms have been worsening.,116,70,99.2,None,0,Neurology
+73,1,Patient states they have been having breathlessness. There is significant discomfort.,129,77,99.6,Hypertension,1,Pulmonology
+37,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,113,69,98.1,None,0,Pulmonology
+38,0,Patient arrived with symptoms of headache.,135,83,96.9,None,1,Neurology
+39,0,Patient complains of chest discomfort since this morning. The patient looks distressed.,140,57,98.6,None,1,Pulmonology
+32,1,Patient complains of headache since this morning.,107,67,96.9,None,0,Cardiology
+77,0,Patient complains of severe fatigue since this morning. The patient looks distressed.,109,108,98.2,None,0,Pulmonology
+16,1,Patient states they have been having breathlessness. Symptoms have been worsening.,114,71,98.4,None,0,Neurology
+48,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,109,62,97.8,None,0,Pulmonology
+37,0,Patient states they have been having chest discomfort. Symptoms have been worsening.,105,77,98.2,None,1,Cardiology
+39,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,103,115,97.3,Heart Disease,1,Cardiology
+32,1,Patient complains of headache since this morning. There is significant discomfort.,119,68,99.5,None,0,Pulmonology
+55,1,The patient reports headache. There is significant discomfort.,114,77,96.6,None,0,Cardiology
+38,1,The patient reports breathlessness. Symptoms have been worsening.,114,59,98.8,None,0,Neurology
+10,1,The person is experiencing headache and came to the hospital. The issue began earlier today.,113,71,98.3,None,0,Neurology
+74,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,112,94,97.0,Cardiac Issue,1,Cardiology
+71,1,Patient states they have been having headache. Pain intensity is increasing.,134,72,97.7,Hypertension,1,General Medicine
+49,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,140,83,98.0,Hypertension,1,Cardiology
+65,1,Patient complains of breathlessness since this morning. There is significant discomfort.,115,71,97.5,None,0,Cardiology
+76,0,Patient complains of headache since this morning.,107,77,99.6,None,0,Cardiology
+48,0,The patient reports chest discomfort. Pain intensity is increasing.,118,75,97.4,None,1,Pulmonology
+8,0,The patient reports chest discomfort. The issue began earlier today.,110,66,98.2,None,0,Cardiology
+6,0,Patient states they have been having chest discomfort. The patient looks distressed.,101,61,97.0,None,0,Neurology
+23,1,Patient complains of headache since this morning. There is significant discomfort.,120,66,98.1,None,0,Neurology
+76,1,The patient reports headache. Symptoms have been worsening.,112,57,96.7,None,0,Neurology
+34,1,Primary complaint: severe fatigue. There is significant discomfort.,110,61,97.6,None,0,Pulmonology
+4,1,The person is experiencing headache and came to the hospital.,118,59,100.4,None,0,Pulmonology
+47,1,Primary complaint: headache. Symptoms have been worsening.,130,81,97.9,Hypertension,2,General Medicine
+53,0,Primary complaint: chest discomfort. Symptoms have been worsening.,100,70,98.5,None,1,General Medicine
+37,0,Individual presenting with breathlessness. Symptoms have been worsening.,115,79,98.3,None,0,Cardiology
+38,1,Patient arrived with symptoms of breathlessness. The patient looks distressed.,106,81,99.9,None,0,General Medicine
+57,0,The person is experiencing chest discomfort and came to the hospital.,141,95,98.3,Cardiac Issue,2,Cardiology
+43,0,Primary complaint: breathlessness. The patient looks distressed.,103,76,97.6,Hypertension,2,Cardiology
+6,1,The person is experiencing headache and came to the hospital. The condition started suddenly.,120,76,96.1,None,0,Cardiology
+67,0,Patient states they have been having severe fatigue. The issue began earlier today.,119,63,98.7,None,0,Cardiology
+0,0,Individual presenting with chest discomfort.,105,80,98.4,None,0,Neurology
+60,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,116,79,99.5,Hypertension,1,Neurology
+27,0,The person is experiencing breathlessness and came to the hospital. The condition started suddenly.,117,57,97.6,None,0,Neurology
+72,0,Patient states they have been having chest discomfort.,110,110,98.5,Heart Disease,1,General Medicine
+76,0,The patient reports breathlessness.,113,104,100.7,Heart Disease,1,General Medicine
+73,1,Patient complains of breathlessness since this morning. There is significant discomfort.,120,74,98.9,None,0,Cardiology
+0,1,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,113,71,99.1,None,0,Neurology
+3,1,The patient reports chest discomfort. There is significant discomfort.,119,61,101.1,None,0,Cardiology
+30,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,110,68,98.9,None,0,Cardiology
+40,0,Patient states they have been having severe fatigue. Pain intensity is increasing.,118,72,98.4,Heart Disease,1,Cardiology
+31,1,Patient reports suffering from severe fatigue for the past few hours. There is significant discomfort.,116,57,99.7,None,0,Neurology
+10,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,111,70,99.3,None,0,General Medicine
+40,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,104,77,99.8,Hypertension,2,General Medicine
+7,1,The patient reports breathlessness. The patient looks distressed.,102,82,96.7,None,0,Neurology
+57,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,109,93,99.2,Cardiac Issue,0,Cardiology
+60,0,Patient reports suffering from chest discomfort for the past few hours.,116,71,98.1,None,0,General Medicine
+67,0,Primary complaint: headache. Symptoms have been worsening.,128,116,98.3,Cardiac Issue,2,Cardiology
+54,0,Primary complaint: chest discomfort. Symptoms have been worsening.,114,69,98.4,None,0,General Medicine
+0,0,Patient arrived with symptoms of breathlessness.,107,73,96.6,None,0,Neurology
+19,1,Primary complaint: headache. There is significant discomfort.,117,59,97.6,None,0,Pulmonology
+30,0,Patient complains of headache since this morning. The patient looks distressed.,113,67,99.5,None,1,Pulmonology
+38,0,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,140,79,98.1,Hypertension,2,Neurology
+41,0,Primary complaint: chest discomfort. The condition started suddenly.,115,102,98.4,Cardiac Issue,0,Pulmonology
+0,1,The patient reports chest discomfort. The condition started suddenly.,110,57,98.4,None,0,Neurology
+76,0,Primary complaint: headache. The condition started suddenly.,115,78,98.3,None,0,General Medicine
+38,0,Individual presenting with breathlessness. The condition started suddenly.,111,68,99.3,None,0,Cardiology
+66,0,Patient states they have been having chest discomfort. There is significant discomfort.,137,110,98.3,Cardiac Issue,2,Cardiology
+49,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,106,65,98.7,None,1,Cardiology
+42,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,108,61,99.3,None,0,Neurology
+48,0,Patient arrived with symptoms of headache. The patient looks distressed.,105,79,98.3,None,1,Pulmonology
+64,1,Individual presenting with breathlessness. There is significant discomfort.,109,76,99.3,Hypertension,1,Pulmonology
+70,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,115,73,98.2,Hypertension,1,Pulmonology
+4,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,113,57,98.6,None,0,Cardiology
+47,1,Patient arrived with symptoms of headache. The condition started suddenly.,118,67,98.6,Hypertension,0,Pulmonology
+29,0,Primary complaint: severe fatigue. The issue began earlier today.,107,57,98.4,Hypertension,1,Neurology
+40,0,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,105,70,98.9,Cardiac Issue,1,General Medicine
+0,0,Individual presenting with chest discomfort. Pain intensity is increasing.,111,78,99.2,None,0,Cardiology
+60,0,Primary complaint: breathlessness. The patient looks distressed.,118,71,96.4,None,2,Pulmonology
+54,0,Patient arrived with symptoms of headache. Pain intensity is increasing.,116,62,99.1,None,0,Cardiology
+71,0,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,133,102,97.9,Cardiac Issue,2,Cardiology
+53,0,Primary complaint: headache. Symptoms have been worsening.,141,87,97.6,Cardiac Issue,2,Cardiology
+4,0,The person is experiencing chest discomfort and came to the hospital. The issue began earlier today.,111,69,96.8,None,0,Cardiology
+41,0,Primary complaint: chest discomfort. Pain intensity is increasing.,109,73,98.4,None,0,Cardiology
+35,0,Primary complaint: headache. Pain intensity is increasing.,118,62,98.9,None,0,Pulmonology
+43,1,Patient states they have been having headache. Pain intensity is increasing.,108,62,97.0,Hypertension,0,Cardiology
+63,1,Patient states they have been having breathlessness.,102,77,100.2,None,0,Pulmonology
+57,0,Patient complains of headache since this morning. The condition started suddenly.,142,58,98.0,Cardiac Issue,2,General Medicine
+38,0,Primary complaint: chest discomfort. Symptoms have been worsening.,105,78,99.8,None,0,Neurology
+0,1,The patient reports breathlessness. The issue began earlier today.,117,66,98.7,None,0,Cardiology
+8,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,103,80,99.2,None,0,Neurology
+9,0,The patient reports chest discomfort. Symptoms have been worsening.,118,73,98.8,None,0,Neurology
+42,1,Patient states they have been having breathlessness. The patient looks distressed.,109,59,96.8,None,0,Neurology
+24,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,109,60,98.9,None,0,General Medicine
+46,1,Patient states they have been having headache. Pain intensity is increasing.,146,60,97.7,Hypertension,1,Neurology
+44,1,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,114,78,99.4,None,0,Pulmonology
+41,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,104,77,98.2,None,0,General Medicine
+78,0,Primary complaint: chest discomfort.,103,112,97.8,Hypertension,1,General Medicine
+17,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,110,96,98.5,None,0,Pulmonology
+46,1,Patient arrived with symptoms of headache. The issue began earlier today.,140,76,96.6,Hypertension,2,Cardiology
+39,1,The person is experiencing severe fatigue and came to the hospital. Pain intensity is increasing.,138,69,98.9,Hypertension,1,Pulmonology
+42,0,Patient states they have been having chest discomfort.,109,98,101.6,Heart Disease,1,Cardiology
+65,1,Patient states they have been having chest discomfort. Symptoms have been worsening.,139,57,98.3,None,1,Cardiology
+28,1,Patient states they have been having breathlessness. The patient looks distressed.,110,61,100.5,None,0,Pulmonology
+39,1,Patient arrived with symptoms of headache.,112,82,97.7,None,0,Neurology
+50,0,The patient reports chest discomfort. The issue began earlier today.,111,63,97.9,None,0,Neurology
+82,1,Individual presenting with headache. The condition started suddenly.,116,110,97.6,Heart Disease,1,Cardiology
+68,0,The patient reports breathlessness. The condition started suddenly.,115,116,98.7,Cardiac Issue,1,Cardiology
+58,0,Primary complaint: chest discomfort. The patient looks distressed.,141,110,97.7,Cardiac Issue,2,Cardiology
+55,0,Patient complains of chest discomfort since this morning. There is significant discomfort.,116,81,98.8,None,0,Cardiology
+37,1,Primary complaint: breathlessness. The issue began earlier today.,105,73,96.9,None,0,Cardiology
+26,1,Patient complains of chest discomfort since this morning. The patient looks distressed.,108,73,98.0,None,0,Pulmonology
+54,0,Individual presenting with headache. The condition started suddenly.,144,96,97.6,Heart Disease,2,Pulmonology
+12,0,The patient reports breathlessness. The patient looks distressed.,116,75,97.4,None,0,Neurology
+3,0,The person is experiencing breathlessness and came to the hospital.,114,57,101.0,None,0,Neurology
+6,1,The patient reports headache. Symptoms have been worsening.,115,81,98.5,None,0,Neurology
+56,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,112,82,97.2,None,1,General Medicine
+11,1,The person is experiencing headache and came to the hospital. The issue began earlier today.,113,65,98.6,None,0,Neurology
+30,1,The patient reports headache. Pain intensity is increasing.,115,67,98.5,None,0,Pulmonology
+53,0,Primary complaint: severe fatigue. The issue began earlier today.,135,116,97.3,Heart Disease,1,Pulmonology
+16,1,The patient reports chest discomfort. There is significant discomfort.,105,62,96.4,None,0,Neurology
+18,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,117,67,98.4,None,0,Cardiology
+5,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,114,65,97.2,None,0,Neurology
+48,0,Individual presenting with chest discomfort. There is significant discomfort.,147,102,98.4,Cardiac Issue,2,General Medicine
+64,1,Patient states they have been having chest discomfort. The issue began earlier today.,108,109,98.9,Cardiac Issue,1,Cardiology
+66,1,The person is experiencing headache and came to the hospital. The patient looks distressed.,112,71,97.0,None,0,Neurology
+67,1,Patient complains of breathlessness since this morning. There is significant discomfort.,104,66,98.1,None,0,Cardiology
+16,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,151,66,97.7,Hypertension,1,Pulmonology
+40,0,Primary complaint: breathlessness. The patient looks distressed.,116,70,98.6,None,2,Neurology
+62,1,Primary complaint: breathlessness. The condition started suddenly.,106,59,97.2,None,1,Cardiology
+2,0,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,110,62,99.7,None,0,Neurology
+4,1,The person is experiencing breathlessness and came to the hospital.,118,60,102.6,None,0,Neurology
+25,0,The patient reports headache.,119,80,97.5,None,0,Neurology
+57,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,138,107,97.6,Heart Disease,2,General Medicine
+13,1,The patient reports chest discomfort. The patient looks distressed.,114,68,99.6,None,0,Pulmonology
+38,1,Patient states they have been having severe fatigue. The patient looks distressed.,111,70,96.9,None,0,Cardiology
+47,0,Primary complaint: chest discomfort. The condition started suddenly.,113,91,96.4,Cardiac Issue,0,Pulmonology
+3,1,Primary complaint: chest discomfort. There is significant discomfort.,113,63,96.8,None,0,Cardiology
+68,1,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,104,101,98.3,Cardiac Issue,1,Cardiology
+63,1,Patient complains of breathlessness since this morning. There is significant discomfort.,112,85,96.9,None,0,Cardiology
+56,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,109,66,97.5,None,0,Neurology
+77,0,Patient complains of chest discomfort since this morning. The condition started suddenly.,105,61,98.3,Hypertension,1,Pulmonology
+44,0,Individual presenting with headache.,135,57,99.8,None,1,Pulmonology
+48,0,The patient reports chest discomfort. Pain intensity is increasing.,112,111,97.6,Heart Disease,0,Cardiology
+55,0,Patient states they have been having chest discomfort. The issue began earlier today.,100,95,97.2,Cardiac Issue,1,Cardiology
+31,0,Patient arrived with symptoms of headache. Pain intensity is increasing.,117,79,97.7,None,0,General Medicine
+41,1,The patient reports breathlessness. Pain intensity is increasing.,108,72,97.8,None,0,Cardiology
+52,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,117,77,97.0,None,0,Neurology
+50,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,109,68,99.2,None,0,Pulmonology
+58,1,Primary complaint: breathlessness. The condition started suddenly.,102,98,97.9,Cardiac Issue,2,Cardiology
+30,1,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,112,57,97.9,None,0,Cardiology
+57,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,117,76,99.3,None,0,Neurology
+49,1,The patient reports breathlessness. Symptoms have been worsening.,112,60,98.0,None,0,Neurology
+16,1,Patient complains of chest discomfort since this morning. The issue began earlier today.,115,66,99.0,None,0,Neurology
+52,0,The patient reports chest discomfort. The issue began earlier today.,115,86,97.9,None,0,General Medicine
+53,1,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,113,67,99.4,None,1,Pulmonology
+32,0,Patient arrived with symptoms of chest discomfort.,107,72,98.4,None,0,Cardiology
+28,1,Individual presenting with chest discomfort. The issue began earlier today.,136,80,98.9,Hypertension,0,Cardiology
+41,0,Primary complaint: breathlessness. The patient looks distressed.,148,92,96.8,Cardiac Issue,2,Cardiology
+49,1,Individual presenting with breathlessness. The issue began earlier today.,115,57,98.2,None,0,General Medicine
+52,1,Patient states they have been having breathlessness.,148,70,98.4,None,0,Neurology
+45,1,Individual presenting with severe fatigue.,115,73,101.5,None,0,Neurology
+7,0,The patient reports breathlessness.,115,74,98.5,None,0,Cardiology
+0,1,Individual presenting with chest discomfort. The condition started suddenly.,114,63,97.7,None,0,Neurology
+27,0,Patient states they have been having breathlessness. The condition started suddenly.,100,72,98.5,None,1,Neurology
+0,0,The patient reports breathlessness. The patient looks distressed.,115,65,100.0,None,0,Neurology
+64,0,Individual presenting with headache. The issue began earlier today.,110,74,98.5,None,0,Cardiology
+54,0,The patient reports severe fatigue. There is significant discomfort.,121,65,99.2,None,0,Cardiology
+38,1,Patient arrived with symptoms of breathlessness.,115,79,98.6,None,1,Neurology
+56,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,109,71,99.0,None,2,Pulmonology
+0,1,Primary complaint: breathlessness. There is significant discomfort.,110,68,99.7,None,0,Neurology
+0,1,Patient complains of severe fatigue since this morning. Pain intensity is increasing.,110,76,100.9,None,0,Neurology
+0,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,109,61,96.5,None,0,Cardiology
+48,1,Individual presenting with chest discomfort. Pain intensity is increasing.,119,70,97.9,None,0,Neurology
+32,0,Primary complaint: headache. Symptoms have been worsening.,134,101,99.2,Cardiac Issue,2,General Medicine
+67,0,Patient reports suffering from breathlessness for the past few hours. Pain intensity is increasing.,112,75,99.5,None,0,Neurology
+47,0,Patient complains of headache since this morning. Pain intensity is increasing.,107,59,97.2,None,0,Cardiology
+40,0,Individual presenting with headache.,141,71,99.8,Hypertension,1,Cardiology
+41,1,Patient arrived with symptoms of breathlessness. The issue began earlier today.,112,75,98.1,None,0,General Medicine
+66,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,114,75,97.9,None,0,Cardiology
+62,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,147,105,97.2,Cardiac Issue,1,Cardiology
+37,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,127,109,98.5,Heart Disease,2,Cardiology
+12,1,The patient reports headache. Symptoms have been worsening.,115,75,97.6,None,0,Neurology
+30,1,The patient reports headache. The issue began earlier today.,110,66,99.5,None,0,Neurology
+18,1,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,115,82,96.1,None,0,Pulmonology
+39,0,The patient reports headache. The patient looks distressed.,102,75,97.9,None,0,Neurology
+5,0,Individual presenting with severe fatigue.,102,76,97.7,None,0,Neurology
+68,0,Patient reports suffering from chest discomfort for the past few hours. Symptoms have been worsening.,154,107,100.1,Hypertension,1,Cardiology
+37,0,Patient arrived with symptoms of headache. Pain intensity is increasing.,111,74,100.1,None,0,Cardiology
+8,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,110,67,96.3,None,0,Neurology
+52,1,The person is experiencing severe fatigue and came to the hospital. The patient looks distressed.,118,66,97.7,None,0,Pulmonology
+40,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,115,77,98.7,None,0,Neurology
+50,1,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,117,76,98.1,None,0,Pulmonology
+30,1,The person is experiencing chest discomfort and came to the hospital.,112,57,99.0,Hypertension,0,Pulmonology
+73,0,Patient states they have been having chest discomfort. The issue began earlier today.,108,100,99.9,Cardiac Issue,1,Cardiology
+39,1,The patient reports breathlessness. The condition started suddenly.,110,112,97.6,Cardiac Issue,2,Cardiology
+8,1,Primary complaint: chest discomfort. Symptoms have been worsening.,114,74,99.4,None,0,Neurology
+21,1,Patient complains of breathlessness since this morning. There is significant discomfort.,112,77,96.6,None,0,Neurology
+57,1,Individual presenting with severe fatigue. Pain intensity is increasing.,117,76,98.4,None,0,Neurology
+0,1,The person is experiencing severe fatigue and came to the hospital. The patient looks distressed.,117,74,96.7,None,0,Pulmonology
+74,0,Primary complaint: severe fatigue. There is significant discomfort.,116,99,98.6,Heart Disease,2,Cardiology
+42,0,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,115,69,98.6,None,0,Pulmonology
+10,1,Patient states they have been having chest discomfort. The patient looks distressed.,106,65,100.1,None,0,Neurology
+53,0,Patient complains of severe fatigue since this morning. Pain intensity is increasing.,120,68,97.7,None,0,Cardiology
+0,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,110,57,97.9,None,0,Neurology
+56,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,101,61,96.0,None,0,Neurology
+58,1,Primary complaint: chest discomfort. The condition started suddenly.,119,98,97.2,Cardiac Issue,1,Pulmonology
+28,1,Individual presenting with breathlessness. The issue began earlier today.,113,60,97.2,None,0,Cardiology
+46,0,Patient states they have been having breathlessness. There is significant discomfort.,132,81,97.1,Hypertension,1,Pulmonology
+58,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,145,77,98.2,Hypertension,2,Cardiology
+54,0,Patient arrived with symptoms of chest discomfort.,110,71,98.8,None,2,Cardiology
+33,1,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,117,67,98.0,None,0,Pulmonology
+66,0,Individual presenting with severe fatigue. The issue began earlier today.,112,108,98.4,Cardiac Issue,1,Cardiology
+41,1,Patient reports suffering from headache for the past few hours. There is significant discomfort.,113,62,98.5,None,0,Cardiology
+41,0,The patient reports severe fatigue. The issue began earlier today.,114,81,98.1,None,0,General Medicine
+44,0,Primary complaint: headache. The condition started suddenly.,109,72,101.1,None,0,General Medicine
+62,0,Patient complains of breathlessness since this morning. Symptoms have been worsening.,117,72,99.0,None,0,Cardiology
+76,1,Patient complains of headache since this morning. The condition started suddenly.,144,77,99.4,Hypertension,2,Pulmonology
+3,1,Patient states they have been having headache. The condition started suddenly.,107,71,97.3,None,0,Neurology
+16,0,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,110,71,98.4,None,0,Cardiology
+51,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,100,80,98.2,None,0,General Medicine
+44,0,Patient complains of headache since this morning. The issue began earlier today.,102,76,96.7,Cardiac Issue,0,Cardiology
+59,0,The person is experiencing severe fatigue and came to the hospital. There is significant discomfort.,150,66,98.6,Hypertension,1,Cardiology
+61,0,The patient reports chest discomfort. The condition started suddenly.,117,79,96.7,None,0,Neurology
+32,0,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,117,81,97.8,None,0,Cardiology
+60,1,Patient states they have been having chest discomfort. Symptoms have been worsening.,107,70,96.8,Cardiac Issue,1,Cardiology
+56,1,The patient reports headache. The issue began earlier today.,108,80,98.4,None,0,Neurology
+43,0,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,111,78,98.2,None,0,Pulmonology
+56,1,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,144,93,96.9,Cardiac Issue,1,Cardiology
+64,1,Individual presenting with headache. There is significant discomfort.,114,65,98.2,None,0,Cardiology
+16,1,Patient arrived with symptoms of headache.,113,73,100.2,None,0,Neurology
+36,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,106,63,96.2,None,0,Neurology
+37,0,The patient reports breathlessness.,117,65,99.0,None,0,Cardiology
+68,0,Patient states they have been having chest discomfort.,102,116,98.7,Heart Disease,1,Cardiology
+24,1,Patient complains of headache since this morning. There is significant discomfort.,118,74,97.1,None,0,Neurology
+43,1,Patient arrived with symptoms of breathlessness. The issue began earlier today.,100,70,99.1,Hypertension,2,General Medicine
+41,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,112,68,98.7,None,0,Cardiology
+1,0,The person is experiencing breathlessness and came to the hospital.,111,60,99.8,None,0,Neurology
+52,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,119,76,97.1,None,0,Neurology
+39,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,111,61,99.4,None,0,Neurology
+5,0,Primary complaint: severe fatigue. The patient looks distressed.,110,68,98.6,None,0,Neurology
+31,1,Primary complaint: breathlessness. There is significant discomfort.,115,67,99.2,None,0,Pulmonology
+42,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,117,70,99.0,None,0,Neurology
+55,0,The person is experiencing chest discomfort and came to the hospital. Symptoms have been worsening.,111,74,99.8,None,0,Neurology
+72,0,Patient states they have been having breathlessness.,106,98,98.9,None,0,Cardiology
+52,1,The person is experiencing headache and came to the hospital. The issue began earlier today.,108,71,98.8,None,0,Pulmonology
+53,0,Patient complains of severe fatigue since this morning. The patient looks distressed.,100,114,98.9,None,0,Cardiology
+57,1,Patient complains of breathlessness since this morning. There is significant discomfort.,108,65,97.4,None,0,Cardiology
+61,1,The person is experiencing headache and came to the hospital. The patient looks distressed.,116,58,100.8,None,0,General Medicine
+68,1,Individual presenting with severe fatigue. The patient looks distressed.,146,62,99.7,Hypertension,1,Pulmonology
+38,0,Individual presenting with chest discomfort. The condition started suddenly.,103,72,99.3,None,0,Neurology
+0,0,Individual presenting with chest discomfort. Pain intensity is increasing.,114,83,99.7,None,0,Cardiology
+82,0,Patient arrived with symptoms of headache. The issue began earlier today.,142,67,99.4,Hypertension,1,General Medicine
+0,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,107,73,98.8,None,0,Pulmonology
+0,1,Primary complaint: severe fatigue. Symptoms have been worsening.,104,76,99.2,None,0,Pulmonology
+32,1,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,100,70,99.3,None,0,Pulmonology
+51,0,The person is experiencing breathlessness and came to the hospital. Pain intensity is increasing.,129,116,98.6,Heart Disease,1,General Medicine
+48,1,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,117,80,98.5,None,0,Cardiology
+39,1,Patient complains of chest discomfort since this morning. Symptoms have been worsening.,109,61,99.2,None,0,Neurology
+43,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,117,64,97.5,None,0,Neurology
+62,0,Patient states they have been having breathlessness. Symptoms have been worsening.,136,69,98.0,None,1,Pulmonology
+58,0,Patient reports suffering from headache for the past few hours. The condition started suddenly.,103,91,99.2,Cardiac Issue,0,Cardiology
+57,0,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,106,107,97.7,None,1,Pulmonology
+58,1,The patient reports chest discomfort. The issue began earlier today.,115,69,99.0,None,0,Neurology
+45,0,Primary complaint: breathlessness. The issue began earlier today.,106,58,98.3,Hypertension,1,Cardiology
+31,1,Primary complaint: headache. The issue began earlier today.,114,67,100.0,None,0,Pulmonology
+32,1,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,108,76,96.9,None,0,Neurology
+0,0,The patient reports chest discomfort. The condition started suddenly.,109,73,101.2,None,0,Pulmonology
+4,1,Patient reports suffering from severe fatigue for the past few hours. There is significant discomfort.,112,81,96.9,None,0,Neurology
+64,0,Primary complaint: breathlessness. The condition started suddenly.,139,75,97.7,Hypertension,1,Pulmonology
+29,0,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,110,61,96.2,None,0,Cardiology
+42,0,Patient states they have been having breathlessness. There is significant discomfort.,133,85,97.6,Hypertension,2,Pulmonology
+33,0,Primary complaint: chest discomfort. Pain intensity is increasing.,113,87,96.4,None,0,Cardiology
+52,0,Individual presenting with headache. The issue began earlier today.,113,87,97.6,None,0,General Medicine
+3,1,The patient reports severe fatigue. The patient looks distressed.,113,63,100.4,None,0,Neurology
+11,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,116,75,97.6,None,0,Neurology
+47,1,Patient states they have been having severe fatigue.,107,59,96.8,None,0,Cardiology
+33,0,Primary complaint: breathlessness. There is significant discomfort.,103,71,99.0,None,0,Neurology
+53,0,Primary complaint: chest discomfort. The condition started suddenly.,110,96,97.1,Cardiac Issue,1,General Medicine
+27,1,Patient complains of severe fatigue since this morning. The issue began earlier today.,114,67,99.0,Hypertension,1,Neurology
+82,1,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,115,80,100.7,Cardiac Issue,1,Cardiology
+55,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,143,82,98.9,Heart Disease,1,Cardiology
+72,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,110,74,98.8,None,0,Cardiology
+78,1,Patient complains of headache since this morning. Pain intensity is increasing.,108,78,97.5,None,0,Cardiology
+47,0,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,114,82,96.7,None,0,Pulmonology
+49,1,Individual presenting with breathlessness. There is significant discomfort.,152,60,99.1,Hypertension,1,Pulmonology
+18,1,The patient reports headache. The issue began earlier today.,112,67,98.5,None,0,Neurology
+41,1,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,113,72,98.7,None,1,Neurology
+68,0,Patient arrived with symptoms of headache.,111,80,98.1,None,0,Cardiology
+52,0,Primary complaint: breathlessness. Pain intensity is increasing.,103,116,97.8,Cardiac Issue,1,General Medicine
+43,0,The person is experiencing headache and came to the hospital. There is significant discomfort.,113,103,99.9,Cardiac Issue,0,Pulmonology
+58,1,Primary complaint: breathlessness. The condition started suddenly.,113,74,97.8,Hypertension,0,Pulmonology
+53,1,Primary complaint: breathlessness. The patient looks distressed.,138,106,97.9,Cardiac Issue,2,General Medicine
+33,0,Individual presenting with headache. The condition started suddenly.,108,67,97.7,Heart Disease,1,General Medicine
+46,0,Patient states they have been having chest discomfort. Symptoms have been worsening.,108,80,97.4,None,1,Cardiology
+43,0,Patient reports suffering from chest discomfort for the past few hours.,104,85,99.4,None,0,General Medicine
+54,1,Individual presenting with chest discomfort. Pain intensity is increasing.,111,114,99.8,None,1,Cardiology
+47,1,The person is experiencing chest discomfort and came to the hospital. Symptoms have been worsening.,113,73,99.1,None,0,Neurology
+14,1,Patient complains of chest discomfort since this morning.,118,75,97.3,None,0,Pulmonology
+62,1,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,102,95,98.7,Cardiac Issue,2,General Medicine
+36,1,Primary complaint: severe fatigue.,114,69,98.1,None,0,Neurology
+72,0,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,101,68,100.7,None,1,Cardiology
+7,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,110,62,96.6,None,0,Neurology
+25,1,Primary complaint: severe fatigue. The patient looks distressed.,110,83,99.0,None,0,Pulmonology
+32,0,Patient complains of breathlessness since this morning. Symptoms have been worsening.,106,73,97.7,None,0,Cardiology
+10,0,Patient states they have been having headache. The patient looks distressed.,102,72,97.6,None,0,Neurology
+32,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,116,77,98.0,Cardiac Issue,2,Neurology
+25,1,The person is experiencing severe fatigue and came to the hospital. The issue began earlier today.,111,57,98.7,Hypertension,0,Pulmonology
+59,1,Primary complaint: severe fatigue. The issue began earlier today.,105,99,101.0,Heart Disease,1,Pulmonology
+47,0,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,112,83,97.5,None,2,Pulmonology
+60,0,The person is experiencing headache and came to the hospital. There is significant discomfort.,109,106,98.1,Cardiac Issue,0,Neurology
+29,1,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,112,62,101.0,None,0,Neurology
+47,1,Primary complaint: breathlessness. There is significant discomfort.,111,62,97.8,None,0,Neurology
+36,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,112,75,100.5,None,0,Cardiology
+56,1,The person is experiencing chest discomfort and came to the hospital.,111,67,97.8,Hypertension,2,General Medicine
+19,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,105,68,99.1,None,0,Cardiology
+11,1,Patient states they have been having headache.,118,65,97.5,None,0,Neurology
+74,0,Primary complaint: chest discomfort. The issue began earlier today.,110,110,98.3,Heart Disease,1,Pulmonology
+8,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,121,62,99.1,None,0,Neurology
+0,1,Patient states they have been having chest discomfort. The patient looks distressed.,114,64,101.8,None,0,Neurology
+49,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,106,61,99.3,None,0,Cardiology
+46,0,Primary complaint: breathlessness. Symptoms have been worsening.,118,73,96.9,None,0,Cardiology
+34,0,Individual presenting with chest discomfort. The condition started suddenly.,105,71,96.4,None,0,Cardiology
+40,0,The patient reports headache. The patient looks distressed.,105,73,96.8,Heart Disease,2,Cardiology
+32,0,Primary complaint: chest discomfort. There is significant discomfort.,117,72,98.8,None,0,Pulmonology
+0,1,Individual presenting with severe fatigue. Symptoms have been worsening.,101,77,97.1,None,0,Neurology
+72,0,Patient reports suffering from chest discomfort for the past few hours.,102,81,98.6,None,1,General Medicine
+67,1,The patient reports breathlessness. Pain intensity is increasing.,112,60,98.5,None,0,Cardiology
+34,1,Patient complains of headache since this morning. Symptoms have been worsening.,111,71,98.9,None,0,General Medicine
+38,1,Individual presenting with severe fatigue.,112,65,98.0,None,0,Neurology
+40,0,Primary complaint: headache. The condition started suddenly.,102,78,98.7,None,1,General Medicine
+33,0,The patient reports breathlessness. The issue began earlier today.,111,75,99.5,None,1,Pulmonology
+54,1,The patient reports breathlessness. The issue began earlier today.,112,71,98.5,None,0,Neurology
+49,0,Individual presenting with chest discomfort. The condition started suddenly.,100,67,97.8,None,0,Neurology
+78,0,Primary complaint: headache. The condition started suddenly.,109,109,99.0,Cardiac Issue,0,General Medicine
+67,1,The patient reports breathlessness. The condition started suddenly.,110,83,98.1,Cardiac Issue,0,Cardiology
+53,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,113,81,97.1,Cardiac Issue,0,General Medicine
+33,0,Patient complains of chest discomfort since this morning.,115,68,98.0,None,0,Cardiology
+20,0,The patient reports breathlessness. Symptoms have been worsening.,107,74,97.7,None,0,Neurology
+43,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,111,77,97.8,None,0,Cardiology
+0,1,Patient complains of chest discomfort since this morning. Symptoms have been worsening.,108,83,98.6,None,0,Neurology
+33,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,116,70,99.4,None,0,Cardiology
+53,1,Patient states they have been having severe fatigue.,113,64,96.6,None,0,Neurology
+52,0,Patient states they have been having headache. Symptoms have been worsening.,115,60,98.3,None,0,Cardiology
+42,0,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,108,65,96.6,None,0,Cardiology
+43,0,The patient reports headache. The patient looks distressed.,102,61,99.5,None,0,Cardiology
+52,0,The patient reports breathlessness. Pain intensity is increasing.,104,78,98.1,None,0,Cardiology
+51,1,The patient reports breathlessness.,104,75,97.7,None,0,Cardiology
+0,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,109,79,97.0,None,0,Neurology
+19,1,The person is experiencing breathlessness and came to the hospital.,117,65,98.2,None,0,Neurology
+28,0,The patient reports breathlessness.,120,57,98.1,None,0,Neurology
+23,0,The patient reports headache. The condition started suddenly.,115,82,98.4,None,0,Pulmonology
+22,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,111,58,98.2,None,0,Cardiology
+67,1,The person is experiencing severe fatigue and came to the hospital. The patient looks distressed.,106,63,97.1,None,0,Cardiology
+30,0,Individual presenting with breathlessness. The patient looks distressed.,116,67,98.1,None,1,Pulmonology
+9,0,Individual presenting with chest discomfort. The condition started suddenly.,115,80,96.7,None,0,Cardiology
+55,0,Patient complains of breathlessness since this morning. The condition started suddenly.,141,88,97.7,Hypertension,2,Cardiology
+34,1,The patient reports chest discomfort. The patient looks distressed.,110,73,100.5,None,0,Cardiology
+29,0,Individual presenting with headache. Pain intensity is increasing.,115,57,100.2,None,0,Pulmonology
+41,0,Patient states they have been having severe fatigue. The issue began earlier today.,112,72,98.4,None,0,Neurology
+33,0,Individual presenting with headache. The issue began earlier today.,110,74,98.0,None,0,Neurology
+50,1,The person is experiencing headache and came to the hospital.,121,57,99.9,None,0,Neurology
+57,0,Individual presenting with chest discomfort. The issue began earlier today.,139,62,97.6,Hypertension,1,Pulmonology
+59,0,Primary complaint: breathlessness. The patient looks distressed.,102,100,98.3,Hypertension,2,Cardiology
+54,1,Individual presenting with headache. The patient looks distressed.,108,73,97.8,Hypertension,1,Cardiology
+79,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,148,62,97.7,Cardiac Issue,2,Cardiology
+33,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,104,80,99.4,None,0,Pulmonology
+48,0,Primary complaint: headache. Symptoms have been worsening.,115,63,98.0,Cardiac Issue,2,Cardiology
+56,1,Patient reports suffering from breathlessness for the past few hours.,138,78,98.2,Hypertension,2,Cardiology
+40,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,112,69,97.7,None,0,Pulmonology
+37,0,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,110,79,98.7,None,0,Pulmonology
+74,0,Patient complains of headache since this morning. The issue began earlier today.,102,89,98.4,Cardiac Issue,1,Cardiology
+66,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,143,98,99.5,Cardiac Issue,2,Cardiology
+10,1,The patient reports chest discomfort. Symptoms have been worsening.,112,73,98.6,None,0,Cardiology
+30,1,Patient states they have been having breathlessness. Symptoms have been worsening.,112,68,98.4,None,0,Cardiology
+45,0,Patient reports suffering from breathlessness for the past few hours.,141,67,97.6,Hypertension,1,Pulmonology
+42,0,The patient reports headache. Pain intensity is increasing.,111,69,96.1,None,0,Neurology
+81,0,Primary complaint: chest discomfort.,105,102,97.8,Heart Disease,1,Cardiology
+34,1,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,115,76,98.0,None,0,Neurology
+58,0,Patient complains of headache since this morning. Symptoms have been worsening.,104,101,98.1,Cardiac Issue,1,General Medicine
+49,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,116,80,97.5,Hypertension,0,Pulmonology
+21,1,Individual presenting with chest discomfort. Pain intensity is increasing.,115,82,99.6,None,0,Neurology
+72,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,135,105,96.7,Heart Disease,1,Cardiology
+26,1,Individual presenting with headache. There is significant discomfort.,101,66,98.0,None,0,Pulmonology
+18,1,Patient arrived with symptoms of headache. Pain intensity is increasing.,109,72,98.3,None,0,Cardiology
+47,1,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,105,76,100.1,None,0,Pulmonology
+69,0,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,108,73,100.1,None,0,Neurology
+44,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,103,70,96.8,None,0,Pulmonology
+37,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,114,72,98.2,Hypertension,2,Cardiology
+11,1,Patient states they have been having headache. The patient looks distressed.,112,63,99.8,None,0,Neurology
+65,1,Primary complaint: breathlessness. The condition started suddenly.,146,95,97.6,Cardiac Issue,1,Pulmonology
+45,0,Patient states they have been having severe fatigue. The issue began earlier today.,116,65,96.8,None,0,Neurology
+19,1,Patient states they have been having breathlessness. The condition started suddenly.,110,77,99.3,None,0,Neurology
+28,1,The person is experiencing breathlessness and came to the hospital.,117,67,99.0,None,0,Neurology
+0,1,The patient reports headache. Pain intensity is increasing.,113,68,98.1,None,0,Cardiology
+55,0,The person is experiencing chest discomfort and came to the hospital. Symptoms have been worsening.,120,76,98.2,None,0,Cardiology
+36,1,Primary complaint: breathlessness. The issue began earlier today.,107,80,97.8,None,0,Cardiology
+74,0,Patient states they have been having chest discomfort. There is significant discomfort.,114,76,98.6,Cardiac Issue,1,Cardiology
+73,0,The patient reports severe fatigue. The issue began earlier today.,104,72,98.9,None,0,General Medicine
+77,1,The patient reports chest discomfort. There is significant discomfort.,117,86,97.8,None,0,Cardiology
+48,0,Patient reports suffering from headache for the past few hours. The condition started suddenly.,115,57,98.3,None,2,Pulmonology
+19,1,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,111,82,99.7,None,0,Cardiology
+49,1,Patient arrived with symptoms of severe fatigue. The issue began earlier today.,103,80,97.1,None,0,Pulmonology
+40,1,Patient arrived with symptoms of headache. The patient looks distressed.,104,70,98.0,None,1,Neurology
+55,0,Individual presenting with chest discomfort. The issue began earlier today.,141,57,96.9,Hypertension,1,Pulmonology
+55,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,130,69,98.6,Hypertension,1,Cardiology
+44,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,106,61,97.3,Heart Disease,1,Cardiology
+44,1,Individual presenting with chest discomfort. There is significant discomfort.,130,62,97.7,Heart Disease,2,General Medicine
+32,0,The patient reports breathlessness. The patient looks distressed.,113,69,97.0,None,0,Neurology
+62,0,Primary complaint: severe fatigue. Pain intensity is increasing.,115,60,98.9,None,0,Cardiology
+50,1,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,118,68,96.4,None,0,Cardiology
+5,0,The patient reports severe fatigue. Pain intensity is increasing.,104,81,99.4,Hypertension,2,Neurology
+56,0,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,107,80,98.8,None,0,Pulmonology
+51,0,The person is experiencing breathlessness and came to the hospital. The condition started suddenly.,105,66,96.7,None,0,Pulmonology
+55,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,146,106,98.2,Cardiac Issue,1,Neurology
+0,1,Individual presenting with severe fatigue. The condition started suddenly.,111,77,97.8,None,0,Neurology
+55,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,149,95,99.0,Hypertension,1,Cardiology
+45,1,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,142,80,97.1,Hypertension,2,Pulmonology
+21,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,119,57,100.2,None,0,Neurology
+0,0,Primary complaint: chest discomfort. Pain intensity is increasing.,117,74,97.0,None,0,Neurology
+0,1,Patient arrived with symptoms of headache.,101,71,97.8,None,0,Neurology
+32,0,The patient reports chest discomfort. The issue began earlier today.,111,85,98.5,None,1,Cardiology
+28,0,Patient states they have been having severe fatigue. The issue began earlier today.,116,57,99.6,None,0,Neurology
+47,1,Primary complaint: headache. The condition started suddenly.,105,79,100.5,None,1,General Medicine
+54,1,Patient complains of chest discomfort since this morning. There is significant discomfort.,120,74,96.3,None,0,Cardiology
+32,0,Patient complains of chest discomfort since this morning. The condition started suddenly.,115,71,98.6,Hypertension,1,Pulmonology
+37,0,Patient arrived with symptoms of headache. There is significant discomfort.,118,116,100.4,None,0,Cardiology
+1,1,Patient states they have been having headache. The patient looks distressed.,120,57,96.2,None,0,Neurology
+0,1,The person is experiencing breathlessness and came to the hospital.,109,70,99.4,None,0,Neurology
+12,0,Patient states they have been having severe fatigue. Symptoms have been worsening.,109,72,98.2,None,0,Cardiology
+62,1,The patient reports severe fatigue. The patient looks distressed.,109,80,98.8,None,0,Cardiology
+47,1,Individual presenting with chest discomfort. Symptoms have been worsening.,109,66,96.6,Hypertension,2,Pulmonology
+41,0,Patient complains of severe fatigue since this morning. The patient looks distressed.,113,92,98.7,None,1,Cardiology
+33,1,Patient complains of chest discomfort since this morning. The patient looks distressed.,109,72,98.3,None,0,Cardiology
+75,0,Patient complains of headache since this morning. Symptoms have been worsening.,110,68,97.8,None,0,General Medicine
+62,1,Primary complaint: breathlessness. There is significant discomfort.,111,80,98.4,None,1,Pulmonology
+40,0,The patient reports breathlessness. Symptoms have been worsening.,116,102,97.6,Cardiac Issue,1,Cardiology
+52,1,Primary complaint: breathlessness. The patient looks distressed.,114,68,96.4,None,0,Cardiology
+77,0,Patient complains of headache since this morning. The condition started suddenly.,131,82,98.2,Hypertension,2,Pulmonology
+26,1,The person is experiencing headache and came to the hospital. There is significant discomfort.,109,68,99.6,None,0,Cardiology
+30,0,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,108,72,98.0,None,0,Cardiology
+30,0,Primary complaint: chest discomfort. Pain intensity is increasing.,110,65,97.7,None,0,Pulmonology
+40,0,Patient reports suffering from chest discomfort for the past few hours.,108,65,97.9,None,1,General Medicine
+46,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,114,77,99.2,None,0,Cardiology
+79,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,108,75,99.5,Cardiac Issue,1,Cardiology
+66,0,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,107,60,101.9,None,0,General Medicine
+59,0,Patient arrived with symptoms of headache. There is significant discomfort.,106,81,98.1,None,0,Cardiology
+72,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,154,104,96.6,Hypertension,1,Cardiology
+0,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,115,70,99.0,None,0,Neurology
+36,1,Individual presenting with headache. The issue began earlier today.,113,84,99.8,None,0,Neurology
+55,1,Primary complaint: chest discomfort.,144,99,97.5,Hypertension,1,General Medicine
+68,1,Patient states they have been having breathlessness. Symptoms have been worsening.,112,66,97.4,None,0,Cardiology
+25,1,Patient complains of severe fatigue since this morning. The patient looks distressed.,113,73,100.0,None,0,Cardiology
+41,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,119,57,98.1,None,0,Neurology
+52,0,Patient reports suffering from chest discomfort for the past few hours.,107,80,99.6,None,0,General Medicine
+18,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,119,61,97.3,None,0,Cardiology
+58,0,The person is experiencing chest discomfort and came to the hospital.,130,73,96.8,None,2,Cardiology
+41,0,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,109,82,97.9,None,0,Neurology
+27,1,The patient reports chest discomfort. There is significant discomfort.,114,74,97.0,None,0,Neurology
+46,1,The patient reports headache. There is significant discomfort.,108,64,97.9,None,0,Neurology
+40,1,Patient complains of breathlessness since this morning.,117,84,97.4,Heart Disease,2,Pulmonology
+0,1,Patient states they have been having severe fatigue.,111,60,102.5,None,0,Neurology
+1,0,Patient states they have been having breathlessness. The condition started suddenly.,110,59,100.3,None,0,Neurology
+30,0,Primary complaint: chest discomfort. Pain intensity is increasing.,117,103,96.8,Cardiac Issue,0,Cardiology
+56,1,Patient arrived with symptoms of headache. The issue began earlier today.,138,82,97.5,Hypertension,1,Pulmonology
+60,1,The person is experiencing headache and came to the hospital. The condition started suddenly.,146,62,100.4,Hypertension,0,Cardiology
+43,0,Patient states they have been having chest discomfort. The condition started suddenly.,115,93,98.5,None,0,Neurology
+9,1,Primary complaint: headache. The issue began earlier today.,110,71,96.8,None,0,Pulmonology
+18,0,Patient reports suffering from breathlessness for the past few hours. Pain intensity is increasing.,105,70,97.6,None,0,Cardiology
+53,0,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,110,57,97.3,None,0,Cardiology
+76,0,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,108,60,99.4,None,0,General Medicine
+25,0,Patient arrived with symptoms of chest discomfort.,137,65,97.4,Hypertension,0,Pulmonology
+72,0,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,114,70,98.1,None,0,Cardiology
+16,1,The person is experiencing headache and came to the hospital.,111,68,99.9,None,0,Neurology
+45,0,The patient reports breathlessness.,116,80,96.5,None,0,Neurology
+75,1,Individual presenting with breathlessness. The patient looks distressed.,146,80,100.4,None,1,Cardiology
+13,1,Patient reports suffering from severe fatigue for the past few hours. There is significant discomfort.,109,76,99.2,None,0,Neurology
+50,1,Patient reports suffering from breathlessness for the past few hours.,142,81,99.0,Hypertension,1,General Medicine
+65,1,Patient states they have been having chest discomfort. There is significant discomfort.,146,67,98.5,Hypertension,1,Neurology
+0,0,Individual presenting with chest discomfort. Pain intensity is increasing.,116,66,96.6,None,0,Cardiology
+12,0,Individual presenting with headache. Symptoms have been worsening.,115,100,96.3,None,0,Neurology
+9,0,The patient reports chest discomfort. Symptoms have been worsening.,115,58,97.5,None,0,Neurology
+23,0,Patient complains of headache since this morning. Symptoms have been worsening.,106,91,96.4,None,1,General Medicine
+66,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,100,75,96.8,Cardiac Issue,1,Cardiology
+33,1,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,109,62,97.2,None,0,Neurology
+52,1,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,106,78,97.8,None,0,Pulmonology
+27,1,Primary complaint: headache. There is significant discomfort.,106,70,99.0,None,0,Cardiology
+44,1,The patient reports breathlessness. There is significant discomfort.,115,69,98.5,None,0,Cardiology
+51,1,Patient complains of chest discomfort since this morning. There is significant discomfort.,113,80,98.0,None,0,Neurology
+50,1,Patient arrived with symptoms of headache. The patient looks distressed.,112,73,96.5,None,1,Cardiology
+54,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,137,106,98.1,Cardiac Issue,1,Cardiology
+50,0,Patient complains of severe fatigue since this morning.,100,100,98.4,None,0,Cardiology
+29,1,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,119,75,98.8,None,0,Cardiology
+54,1,Primary complaint: headache. The issue began earlier today.,109,76,98.0,None,0,Pulmonology
+82,0,Patient states they have been having severe fatigue. Pain intensity is increasing.,136,81,98.4,None,1,General Medicine
+45,1,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,120,59,98.5,None,0,Pulmonology
+6,1,Patient complains of headache since this morning. There is significant discomfort.,118,76,99.7,None,0,Pulmonology
+34,1,Patient states they have been having headache. The condition started suddenly.,109,77,98.1,None,0,Neurology
+31,1,Individual presenting with breathlessness. There is significant discomfort.,141,81,100.4,Hypertension,1,Pulmonology
+32,1,The patient reports breathlessness. Symptoms have been worsening.,111,62,97.4,None,0,Neurology
+50,1,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,118,68,98.6,Hypertension,1,Pulmonology
+40,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,115,73,96.2,Cardiac Issue,1,Cardiology
+63,0,The person is experiencing severe fatigue and came to the hospital. There is significant discomfort.,152,74,98.7,Heart Disease,1,Cardiology
+61,0,Primary complaint: breathlessness. The patient looks distressed.,117,96,98.4,Cardiac Issue,2,General Medicine
+52,1,Patient complains of severe fatigue since this morning. There is significant discomfort.,115,72,98.8,None,0,Neurology
+45,0,Primary complaint: severe fatigue. The issue began earlier today.,103,112,97.8,Heart Disease,2,General Medicine
+15,0,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,110,69,98.9,None,0,Neurology
+79,0,The patient reports breathlessness. The condition started suddenly.,110,108,100.2,Cardiac Issue,1,Cardiology
+33,0,Individual presenting with chest discomfort. Pain intensity is increasing.,106,68,98.7,None,0,Neurology
+6,1,Patient reports suffering from severe fatigue for the past few hours. There is significant discomfort.,112,68,99.5,None,0,Neurology
+42,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,110,78,98.6,None,0,General Medicine
+44,1,Patient states they have been having headache. The condition started suddenly.,137,68,97.5,Hypertension,0,Neurology
+10,1,Patient reports suffering from headache for the past few hours.,118,68,97.6,None,0,Cardiology
+66,0,Individual presenting with headache. Symptoms have been worsening.,102,79,96.4,None,0,Cardiology
+43,0,Patient arrived with symptoms of breathlessness. There is significant discomfort.,116,73,96.9,None,2,Cardiology
+38,1,Patient states they have been having severe fatigue. The condition started suddenly.,118,71,98.5,None,0,Cardiology
+59,0,Patient arrived with symptoms of chest discomfort.,113,108,98.4,Cardiac Issue,0,Cardiology
+50,0,Patient complains of breathlessness since this morning. The patient looks distressed.,112,59,98.4,None,0,Cardiology
+33,0,The person is experiencing severe fatigue and came to the hospital. There is significant discomfort.,146,77,98.2,Hypertension,1,Cardiology
+0,0,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,104,67,99.4,None,0,Neurology
+8,1,The patient reports breathlessness. The patient looks distressed.,114,68,97.9,None,0,Neurology
+7,1,The patient reports severe fatigue. The patient looks distressed.,114,74,99.4,None,0,Cardiology
+57,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,154,78,97.5,Hypertension,0,Pulmonology
+51,0,Patient reports suffering from breathlessness for the past few hours.,145,68,96.8,Hypertension,1,General Medicine
+49,1,The patient reports breathlessness. Pain intensity is increasing.,118,77,96.0,None,0,General Medicine
+60,0,The patient reports chest discomfort.,107,116,98.0,Cardiac Issue,2,Cardiology
+0,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,109,64,98.4,None,0,Neurology
+0,0,Patient reports suffering from breathlessness for the past few hours. The condition started suddenly.,114,58,98.9,None,0,Neurology
+53,0,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,113,65,101.0,None,0,Pulmonology
+43,0,Primary complaint: chest discomfort. The condition started suddenly.,109,101,98.2,Cardiac Issue,1,Cardiology
+52,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,142,70,100.6,Hypertension,2,Pulmonology
+47,1,Primary complaint: severe fatigue. Pain intensity is increasing.,112,58,98.9,None,0,Pulmonology
+76,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,153,96,99.9,Hypertension,1,Cardiology
+44,1,Patient reports suffering from headache for the past few hours. There is significant discomfort.,112,75,96.6,None,0,Neurology
+29,1,Individual presenting with headache. There is significant discomfort.,115,68,98.7,None,0,Neurology
+36,0,Primary complaint: chest discomfort. Pain intensity is increasing.,114,71,98.5,None,0,Cardiology
+57,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,136,80,97.8,Hypertension,1,Neurology
+35,0,Patient states they have been having chest discomfort. The patient looks distressed.,115,73,98.1,None,0,Neurology
+69,1,Patient complains of headache since this morning. The condition started suddenly.,111,67,97.8,Hypertension,1,General Medicine
+8,1,The patient reports chest discomfort. Symptoms have been worsening.,120,63,98.4,None,0,Neurology
+57,0,Patient complains of breathlessness since this morning.,128,105,98.6,Heart Disease,1,Pulmonology
+0,1,The person is experiencing headache and came to the hospital. The issue began earlier today.,106,79,97.8,None,0,Neurology
+35,0,Patient reports suffering from headache for the past few hours. The issue began earlier today.,118,71,98.4,None,0,Neurology
+31,0,Primary complaint: breathlessness. There is significant discomfort.,118,60,98.9,None,0,Pulmonology
+38,0,The patient reports chest discomfort. Symptoms have been worsening.,115,74,98.8,None,0,Neurology
+68,0,Primary complaint: chest discomfort. Pain intensity is increasing.,113,68,97.7,None,0,Neurology
+45,1,Patient states they have been having breathlessness. There is significant discomfort.,108,77,99.0,Hypertension,1,Pulmonology
+44,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,104,84,98.2,None,0,Cardiology
+13,1,Patient states they have been having headache. Symptoms have been worsening.,118,63,100.5,None,0,Cardiology
+39,1,Individual presenting with chest discomfort. Pain intensity is increasing.,115,76,98.5,None,0,Cardiology
+65,0,Primary complaint: breathlessness. The condition started suddenly.,105,82,98.7,None,1,Cardiology
+77,0,Patient states they have been having breathlessness. There is significant discomfort.,119,81,98.3,Hypertension,0,Pulmonology
+58,0,Primary complaint: headache. Symptoms have been worsening.,110,93,100.7,Cardiac Issue,2,Cardiology
+73,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,115,69,97.8,None,0,Neurology
+20,1,Patient complains of chest discomfort since this morning. There is significant discomfort.,105,85,97.3,None,0,Cardiology
+42,0,The patient reports chest discomfort. The issue began earlier today.,114,81,98.4,None,0,Cardiology
+59,1,Individual presenting with chest discomfort. The condition started suddenly.,108,65,99.3,None,0,Neurology
+57,1,Patient complains of breathlessness since this morning. The condition started suddenly.,101,98,98.1,Cardiac Issue,2,Cardiology
+45,0,Patient reports suffering from headache for the past few hours. The condition started suddenly.,107,112,96.4,Cardiac Issue,1,Neurology
+0,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,105,70,96.7,None,0,Neurology
+23,1,Primary complaint: severe fatigue. The patient looks distressed.,112,76,96.9,None,0,Pulmonology
+39,1,The patient reports chest discomfort. The patient looks distressed.,107,75,101.1,Hypertension,0,Neurology
+48,1,Patient arrived with symptoms of breathlessness. The issue began earlier today.,133,95,97.5,None,0,General Medicine
+59,1,Primary complaint: severe fatigue.,109,78,98.9,None,0,Cardiology
+34,1,Patient complains of breathlessness since this morning. The issue began earlier today.,114,61,98.7,None,0,Neurology
+51,0,Primary complaint: headache. Symptoms have been worsening.,113,89,98.2,Cardiac Issue,2,Pulmonology
+12,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,108,58,99.6,None,0,Neurology
+45,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,115,81,97.8,None,0,Neurology
+36,0,Primary complaint: severe fatigue. The issue began earlier today.,110,59,101.0,Cardiac Issue,0,Cardiology
+33,0,Patient complains of headache since this morning. Pain intensity is increasing.,113,67,98.2,None,0,Cardiology
+35,1,The person is experiencing chest discomfort and came to the hospital. The issue began earlier today.,104,69,100.5,None,0,Neurology
+55,1,Individual presenting with breathlessness. The condition started suddenly.,118,69,97.8,None,0,Cardiology
+53,1,Primary complaint: breathlessness. The condition started suddenly.,108,62,98.4,None,1,General Medicine
+18,0,Primary complaint: headache. Symptoms have been worsening.,117,68,98.7,None,0,Cardiology
+52,0,Primary complaint: chest discomfort. Pain intensity is increasing.,115,72,99.6,None,0,Cardiology
+43,0,Patient reports suffering from chest discomfort for the past few hours.,114,63,98.5,None,0,General Medicine
+69,1,Patient arrived with symptoms of headache. The patient looks distressed.,101,58,96.6,None,1,Cardiology
+1,1,Individual presenting with breathlessness.,115,65,97.6,None,0,Neurology
+69,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,107,112,98.9,Cardiac Issue,1,Cardiology
+32,1,The person is experiencing severe fatigue and came to the hospital. Pain intensity is increasing.,112,68,98.8,None,0,Cardiology
+50,1,Primary complaint: chest discomfort.,102,62,97.6,Cardiac Issue,1,Cardiology
+26,1,Patient complains of breathlessness since this morning. Symptoms have been worsening.,108,80,100.8,None,0,Neurology
+63,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,109,63,99.0,Heart Disease,1,Cardiology
+46,0,Individual presenting with chest discomfort. Pain intensity is increasing.,113,71,99.1,None,0,Cardiology
+37,0,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,154,69,98.6,Hypertension,0,Cardiology
+18,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,103,69,97.3,None,0,Neurology
+32,1,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,107,71,98.4,None,0,Cardiology
+32,1,The patient reports headache. Symptoms have been worsening.,107,58,98.6,None,0,Neurology
+60,1,Patient arrived with symptoms of headache. Symptoms have been worsening.,102,64,98.2,None,0,General Medicine
+0,1,The patient reports breathlessness. Symptoms have been worsening.,107,79,96.6,None,0,Neurology
+0,0,The patient reports breathlessness. The patient looks distressed.,115,84,100.8,None,0,Neurology
+57,0,The patient reports breathlessness. The condition started suddenly.,110,85,99.3,Cardiac Issue,0,Cardiology
+7,1,The patient reports chest discomfort. There is significant discomfort.,110,65,98.9,None,0,Pulmonology
+3,1,The patient reports breathlessness. Symptoms have been worsening.,114,64,98.3,None,0,Neurology
+62,1,Patient complains of breathlessness since this morning. The issue began earlier today.,114,81,98.2,None,0,Pulmonology
+0,0,The person is experiencing breathlessness and came to the hospital.,113,68,98.1,None,0,Neurology
+41,0,Primary complaint: headache. The condition started suddenly.,118,61,97.1,None,1,General Medicine
+43,0,The patient reports headache. Pain intensity is increasing.,117,76,98.2,None,1,Cardiology
+50,0,Individual presenting with severe fatigue. The patient looks distressed.,144,82,98.1,Heart Disease,1,General Medicine
+30,0,Patient states they have been having severe fatigue. The issue began earlier today.,109,82,97.9,None,0,Neurology
+0,1,Patient reports suffering from severe fatigue for the past few hours. There is significant discomfort.,119,57,99.4,None,0,Neurology
+67,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,115,107,99.0,Cardiac Issue,1,General Medicine
+64,1,Patient complains of breathlessness since this morning. There is significant discomfort.,116,65,97.4,None,0,Cardiology
+41,1,Primary complaint: severe fatigue. There is significant discomfort.,115,71,98.7,None,1,Cardiology
+21,1,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,109,76,98.1,None,0,Neurology
+41,1,Patient states they have been having chest discomfort. Symptoms have been worsening.,106,74,100.4,None,0,Cardiology
+25,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,112,73,97.2,Hypertension,0,Cardiology
+39,1,The patient reports severe fatigue. Pain intensity is increasing.,107,62,97.7,None,0,Pulmonology
+46,1,Patient complains of headache since this morning. The issue began earlier today.,112,81,98.8,None,1,General Medicine
+37,1,Individual presenting with headache. The issue began earlier today.,111,63,98.7,None,0,Neurology
+0,1,Primary complaint: severe fatigue. There is significant discomfort.,112,84,96.4,None,0,Cardiology
+40,0,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,137,78,96.7,Hypertension,2,Neurology
+54,0,Primary complaint: breathlessness.,117,106,98.4,Cardiac Issue,2,Cardiology
+28,0,Patient complains of chest discomfort since this morning. The condition started suddenly.,147,77,98.2,Hypertension,1,Neurology
+2,1,Individual presenting with chest discomfort.,115,59,98.8,None,0,Neurology
+72,0,Individual presenting with chest discomfort. There is significant discomfort.,103,96,96.7,Cardiac Issue,2,Pulmonology
+51,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,113,80,97.5,None,0,General Medicine
+41,0,Patient complains of severe fatigue since this morning. The patient looks distressed.,109,82,97.8,None,0,Neurology
+55,0,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,100,83,98.9,None,0,Cardiology
+58,0,Primary complaint: chest discomfort. The issue began earlier today.,111,103,97.0,Heart Disease,1,Cardiology
+63,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,136,92,99.5,None,2,Cardiology
+58,1,Individual presenting with severe fatigue. The issue began earlier today.,109,109,97.5,Cardiac Issue,2,Cardiology
+59,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,113,60,99.1,None,0,Pulmonology
+37,0,The patient reports severe fatigue. The issue began earlier today.,105,73,98.0,None,1,Cardiology
+73,0,The patient reports severe fatigue. Pain intensity is increasing.,118,116,97.5,Hypertension,1,General Medicine
+22,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,105,59,97.4,None,0,Neurology
+48,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,129,116,100.4,Heart Disease,2,General Medicine
+19,1,The patient reports breathlessness. The issue began earlier today.,103,77,97.1,None,0,Neurology
+43,0,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,111,72,98.7,None,0,Neurology
+52,1,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,113,63,97.6,None,0,Pulmonology
+0,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,110,60,98.5,None,0,Neurology
+38,0,The patient reports breathlessness. Symptoms have been worsening.,115,71,98.5,None,0,Pulmonology
+61,1,Patient complains of headache since this morning. Symptoms have been worsening.,115,70,97.8,None,1,General Medicine
+77,1,Patient complains of headache since this morning. The condition started suddenly.,107,85,97.2,None,2,Cardiology
+73,0,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,115,78,98.1,None,0,Pulmonology
+19,1,The patient reports breathlessness. The condition started suddenly.,116,74,98.1,None,0,Neurology
+57,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,105,78,98.1,None,1,Neurology
+41,0,Patient complains of headache since this morning. Pain intensity is increasing.,102,70,98.2,None,0,Pulmonology
+71,1,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,106,97,99.4,Cardiac Issue,1,Cardiology
+40,1,Patient complains of chest discomfort since this morning.,142,59,98.7,Hypertension,0,Pulmonology
+61,1,Patient reports suffering from breathlessness for the past few hours.,140,81,97.8,Hypertension,2,Pulmonology
+58,0,The patient reports chest discomfort.,108,105,97.5,Cardiac Issue,1,Cardiology
+51,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,117,80,98.1,None,1,Pulmonology
+42,0,Patient arrived with symptoms of headache. The issue began earlier today.,137,58,100.3,Hypertension,1,Cardiology
+47,1,The person is experiencing headache and came to the hospital.,103,65,97.7,None,0,Cardiology
+9,0,Primary complaint: headache. Pain intensity is increasing.,110,64,100.4,None,0,Neurology
+24,0,The person is experiencing headache and came to the hospital.,118,71,98.4,None,2,Neurology
+47,1,The patient reports chest discomfort. The issue began earlier today.,109,76,98.0,Cardiac Issue,0,Cardiology
+47,1,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,104,79,98.0,None,0,General Medicine
+31,1,Patient complains of headache since this morning. There is significant discomfort.,107,80,98.9,None,0,Cardiology
+69,0,Individual presenting with headache. The condition started suddenly.,104,85,98.5,None,0,Pulmonology
+81,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,109,65,98.4,Cardiac Issue,1,Cardiology
+68,0,The person is experiencing headache and came to the hospital. The patient looks distressed.,116,71,98.7,Heart Disease,2,Cardiology
+34,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,138,72,96.9,Hypertension,0,Neurology
+38,0,Primary complaint: headache. The issue began earlier today.,114,75,98.7,None,0,Pulmonology
+37,1,Patient complains of chest discomfort since this morning.,120,70,97.0,None,0,Cardiology
+17,1,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,102,81,97.5,None,0,Cardiology
+0,1,Individual presenting with chest discomfort. The patient looks distressed.,115,73,98.1,None,0,Neurology
+47,1,Patient states they have been having headache. Symptoms have been worsening.,118,69,97.4,None,0,Cardiology
+0,1,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,112,83,98.7,None,0,Pulmonology
+0,0,Primary complaint: headache.,107,68,96.9,None,0,Neurology
+20,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,105,68,96.7,None,0,Neurology
+61,1,Primary complaint: severe fatigue. The issue began earlier today.,142,68,98.0,Heart Disease,1,General Medicine
+7,1,The person is experiencing breathlessness and came to the hospital. The patient looks distressed.,104,82,98.2,None,0,Cardiology
+41,0,The person is experiencing breathlessness and came to the hospital. The condition started suddenly.,130,75,98.0,Hypertension,0,Neurology
+54,1,The patient reports severe fatigue. The patient looks distressed.,119,73,97.7,None,0,Cardiology
+39,1,The person is experiencing severe fatigue and came to the hospital. The issue began earlier today.,112,69,99.1,Hypertension,0,Neurology
+4,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,112,65,98.2,None,0,Neurology
+44,0,The patient reports headache. Pain intensity is increasing.,117,82,98.9,None,0,Cardiology
+54,1,Patient states they have been having breathlessness. Symptoms have been worsening.,113,62,98.4,None,0,Pulmonology
+62,1,The person is experiencing severe fatigue and came to the hospital. The patient looks distressed.,116,57,96.9,None,0,Pulmonology
+4,1,Primary complaint: headache.,111,74,97.1,None,0,Neurology
+35,1,Individual presenting with breathlessness. There is significant discomfort.,114,68,98.2,None,0,Neurology
+46,0,Patient arrived with symptoms of headache. There is significant discomfort.,105,66,97.5,None,0,Cardiology
+57,0,Patient arrived with symptoms of chest discomfort.,109,92,100.4,Cardiac Issue,0,Cardiology
+16,0,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,109,66,98.8,None,0,Neurology
+54,0,Patient complains of breathlessness since this morning.,118,99,97.1,None,0,Cardiology
+46,1,The person is experiencing headache and came to the hospital. The condition started suddenly.,112,78,97.1,None,0,Cardiology
+57,1,Patient states they have been having severe fatigue. Symptoms have been worsening.,118,78,97.7,None,0,Cardiology
+56,1,The patient reports breathlessness. The issue began earlier today.,109,83,97.0,None,0,Cardiology
+53,0,Primary complaint: breathlessness. The condition started suddenly.,112,62,99.0,Cardiac Issue,1,Neurology
+30,1,Primary complaint: chest discomfort. The issue began earlier today.,133,77,102.2,Heart Disease,1,General Medicine
+53,1,The patient reports severe fatigue. There is significant discomfort.,112,79,97.8,None,0,Neurology
+10,1,The patient reports headache. The condition started suddenly.,115,77,96.8,None,0,Pulmonology
+32,1,Primary complaint: headache.,110,61,97.8,None,0,Pulmonology
+49,1,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,116,61,99.4,None,0,Cardiology
+61,1,Individual presenting with severe fatigue. The patient looks distressed.,154,70,97.9,Hypertension,1,Pulmonology
+44,0,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,116,69,99.0,None,0,Neurology
+2,0,Patient states they have been having headache. There is significant discomfort.,111,79,97.7,None,0,Neurology
+68,0,Primary complaint: severe fatigue. The condition started suddenly.,108,80,99.5,None,0,Neurology
+48,0,Patient states they have been having severe fatigue. The issue began earlier today.,118,81,100.0,None,0,Cardiology
+24,0,Primary complaint: breathlessness. The patient looks distressed.,103,57,101.1,None,0,Cardiology
+70,0,Primary complaint: breathlessness. The patient looks distressed.,130,61,97.0,None,2,General Medicine
+57,0,Patient reports suffering from chest discomfort for the past few hours.,102,63,98.5,None,0,General Medicine
+41,0,The person is experiencing breathlessness and came to the hospital.,114,74,96.9,None,0,Cardiology
+50,0,Patient complains of breathlessness since this morning. The condition started suddenly.,142,93,97.4,Cardiac Issue,2,General Medicine
+48,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,114,59,98.5,None,0,Cardiology
+58,0,Primary complaint: severe fatigue. The patient looks distressed.,109,74,97.1,None,2,Neurology
+27,1,Primary complaint: severe fatigue. The patient looks distressed.,113,71,99.9,None,0,Pulmonology
+33,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,111,64,98.7,None,0,Neurology
+50,0,Primary complaint: breathlessness. The patient looks distressed.,104,98,99.4,Cardiac Issue,2,Cardiology
+14,1,The patient reports chest discomfort. The issue began earlier today.,114,71,98.1,None,0,Cardiology
+8,1,Individual presenting with severe fatigue.,106,81,99.6,None,0,Neurology
+0,0,Patient states they have been having severe fatigue. Symptoms have been worsening.,119,57,98.9,None,0,Neurology
+47,1,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,118,62,99.2,None,0,Pulmonology
+29,0,The patient reports breathlessness. The condition started suddenly.,108,107,97.0,Cardiac Issue,1,Cardiology
+40,1,The patient reports chest discomfort. Symptoms have been worsening.,112,72,98.4,None,0,Pulmonology
+47,0,The patient reports chest discomfort. Pain intensity is increasing.,119,80,96.4,None,0,Pulmonology
+9,1,Primary complaint: chest discomfort. There is significant discomfort.,115,77,97.5,None,0,Cardiology
+35,1,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,115,71,98.7,None,0,Pulmonology
+60,1,Patient arrived with symptoms of chest discomfort.,102,104,96.4,None,0,Cardiology
+73,0,Primary complaint: headache. The condition started suddenly.,103,70,97.8,None,0,General Medicine
+0,1,Patient states they have been having headache. The patient looks distressed.,116,81,99.8,None,0,Neurology
+35,0,The patient reports headache.,114,73,100.1,None,0,Cardiology
+73,0,Patient states they have been having chest discomfort.,141,110,97.2,Heart Disease,1,Cardiology
+30,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,105,61,100.9,None,0,General Medicine
+50,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,108,83,98.5,None,0,Cardiology
+56,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,133,80,96.1,Hypertension,1,Pulmonology
+57,1,Individual presenting with headache. The patient looks distressed.,113,73,98.4,Hypertension,1,Cardiology
+30,1,Patient states they have been having chest discomfort. The issue began earlier today.,144,82,99.3,Hypertension,1,Cardiology
+4,0,Individual presenting with severe fatigue. Symptoms have been worsening.,114,66,97.0,None,0,Neurology
+42,0,Patient states they have been having chest discomfort.,110,70,97.1,None,1,Pulmonology
+41,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,138,100,97.4,Cardiac Issue,1,Cardiology
+72,0,Patient states they have been having severe fatigue. Pain intensity is increasing.,115,81,97.2,None,1,Cardiology
+32,1,The person is experiencing severe fatigue and came to the hospital. The condition started suddenly.,147,71,99.0,Hypertension,1,Pulmonology
+49,0,Patient arrived with symptoms of severe fatigue. The condition started suddenly.,109,74,97.8,None,0,Cardiology
+34,1,The patient reports headache. The condition started suddenly.,111,66,98.8,None,0,Neurology
+48,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,108,82,97.0,None,0,Pulmonology
+35,1,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,115,74,97.6,Hypertension,0,Neurology
+49,1,Patient reports suffering from breathlessness for the past few hours.,101,69,98.1,Heart Disease,1,Cardiology
+70,1,The patient reports breathlessness. The condition started suddenly.,104,101,98.7,Cardiac Issue,1,General Medicine
+57,1,The person is experiencing chest discomfort and came to the hospital.,133,79,99.6,Cardiac Issue,2,General Medicine
+61,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,114,99,97.6,Cardiac Issue,2,Cardiology
+53,1,Patient reports suffering from chest discomfort for the past few hours.,104,67,98.5,None,0,General Medicine
+30,0,Patient complains of severe fatigue since this morning. The condition started suddenly.,108,66,100.1,None,0,Neurology
+0,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,116,58,99.8,None,0,Neurology
+56,1,The patient reports breathlessness. The issue began earlier today.,119,80,99.2,None,0,Neurology
+0,0,Patient states they have been having headache. The patient looks distressed.,100,58,96.0,None,0,Neurology
+55,1,Patient reports suffering from headache for the past few hours. The issue began earlier today.,105,77,99.5,None,2,Cardiology
+42,0,Patient states they have been having chest discomfort. The patient looks distressed.,115,77,98.4,None,0,Neurology
+1,1,Individual presenting with chest discomfort. Pain intensity is increasing.,118,65,96.6,None,0,Neurology
+40,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,117,57,97.3,None,0,Pulmonology
+73,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,112,86,97.3,None,0,General Medicine
+42,0,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,119,59,97.1,None,0,Neurology
+42,1,The person is experiencing breathlessness and came to the hospital. The patient looks distressed.,113,60,96.2,None,0,Pulmonology
+37,0,Patient complains of breathlessness since this morning.,111,75,97.8,Heart Disease,0,Cardiology
+32,0,Patient complains of severe fatigue since this morning.,105,66,98.2,None,0,Neurology
+58,0,Primary complaint: breathlessness. The patient looks distressed.,101,106,98.5,Cardiac Issue,2,General Medicine
+43,1,Primary complaint: breathlessness. There is significant discomfort.,111,64,98.1,None,0,Neurology
+38,1,The patient reports headache. Pain intensity is increasing.,114,78,99.9,None,1,General Medicine
+28,1,Patient complains of breathlessness since this morning. There is significant discomfort.,115,72,97.4,None,0,Cardiology
+50,0,Individual presenting with severe fatigue. Pain intensity is increasing.,110,66,96.4,None,0,Neurology
+68,1,Primary complaint: chest discomfort.,136,86,98.6,Hypertension,1,Neurology
+0,0,Patient states they have been having chest discomfort. The patient looks distressed.,100,83,98.3,None,0,Neurology
+41,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,118,94,97.3,Cardiac Issue,2,Cardiology
+53,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,107,98,97.0,Cardiac Issue,1,General Medicine
+55,0,Individual presenting with chest discomfort. Pain intensity is increasing.,105,65,97.9,None,0,Neurology
+72,0,Patient complains of headache since this morning. The issue began earlier today.,106,100,99.1,Cardiac Issue,0,Cardiology
+76,1,The patient reports chest discomfort. The patient looks distressed.,106,66,96.5,None,0,Cardiology
+67,0,Individual presenting with severe fatigue. The issue began earlier today.,144,111,99.9,Cardiac Issue,1,Cardiology
+25,0,Patient complains of headache since this morning. Pain intensity is increasing.,110,71,97.2,None,0,Cardiology
+49,0,The patient reports chest discomfort. Pain intensity is increasing.,114,70,97.7,None,0,Pulmonology
+53,0,Primary complaint: breathlessness. The patient looks distressed.,148,105,97.6,Hypertension,2,Cardiology
+33,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,111,69,98.1,None,0,Pulmonology
+53,0,Patient reports suffering from headache for the past few hours. The patient looks distressed.,102,99,99.3,Heart Disease,0,General Medicine
+43,1,Patient reports suffering from breathlessness for the past few hours.,139,75,98.5,Hypertension,2,Pulmonology
+65,1,Primary complaint: chest discomfort. The patient looks distressed.,106,62,98.7,None,2,Pulmonology
+47,0,Individual presenting with chest discomfort. There is significant discomfort.,138,101,99.0,Cardiac Issue,2,Cardiology
+47,1,Patient complains of severe fatigue since this morning. Pain intensity is increasing.,113,76,98.5,None,1,Neurology
+26,0,Individual presenting with severe fatigue. The condition started suddenly.,112,77,98.8,None,0,Pulmonology
+37,1,Patient complains of headache since this morning. There is significant discomfort.,115,58,98.8,None,0,Neurology
+8,1,Primary complaint: headache. The issue began earlier today.,102,77,98.1,None,0,Cardiology
+32,1,The patient reports headache. Pain intensity is increasing.,114,70,98.6,None,1,Cardiology
+45,0,Individual presenting with breathlessness. There is significant discomfort.,136,63,97.5,Hypertension,1,General Medicine
+69,1,Patient states they have been having headache.,110,65,97.7,None,0,Neurology
+39,0,Primary complaint: breathlessness. The issue began earlier today.,105,61,99.5,None,0,Pulmonology
+63,1,Individual presenting with headache. The patient looks distressed.,152,100,96.9,Cardiac Issue,1,General Medicine
+10,0,Individual presenting with chest discomfort. The condition started suddenly.,112,60,97.2,None,0,Pulmonology
+28,0,Patient complains of breathlessness since this morning. Symptoms have been worsening.,115,65,97.1,None,0,Cardiology
+25,1,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,117,75,101.2,None,0,Cardiology
+41,0,Primary complaint: chest discomfort. The patient looks distressed.,116,70,97.3,Cardiac Issue,0,Cardiology
+29,0,Individual presenting with chest discomfort.,101,73,97.7,None,0,Neurology
+17,1,Individual presenting with breathlessness. The issue began earlier today.,116,60,97.9,None,2,Pulmonology
+48,0,Patient complains of headache since this morning. Pain intensity is increasing.,115,61,99.6,None,0,Cardiology
+16,1,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,103,68,101.0,None,2,Pulmonology
+1,1,Patient complains of headache since this morning.,105,65,99.0,None,0,Cardiology
+69,0,Patient states they have been having chest discomfort. There is significant discomfort.,140,116,96.5,Cardiac Issue,1,Cardiology
+78,1,Patient complains of chest discomfort since this morning. The issue began earlier today.,109,69,98.6,None,0,Pulmonology
+65,0,Patient states they have been having chest discomfort. The issue began earlier today.,111,109,98.5,Cardiac Issue,1,Cardiology
+52,0,The person is experiencing severe fatigue and came to the hospital. There is significant discomfort.,114,92,100.0,Cardiac Issue,1,Cardiology
+42,1,The person is experiencing headache and came to the hospital.,115,79,98.3,None,0,Neurology
+16,0,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,114,77,97.2,None,0,Neurology
+20,0,Individual presenting with chest discomfort.,109,71,98.0,None,0,Cardiology
+30,0,Patient states they have been having severe fatigue. Symptoms have been worsening.,104,59,99.0,None,0,Cardiology
+45,0,Patient reports suffering from headache for the past few hours.,116,65,99.2,None,0,Pulmonology
+0,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,106,73,100.0,None,0,Pulmonology
+57,0,Primary complaint: headache. The condition started suddenly.,117,74,99.8,None,0,General Medicine
+61,1,Patient complains of headache since this morning. The issue began earlier today.,105,106,98.8,Cardiac Issue,1,Cardiology
+32,0,Primary complaint: severe fatigue. Pain intensity is increasing.,110,57,98.2,None,0,Pulmonology
+0,0,The patient reports breathlessness. The patient looks distressed.,119,57,98.7,None,0,Neurology
+63,0,Patient complains of chest discomfort since this morning. Symptoms have been worsening.,117,57,96.6,None,0,Neurology
+0,0,Patient complains of severe fatigue since this morning.,111,64,98.4,None,0,Neurology
+43,1,Patient complains of breathlessness since this morning. There is significant discomfort.,112,57,99.1,None,0,Cardiology
+29,1,Individual presenting with severe fatigue. Pain intensity is increasing.,145,60,99.0,None,0,Pulmonology
+25,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,108,72,98.4,None,1,Cardiology
+0,0,Individual presenting with chest discomfort.,107,65,97.4,None,0,Neurology
+66,1,Primary complaint: chest discomfort.,112,73,98.5,Hypertension,1,General Medicine
+0,0,Primary complaint: severe fatigue.,118,81,97.8,None,0,Pulmonology
+0,1,Patient complains of severe fatigue since this morning. The condition started suddenly.,109,57,96.0,None,0,Neurology
+56,0,Patient reports suffering from headache for the past few hours. The condition started suddenly.,147,85,96.9,Cardiac Issue,2,Cardiology
+0,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,110,79,96.4,None,0,Neurology
+34,1,The person is experiencing chest discomfort and came to the hospital. Symptoms have been worsening.,114,70,97.5,None,0,Cardiology
+35,0,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,135,69,98.6,Hypertension,1,Pulmonology
+70,0,Patient complains of headache since this morning. Pain intensity is increasing.,113,76,99.8,None,0,Cardiology
+53,1,Primary complaint: chest discomfort. Symptoms have been worsening.,116,73,98.1,None,0,Neurology
+67,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,100,116,98.6,Cardiac Issue,0,General Medicine
+0,1,Individual presenting with headache. Pain intensity is increasing.,117,63,98.8,None,0,Neurology
+4,0,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,111,64,97.3,None,0,Neurology
+40,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,115,57,100.1,Hypertension,1,Neurology
+80,0,Patient states they have been having chest discomfort.,146,111,100.2,Heart Disease,2,Cardiology
+47,1,The person is experiencing chest discomfort and came to the hospital. The issue began earlier today.,115,73,97.9,None,0,Neurology
+46,0,Primary complaint: headache. The condition started suddenly.,103,80,101.0,None,0,General Medicine
+40,0,Patient states they have been having chest discomfort.,101,109,98.5,Cardiac Issue,1,Cardiology
+44,0,Primary complaint: chest discomfort. Pain intensity is increasing.,101,70,98.8,None,0,Neurology
+54,0,The patient reports breathlessness. The condition started suddenly.,112,103,97.7,Cardiac Issue,2,Pulmonology
+63,1,The patient reports headache. The condition started suddenly.,117,62,97.8,None,0,Pulmonology
+37,0,The patient reports breathlessness. The condition started suddenly.,103,72,98.0,None,0,Cardiology
+38,1,Individual presenting with chest discomfort. Pain intensity is increasing.,116,85,98.7,None,0,Neurology
+42,1,Primary complaint: severe fatigue.,117,67,101.2,None,0,Cardiology
+41,1,The person is experiencing severe fatigue and came to the hospital.,115,57,101.1,None,0,Cardiology
+36,1,Individual presenting with severe fatigue.,109,60,98.3,None,0,Pulmonology
+38,1,The patient reports chest discomfort. Symptoms have been worsening.,110,66,97.8,None,0,Neurology
+45,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,109,59,99.4,None,1,Cardiology
+43,0,Individual presenting with chest discomfort. Symptoms have been worsening.,137,66,99.6,Hypertension,1,Cardiology
+76,0,Patient reports suffering from chest discomfort for the past few hours. Symptoms have been worsening.,138,97,96.9,Cardiac Issue,1,Cardiology
+46,1,Patient states they have been having headache. Pain intensity is increasing.,111,75,98.7,None,1,General Medicine
+62,0,Patient states they have been having breathlessness. Symptoms have been worsening.,113,58,98.5,None,0,Neurology
+0,0,Individual presenting with chest discomfort. Pain intensity is increasing.,108,63,96.7,None,0,Pulmonology
+45,0,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,115,62,99.6,Cardiac Issue,0,Neurology
+53,0,Patient states they have been having chest discomfort.,105,77,98.6,None,0,Cardiology
+43,0,Individual presenting with headache. Symptoms have been worsening.,112,102,98.3,None,0,Cardiology
+67,0,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,100,67,97.2,None,0,Neurology
+76,1,Primary complaint: breathlessness.,130,99,98.0,Hypertension,2,Pulmonology
+8,1,The patient reports breathlessness. There is significant discomfort.,109,79,99.8,None,1,Neurology
+63,1,Patient states they have been having breathlessness. The issue began earlier today.,103,80,98.3,None,0,Cardiology
+0,0,Individual presenting with chest discomfort. Pain intensity is increasing.,112,73,98.5,None,0,Neurology
+51,1,Individual presenting with headache. Pain intensity is increasing.,116,62,98.4,None,0,Neurology
+55,1,The patient reports headache. Symptoms have been worsening.,112,67,98.4,None,0,Cardiology
+43,1,Individual presenting with headache. The condition started suddenly.,116,71,98.4,None,0,Cardiology
+55,0,Primary complaint: chest discomfort. The issue began earlier today.,107,103,98.5,Heart Disease,2,Pulmonology
+71,1,The patient reports severe fatigue. The issue began earlier today.,113,76,98.5,None,1,General Medicine
+40,0,Patient states they have been having breathlessness. There is significant discomfort.,154,79,100.4,Hypertension,0,Pulmonology
+55,0,Individual presenting with breathlessness. There is significant discomfort.,138,67,97.4,Hypertension,1,Cardiology
+32,0,Primary complaint: severe fatigue. Pain intensity is increasing.,115,59,98.7,None,0,Neurology
+26,0,Patient states they have been having severe fatigue.,106,60,100.8,None,0,Neurology
+70,0,Primary complaint: breathlessness. The patient looks distressed.,151,90,97.9,Hypertension,2,Pulmonology
+0,0,Individual presenting with chest discomfort. The condition started suddenly.,111,78,99.5,None,0,Neurology
+26,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,106,72,96.7,None,0,Pulmonology
+51,1,Patient states they have been having breathlessness. Symptoms have been worsening.,109,80,98.2,None,0,Pulmonology
+49,1,Primary complaint: headache. There is significant discomfort.,115,65,100.6,None,0,Cardiology
+27,0,Patient complains of headache since this morning. Symptoms have been worsening.,102,58,96.9,None,0,Neurology
+34,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,110,69,98.0,None,0,Pulmonology
+52,1,Primary complaint: chest discomfort.,101,68,99.1,Hypertension,1,Cardiology
+35,0,Individual presenting with breathlessness. The condition started suddenly.,114,58,97.7,None,0,Neurology
+53,0,The patient reports headache. The patient looks distressed.,118,80,98.6,None,0,Cardiology
+33,0,Patient complains of breathlessness since this morning. There is significant discomfort.,109,57,99.3,None,0,Neurology
+48,0,Primary complaint: severe fatigue. The issue began earlier today.,103,116,97.6,Heart Disease,2,General Medicine
+63,0,Primary complaint: chest discomfort.,106,78,98.2,Hypertension,1,Pulmonology
+46,1,Primary complaint: headache. The issue began earlier today.,112,68,98.3,None,0,Pulmonology
+35,0,Individual presenting with chest discomfort. Pain intensity is increasing.,111,69,99.6,None,0,Cardiology
+31,1,Patient states they have been having headache. The condition started suddenly.,110,75,98.3,None,0,Neurology
+71,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,109,59,96.8,None,0,Neurology
+27,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,111,73,96.3,None,0,Pulmonology
+38,0,The patient reports headache. Pain intensity is increasing.,100,82,98.9,None,0,Cardiology
+71,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,109,75,98.2,None,0,Cardiology
+11,1,Individual presenting with severe fatigue. Symptoms have been worsening.,107,74,100.2,None,0,Neurology
+40,0,Patient reports suffering from headache for the past few hours. The issue began earlier today.,106,71,98.0,None,0,Neurology
+43,1,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,105,70,98.6,None,0,General Medicine
+45,1,The patient reports breathlessness. The condition started suddenly.,112,95,97.8,Cardiac Issue,1,Cardiology
+70,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,131,104,97.7,Heart Disease,1,Cardiology
+55,1,Primary complaint: severe fatigue. The issue began earlier today.,152,57,98.7,Hypertension,1,Cardiology
+8,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,109,71,98.4,None,0,Neurology
+0,1,Patient complains of breathlessness since this morning. The issue began earlier today.,115,69,98.9,None,0,Neurology
+0,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,108,58,97.5,None,0,Neurology
+41,0,Individual presenting with severe fatigue. The patient looks distressed.,139,65,98.0,Hypertension,2,Pulmonology
+8,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,108,66,96.6,None,0,Neurology
+40,1,Primary complaint: severe fatigue.,113,74,96.1,None,0,Neurology
+49,0,The patient reports chest discomfort. Symptoms have been worsening.,111,76,100.6,None,0,Neurology
+64,1,Patient states they have been having headache.,109,72,99.9,None,0,Neurology
+56,1,The patient reports chest discomfort. The issue began earlier today.,115,81,96.8,None,0,Neurology
+14,0,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,112,67,96.6,None,0,Neurology
+74,0,The patient reports severe fatigue. The issue began earlier today.,106,64,97.8,None,0,General Medicine
+3,1,Patient complains of breathlessness since this morning. There is significant discomfort.,117,72,98.4,None,0,Cardiology
+30,1,Primary complaint: severe fatigue. There is significant discomfort.,105,76,101.0,None,0,Cardiology
+48,0,Patient states they have been having chest discomfort. There is significant discomfort.,140,70,98.1,Heart Disease,1,Cardiology
+42,0,The patient reports headache. The condition started suddenly.,107,57,96.5,None,0,Pulmonology
+17,0,Primary complaint: breathlessness.,117,57,99.4,None,0,Pulmonology
+5,1,The patient reports headache. Symptoms have been worsening.,114,70,98.0,None,0,Cardiology
+68,1,Individual presenting with chest discomfort. Symptoms have been worsening.,111,80,97.8,Hypertension,1,Pulmonology
+35,0,Primary complaint: chest discomfort. The patient looks distressed.,109,68,98.3,None,0,Cardiology
+71,0,Individual presenting with chest discomfort. The patient looks distressed.,109,100,98.5,Cardiac Issue,2,General Medicine
+44,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,139,75,99.8,None,0,General Medicine
+26,1,Primary complaint: severe fatigue.,118,61,99.1,None,0,Cardiology
+49,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,137,109,97.5,Heart Disease,2,Pulmonology
+24,0,Patient complains of headache since this morning.,113,79,98.6,None,0,Cardiology
+49,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,139,69,97.3,Hypertension,2,Neurology
+61,0,Individual presenting with headache. The patient looks distressed.,138,109,99.5,Hypertension,1,General Medicine
+49,1,Primary complaint: headache. The issue began earlier today.,117,73,96.0,None,0,Neurology
+7,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,117,72,98.0,None,0,Neurology
+46,0,Patient states they have been having chest discomfort. The condition started suddenly.,101,79,99.1,None,0,Neurology
+0,1,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,113,66,97.1,None,0,Neurology
+10,1,Patient complains of headache since this morning.,106,70,97.5,None,0,Neurology
+52,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,105,80,99.7,Cardiac Issue,1,Pulmonology
+8,1,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,100,69,97.5,None,0,Neurology
+0,1,Patient arrived with symptoms of severe fatigue. The issue began earlier today.,114,78,100.3,None,0,Neurology
+61,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,115,59,96.4,Cardiac Issue,2,Cardiology
+34,1,Primary complaint: chest discomfort. The issue began earlier today.,110,75,99.0,Heart Disease,1,Neurology
+55,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,102,82,98.2,None,0,Cardiology
+33,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,116,70,97.5,None,0,Cardiology
+56,0,Individual presenting with severe fatigue. The issue began earlier today.,117,97,98.1,Cardiac Issue,1,Cardiology
+73,0,Individual presenting with chest discomfort. Symptoms have been worsening.,144,63,100.1,Hypertension,1,Pulmonology
+44,1,The patient reports chest discomfort. Pain intensity is increasing.,114,73,98.5,None,0,Pulmonology
+29,0,Individual presenting with chest discomfort.,111,59,97.2,None,0,Neurology
+62,1,Patient arrived with symptoms of chest discomfort.,106,104,99.4,Cardiac Issue,0,Cardiology
+15,1,The person is experiencing breathlessness and came to the hospital. The patient looks distressed.,108,63,98.8,None,0,Neurology
+50,0,The patient reports breathlessness.,103,85,96.2,Hypertension,1,Cardiology
+4,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,112,72,99.6,None,0,Neurology
+8,0,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,111,71,100.7,None,0,Neurology
+71,0,The patient reports headache. The patient looks distressed.,103,70,99.3,None,0,Cardiology
+46,1,Patient complains of chest discomfort since this morning.,113,64,97.1,None,0,Cardiology
+60,0,The patient reports severe fatigue. The issue began earlier today.,101,84,98.9,None,0,General Medicine
+51,0,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,110,65,98.7,None,2,Pulmonology
+36,0,Individual presenting with headache. The issue began earlier today.,116,60,98.3,Hypertension,1,General Medicine
+36,0,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,105,71,96.6,None,0,Pulmonology
+43,1,Individual presenting with breathlessness.,109,64,100.3,None,0,Neurology
+51,1,Individual presenting with headache.,111,77,97.9,None,1,Cardiology
+34,1,Primary complaint: headache. There is significant discomfort.,115,74,98.3,None,0,Cardiology
+47,0,Individual presenting with headache. The issue began earlier today.,100,84,100.0,None,1,General Medicine
+43,0,Primary complaint: severe fatigue. Symptoms have been worsening.,110,57,98.7,None,0,Neurology
+41,1,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,118,62,99.2,None,0,Neurology
+60,1,Primary complaint: breathlessness.,112,80,96.5,None,2,Pulmonology
+75,0,The person is experiencing breathlessness and came to the hospital. Pain intensity is increasing.,103,113,97.0,Heart Disease,2,General Medicine
+28,1,Patient states they have been having headache. The patient looks distressed.,105,63,97.3,None,0,Neurology
+53,0,Primary complaint: chest discomfort. The condition started suddenly.,111,98,96.8,Cardiac Issue,1,Cardiology
+19,1,Patient arrived with symptoms of severe fatigue. The condition started suddenly.,113,78,100.9,None,0,Neurology
+28,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,105,63,97.1,None,0,Cardiology
+4,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,117,65,97.0,None,0,Neurology
+49,0,Patient reports suffering from severe fatigue for the past few hours. The condition started suddenly.,112,58,98.6,Hypertension,1,Cardiology
+13,1,The patient reports breathlessness. Pain intensity is increasing.,116,59,96.7,None,0,Neurology
+62,1,Patient states they have been having severe fatigue. The patient looks distressed.,113,61,98.8,None,0,Cardiology
+29,1,Patient complains of headache since this morning. The condition started suddenly.,147,57,98.2,None,0,Neurology
+27,1,The patient reports severe fatigue.,117,70,99.3,None,0,Neurology
+5,1,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,113,78,98.5,None,0,Cardiology
+30,1,Patient arrived with symptoms of severe fatigue. The issue began earlier today.,117,82,101.1,None,0,Neurology
+54,0,The patient reports chest discomfort. There is significant discomfort.,108,81,97.0,None,0,Cardiology
+70,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,154,80,98.3,Hypertension,1,Cardiology
+39,1,Individual presenting with breathlessness. Symptoms have been worsening.,112,79,96.6,None,0,Cardiology
+0,0,Primary complaint: headache. Pain intensity is increasing.,112,72,98.1,None,0,Neurology
+76,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,116,106,100.9,Cardiac Issue,2,Cardiology
+34,1,The person is experiencing breathlessness and came to the hospital.,105,65,99.9,None,0,Neurology
+43,1,Patient complains of headache since this morning. There is significant discomfort.,105,77,98.9,None,0,General Medicine
+47,1,Patient complains of breathlessness since this morning. There is significant discomfort.,112,77,102.0,None,0,Cardiology
+18,1,Patient arrived with symptoms of chest discomfort.,106,57,101.2,None,0,Neurology
+27,0,Primary complaint: breathlessness. The issue began earlier today.,111,105,96.6,None,0,Pulmonology
+40,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,111,69,98.3,None,0,Pulmonology
+69,0,Patient states they have been having severe fatigue.,105,73,97.5,None,0,Neurology
+35,0,Primary complaint: chest discomfort. Symptoms have been worsening.,109,75,98.8,None,1,Cardiology
+58,0,The person is experiencing breathlessness and came to the hospital.,112,62,99.1,Cardiac Issue,2,Pulmonology
+74,0,Primary complaint: severe fatigue. The issue began earlier today.,111,109,96.0,Cardiac Issue,1,Cardiology
+11,1,Primary complaint: headache.,112,75,97.7,None,0,Neurology
+50,0,Patient states they have been having breathlessness. There is significant discomfort.,144,85,97.2,Hypertension,1,Pulmonology
+50,1,Patient reports suffering from headache for the past few hours. The issue began earlier today.,114,78,98.4,None,1,Pulmonology
+42,0,Patient states they have been having breathlessness. Pain intensity is increasing.,111,90,98.2,Cardiac Issue,0,General Medicine
+54,0,Individual presenting with chest discomfort. The patient looks distressed.,115,73,97.9,None,0,General Medicine
+76,1,The patient reports breathlessness. The issue began earlier today.,117,78,97.7,None,0,Neurology
+68,0,Patient reports suffering from chest discomfort for the past few hours. The patient looks distressed.,109,71,98.2,None,0,Neurology
+32,1,The person is experiencing severe fatigue and came to the hospital.,120,66,99.3,None,0,Neurology
+73,0,Patient states they have been having chest discomfort. There is significant discomfort.,131,105,97.9,Heart Disease,1,General Medicine
+30,1,Individual presenting with breathlessness. There is significant discomfort.,151,79,98.1,Hypertension,0,General Medicine
+8,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,117,68,97.3,None,0,Neurology
+0,0,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,107,75,96.8,None,0,Neurology
+1,0,Patient states they have been having severe fatigue. The patient looks distressed.,105,66,98.3,None,0,Neurology
+50,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,113,60,98.5,None,1,Cardiology
+29,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,110,76,98.1,None,0,Cardiology
+57,1,Patient arrived with symptoms of headache. The issue began earlier today.,143,66,96.8,Hypertension,1,Pulmonology
+57,1,Patient states they have been having headache. Symptoms have been worsening.,108,70,96.0,None,0,Cardiology
+54,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,109,79,98.1,None,0,Pulmonology
+45,1,Individual presenting with headache. The condition started suddenly.,109,59,98.4,None,0,General Medicine
+62,1,The patient reports headache. Symptoms have been worsening.,112,74,96.9,None,0,Cardiology
+0,1,Primary complaint: severe fatigue. The patient looks distressed.,118,67,97.0,None,0,Neurology
+26,0,Individual presenting with severe fatigue. The condition started suddenly.,112,60,97.1,None,0,Neurology
+6,1,Patient complains of headache since this morning. There is significant discomfort.,101,71,99.3,None,0,Pulmonology
+48,1,Patient reports suffering from breathlessness for the past few hours.,145,80,100.6,Hypertension,1,Cardiology
+54,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,103,57,98.3,Cardiac Issue,1,Neurology
+32,0,The person is experiencing headache and came to the hospital.,116,65,96.3,Cardiac Issue,1,Cardiology
+80,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,115,58,99.0,None,1,Neurology
+40,0,Patient states they have been having chest discomfort. The patient looks distressed.,114,63,98.7,None,0,Pulmonology
+79,0,Individual presenting with headache. The patient looks distressed.,107,73,98.2,Cardiac Issue,1,Cardiology
+50,0,Individual presenting with headache. The issue began earlier today.,117,80,98.7,None,0,General Medicine
+72,0,Individual presenting with breathlessness. The condition started suddenly.,115,71,98.0,None,0,Pulmonology
+70,0,The person is experiencing headache and came to the hospital. There is significant discomfort.,108,71,99.0,Cardiac Issue,0,Cardiology
+82,0,The patient reports breathlessness. The condition started suddenly.,107,108,97.3,Cardiac Issue,1,General Medicine
+49,1,Individual presenting with breathlessness. There is significant discomfort.,117,67,99.8,Hypertension,0,Cardiology
+62,1,Primary complaint: breathlessness.,132,93,96.3,Cardiac Issue,2,General Medicine
+55,0,Patient arrived with symptoms of breathlessness.,106,67,100.1,None,0,Cardiology
+37,0,Individual presenting with chest discomfort. Symptoms have been worsening.,110,76,97.8,Hypertension,0,Pulmonology
+58,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,105,60,97.3,None,1,Cardiology
+34,0,Patient complains of chest discomfort since this morning. There is significant discomfort.,113,61,98.3,None,1,Cardiology
+39,0,The person is experiencing headache and came to the hospital. There is significant discomfort.,111,62,98.2,None,0,Neurology
+47,0,The patient reports chest discomfort. Pain intensity is increasing.,112,82,98.3,None,0,Neurology
+43,1,Patient complains of breathlessness since this morning. The patient looks distressed.,114,61,96.9,None,0,Cardiology
+20,1,The person is experiencing breathlessness and came to the hospital. The patient looks distressed.,118,61,97.3,None,0,Pulmonology
+12,1,Individual presenting with chest discomfort. The condition started suddenly.,100,67,96.0,None,0,Neurology
+56,0,Patient states they have been having chest discomfort. The issue began earlier today.,103,116,98.2,Cardiac Issue,1,Cardiology
+38,0,Primary complaint: breathlessness. The issue began earlier today.,107,78,97.2,None,0,Pulmonology
+30,0,The patient reports breathlessness. Pain intensity is increasing.,104,59,98.7,None,0,Neurology
+27,1,Patient complains of headache since this morning. The condition started suddenly.,110,59,98.3,None,1,Neurology
+24,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,100,69,98.1,None,0,General Medicine
+60,0,Patient complains of chest discomfort since this morning. The condition started suddenly.,141,76,99.7,Hypertension,2,General Medicine
+12,1,Individual presenting with severe fatigue. The condition started suddenly.,110,57,99.4,None,0,Neurology
+9,1,The patient reports chest discomfort. The patient looks distressed.,113,76,97.1,None,0,Neurology
+68,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,106,85,97.5,Heart Disease,2,General Medicine
+35,0,Patient reports suffering from severe fatigue for the past few hours. The issue began earlier today.,134,66,98.7,None,0,Cardiology
+70,1,Patient complains of headache since this morning. There is significant discomfort.,114,76,97.9,None,0,Neurology
+46,1,The person is experiencing chest discomfort and came to the hospital.,102,60,98.4,Hypertension,2,Neurology
+13,0,Patient arrived with symptoms of breathlessness. There is significant discomfort.,107,74,98.7,None,0,Neurology
+82,0,Patient states they have been having chest discomfort. The issue began earlier today.,105,95,96.9,Cardiac Issue,1,Cardiology
+3,0,The person is experiencing breathlessness and came to the hospital.,115,72,97.2,None,0,Neurology
+58,0,Patient complains of chest discomfort since this morning.,103,72,98.3,None,0,Cardiology
+0,0,Individual presenting with chest discomfort. The condition started suddenly.,113,59,98.1,None,0,Pulmonology
+22,1,The patient reports chest discomfort. Symptoms have been worsening.,118,69,98.6,None,0,Neurology
+8,1,Individual presenting with breathlessness. The condition started suddenly.,118,71,98.6,None,0,Neurology
+78,0,The patient reports breathlessness.,100,116,96.7,Cardiac Issue,1,Cardiology
+32,0,Individual presenting with headache. The condition started suddenly.,105,60,98.7,None,0,Cardiology
+15,1,The patient reports breathlessness. The issue began earlier today.,103,73,97.7,None,0,Cardiology
+41,0,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,116,70,98.0,None,1,Cardiology
+8,0,The patient reports headache. The patient looks distressed.,111,75,97.7,None,0,Cardiology
+57,1,Patient states they have been having chest discomfort. The condition started suddenly.,115,77,97.8,None,0,Neurology
+51,0,The patient reports breathlessness. Pain intensity is increasing.,128,71,98.0,Hypertension,1,Neurology
+41,0,The patient reports severe fatigue. The issue began earlier today.,104,66,97.8,None,0,General Medicine
+47,1,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,118,76,99.1,None,0,Pulmonology
+17,1,The patient reports chest discomfort. The patient looks distressed.,106,86,98.4,None,0,Pulmonology
+50,0,Individual presenting with headache.,138,73,98.4,Cardiac Issue,1,Cardiology
+47,1,Individual presenting with headache. There is significant discomfort.,117,67,97.3,None,0,Cardiology
+51,0,Patient states they have been having breathlessness. Symptoms have been worsening.,114,76,96.0,None,0,Pulmonology
+35,1,Individual presenting with breathlessness. The condition started suddenly.,116,61,99.4,None,0,Neurology
+49,0,Patient arrived with symptoms of headache. The condition started suddenly.,134,84,99.1,Hypertension,1,Cardiology
+43,0,Patient arrived with symptoms of headache. There is significant discomfort.,105,92,98.6,None,0,Cardiology
+0,1,Patient arrived with symptoms of severe fatigue. The issue began earlier today.,118,58,96.9,None,0,Neurology
+0,1,Patient states they have been having headache.,114,67,99.1,None,0,Neurology
+58,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,115,66,98.0,None,0,Pulmonology
+34,0,Primary complaint: chest discomfort. The condition started suddenly.,135,70,98.2,None,0,Pulmonology
+63,1,Primary complaint: chest discomfort. The condition started suddenly.,112,98,99.6,Cardiac Issue,1,Cardiology
+36,0,Primary complaint: chest discomfort. Pain intensity is increasing.,105,59,98.0,None,0,Cardiology
+0,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,112,79,99.8,None,0,Neurology
+60,1,The patient reports breathlessness. The condition started suddenly.,106,81,97.9,Cardiac Issue,0,Cardiology
+62,0,Patient complains of breathlessness since this morning. There is significant discomfort.,114,65,97.7,None,0,Neurology
+56,1,Primary complaint: chest discomfort. The issue began earlier today.,151,84,98.2,Heart Disease,2,General Medicine
+0,0,The patient reports chest discomfort. The condition started suddenly.,104,77,98.2,None,0,Neurology
+52,1,The person is experiencing severe fatigue and came to the hospital. There is significant discomfort.,150,99,96.8,Hypertension,1,Cardiology
+51,1,The person is experiencing severe fatigue and came to the hospital. The condition started suddenly.,133,70,97.0,Hypertension,1,General Medicine
+60,0,The patient reports breathlessness. The condition started suddenly.,101,106,98.5,Cardiac Issue,0,Cardiology
+42,1,Individual presenting with chest discomfort. Symptoms have been worsening.,137,78,99.1,Hypertension,1,Pulmonology
+31,1,Patient complains of chest discomfort since this morning. The patient looks distressed.,112,65,98.2,None,0,Neurology
+55,0,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,119,65,97.6,None,0,Pulmonology
+3,0,Primary complaint: chest discomfort. There is significant discomfort.,109,80,96.6,None,0,Neurology
+5,1,Individual presenting with chest discomfort. The condition started suddenly.,114,57,96.5,None,0,Cardiology
+33,0,Individual presenting with headache. The patient looks distressed.,116,59,99.3,None,1,Cardiology
+67,1,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,103,99,96.5,Cardiac Issue,1,General Medicine
+28,1,Patient states they have been having severe fatigue. The patient looks distressed.,103,82,98.5,None,0,Pulmonology
+17,1,The patient reports chest discomfort. Pain intensity is increasing.,111,78,98.7,None,0,Cardiology
+38,0,The patient reports headache. There is significant discomfort.,112,74,97.2,Hypertension,0,Neurology
+53,0,Patient reports suffering from breathlessness for the past few hours.,148,71,98.0,Hypertension,1,Pulmonology
+30,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,105,61,96.4,None,0,Cardiology
+40,0,The patient reports severe fatigue. The patient looks distressed.,118,65,99.0,None,0,Neurology
+41,1,Patient complains of breathlessness since this morning. There is significant discomfort.,114,73,99.0,None,0,Cardiology
+16,1,The patient reports chest discomfort. The issue began earlier today.,116,66,99.3,None,0,Neurology
+17,1,The patient reports chest discomfort. The patient looks distressed.,112,66,98.5,None,0,Cardiology
+49,1,Individual presenting with chest discomfort. Symptoms have been worsening.,139,75,97.5,Hypertension,1,General Medicine
+72,0,Primary complaint: chest discomfort.,117,81,96.0,Cardiac Issue,1,Cardiology
+51,1,Primary complaint: headache.,117,67,97.2,None,0,Cardiology
+77,1,The patient reports severe fatigue. The issue began earlier today.,109,114,96.2,None,0,General Medicine
+37,0,Patient states they have been having headache. There is significant discomfort.,114,81,98.0,None,0,Neurology
+65,1,Primary complaint: chest discomfort. The condition started suddenly.,115,81,100.1,Cardiac Issue,2,General Medicine
+50,0,The patient reports chest discomfort.,114,91,96.2,None,0,Cardiology
+37,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,108,73,97.6,None,0,Neurology
+80,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,139,90,98.2,Cardiac Issue,2,Cardiology
+17,0,Individual presenting with headache. Pain intensity is increasing.,100,67,98.6,None,2,Neurology
+50,1,Patient complains of headache since this morning.,116,67,97.9,None,0,Cardiology
+48,1,Patient complains of headache since this morning. The issue began earlier today.,112,73,97.5,None,0,Cardiology
+4,1,The patient reports breathlessness. The issue began earlier today.,108,67,96.3,None,0,Pulmonology
+73,0,Primary complaint: chest discomfort.,112,68,100.0,Heart Disease,1,Pulmonology
+40,0,The patient reports headache. The patient looks distressed.,108,77,98.1,None,0,Neurology
+16,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,113,68,98.6,None,0,Neurology
+53,0,The patient reports headache. The patient looks distressed.,107,64,100.5,None,0,Cardiology
+45,0,Patient complains of chest discomfort since this morning. The patient looks distressed.,112,68,99.6,None,0,Neurology
+37,0,Patient states they have been having chest discomfort.,109,74,99.1,None,1,Pulmonology
+48,0,Patient complains of chest discomfort since this morning. The condition started suddenly.,106,72,98.4,Hypertension,1,General Medicine
+43,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,103,61,97.8,None,0,Neurology
+29,0,The patient reports headache. The condition started suddenly.,116,75,96.5,None,0,Pulmonology
+2,0,Primary complaint: headache.,104,65,98.4,None,0,Neurology
+55,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,100,78,97.5,None,1,Neurology
+14,1,The patient reports headache. Symptoms have been worsening.,110,67,99.0,None,0,Pulmonology
+38,0,The patient reports chest discomfort. Pain intensity is increasing.,116,77,97.0,None,0,Pulmonology
+48,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,116,67,99.5,None,0,Pulmonology
+34,1,Primary complaint: breathlessness. The condition started suddenly.,103,102,97.5,Hypertension,1,Cardiology
+0,1,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,116,77,96.7,None,0,Neurology
+51,1,Primary complaint: severe fatigue.,116,79,97.9,None,0,Cardiology
+57,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,104,116,98.3,Cardiac Issue,1,Cardiology
+54,1,The person is experiencing chest discomfort and came to the hospital.,142,57,97.9,Hypertension,2,General Medicine
+48,0,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,145,116,97.7,Heart Disease,2,Cardiology
+29,1,Individual presenting with severe fatigue. There is significant discomfort.,109,66,98.6,None,1,Neurology
+53,0,Patient states they have been having headache. The condition started suddenly.,115,60,97.4,None,0,Neurology
+21,1,Individual presenting with chest discomfort. Pain intensity is increasing.,109,82,98.2,None,0,Pulmonology
+36,0,Patient states they have been having chest discomfort. Symptoms have been worsening.,113,83,98.7,None,1,Neurology
+31,1,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,107,72,98.4,None,0,Neurology
+56,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,115,91,98.0,Cardiac Issue,2,Pulmonology
+71,0,Individual presenting with severe fatigue. The issue began earlier today.,109,79,98.5,Cardiac Issue,0,Cardiology
+44,1,Patient arrived with symptoms of breathlessness. There is significant discomfort.,109,61,98.5,None,0,Cardiology
+5,1,Patient complains of breathlessness since this morning. There is significant discomfort.,117,82,97.3,None,0,Pulmonology
+16,1,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,117,64,100.0,None,0,Pulmonology
+71,0,Individual presenting with severe fatigue. The issue began earlier today.,116,103,98.6,Cardiac Issue,0,General Medicine
+46,1,The person is experiencing severe fatigue and came to the hospital. The patient looks distressed.,110,67,98.1,None,0,Cardiology
+26,0,The person is experiencing headache and came to the hospital.,114,65,96.6,None,0,Neurology
+51,0,The patient reports breathlessness. The condition started suddenly.,102,104,96.4,None,1,Cardiology
+47,1,The person is experiencing breathlessness and came to the hospital. Pain intensity is increasing.,106,70,98.5,None,1,Cardiology
+49,1,The patient reports breathlessness. Symptoms have been worsening.,110,84,100.7,None,0,Pulmonology
+51,0,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,116,61,97.2,None,0,Pulmonology
+26,1,Patient arrived with symptoms of severe fatigue. The issue began earlier today.,112,77,98.3,None,0,Neurology
+54,0,The patient reports severe fatigue. Pain intensity is increasing.,116,81,98.0,None,1,General Medicine
+43,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,109,103,97.3,Cardiac Issue,0,General Medicine
+35,0,Primary complaint: headache. There is significant discomfort.,109,62,98.3,None,1,Cardiology
+22,0,Patient reports suffering from chest discomfort for the past few hours. Pain intensity is increasing.,105,78,99.0,None,1,Cardiology
+32,1,The patient reports chest discomfort. There is significant discomfort.,115,67,97.2,None,0,Neurology
+0,0,The patient reports chest discomfort. Symptoms have been worsening.,117,73,98.4,None,0,Neurology
+51,1,The person is experiencing headache and came to the hospital. The issue began earlier today.,105,66,96.7,None,0,Cardiology
+52,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,151,84,99.6,None,1,Cardiology
+47,0,Individual presenting with severe fatigue. The issue began earlier today.,136,57,97.8,Cardiac Issue,0,Cardiology
+6,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,116,84,96.6,None,0,Neurology
+63,1,Individual presenting with chest discomfort. Symptoms have been worsening.,133,75,98.1,Hypertension,1,Cardiology
+22,1,The patient reports headache. The condition started suddenly.,106,65,101.1,None,0,Pulmonology
+0,0,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,106,70,98.7,None,0,Pulmonology
+55,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,141,63,96.4,Hypertension,1,Cardiology
+53,0,Patient states they have been having breathlessness. There is significant discomfort.,113,59,98.1,Hypertension,1,Pulmonology
+30,1,The person is experiencing breathlessness and came to the hospital. Symptoms have been worsening.,108,60,97.6,None,0,Neurology
+33,1,Patient complains of chest discomfort since this morning. The issue began earlier today.,115,58,98.3,Hypertension,0,Cardiology
+40,0,Patient reports suffering from chest discomfort for the past few hours. Symptoms have been worsening.,116,58,99.0,None,1,Neurology
+79,1,Patient states they have been having headache. Symptoms have been worsening.,115,73,97.6,None,0,Cardiology
+50,0,The patient reports chest discomfort. Pain intensity is increasing.,108,98,96.7,None,0,Pulmonology
+75,0,Patient complains of headache since this morning. The condition started suddenly.,151,76,98.6,Hypertension,1,Cardiology
+0,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,118,66,99.2,None,0,Neurology
+60,0,Patient complains of breathlessness since this morning. There is significant discomfort.,119,64,98.5,None,0,Cardiology
+2,0,The patient reports chest discomfort. Pain intensity is increasing.,110,84,99.4,None,0,Pulmonology
+71,1,Patient reports suffering from headache for the past few hours. The condition started suddenly.,119,100,96.9,Cardiac Issue,2,Cardiology
+35,1,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,100,75,97.2,None,0,Cardiology
+50,1,Primary complaint: chest discomfort.,141,103,98.2,Cardiac Issue,1,Cardiology
+54,1,Individual presenting with severe fatigue. The condition started suddenly.,117,60,97.7,None,0,Neurology
+5,0,Individual presenting with chest discomfort. Pain intensity is increasing.,111,77,97.7,None,0,Neurology
+55,1,The patient reports breathlessness. The condition started suddenly.,104,100,100.1,Cardiac Issue,2,Cardiology
+64,1,The person is experiencing headache and came to the hospital.,110,67,100.2,None,0,Neurology
+51,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,105,89,99.3,Cardiac Issue,2,Cardiology
+41,0,Primary complaint: breathlessness.,115,94,97.3,Cardiac Issue,2,Cardiology
+1,1,Patient complains of severe fatigue since this morning. The condition started suddenly.,118,60,96.5,None,0,Neurology
+10,0,Patient states they have been having breathlessness. The condition started suddenly.,100,68,97.8,None,0,Neurology
+25,0,Patient complains of headache since this morning.,111,71,98.9,None,0,Neurology
+79,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,108,71,96.9,None,0,Neurology
+52,0,Patient complains of headache since this morning. Symptoms have been worsening.,108,116,96.5,Heart Disease,2,General Medicine
+43,0,Individual presenting with chest discomfort. Pain intensity is increasing.,106,105,97.8,None,0,Cardiology
+0,1,Individual presenting with severe fatigue. Pain intensity is increasing.,117,58,99.8,None,0,Neurology
+56,1,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,140,70,97.9,Hypertension,1,Pulmonology
+44,0,Patient complains of headache since this morning. Pain intensity is increasing.,104,110,98.3,None,0,Cardiology
+30,0,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,113,67,99.1,None,0,Pulmonology
+47,0,The patient reports severe fatigue. Pain intensity is increasing.,101,67,99.9,Heart Disease,1,General Medicine
+65,0,The patient reports breathlessness. Symptoms have been worsening.,107,79,99.1,None,0,Pulmonology
+46,0,Patient states they have been having chest discomfort.,128,104,100.3,Heart Disease,1,General Medicine
+55,1,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,120,80,99.7,None,0,Cardiology
+55,0,The person is experiencing breathlessness and came to the hospital.,112,85,97.1,None,0,Neurology
+44,1,The person is experiencing severe fatigue and came to the hospital.,104,61,98.8,Hypertension,1,General Medicine
+53,0,Patient states they have been having chest discomfort. Symptoms have been worsening.,112,80,98.3,None,1,General Medicine
+74,0,Primary complaint: severe fatigue. The issue began earlier today.,141,111,98.3,Heart Disease,1,Cardiology
+60,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,114,71,100.5,None,0,Cardiology
+41,1,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,148,97,98.7,Cardiac Issue,1,General Medicine
+66,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,112,64,98.2,None,0,Pulmonology
+8,0,The patient reports headache.,116,75,97.2,None,0,Neurology
+54,1,Patient states they have been having severe fatigue. Symptoms have been worsening.,114,64,96.7,None,0,Cardiology
+34,0,Primary complaint: chest discomfort. There is significant discomfort.,112,79,98.2,None,0,Neurology
+18,1,Patient states they have been having severe fatigue.,118,62,97.8,None,0,Neurology
+55,0,Individual presenting with chest discomfort. The patient looks distressed.,106,69,98.4,Hypertension,2,Neurology
+47,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,140,65,96.0,Cardiac Issue,1,Cardiology
+0,0,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,118,69,96.7,None,0,Pulmonology
+0,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,107,71,98.1,None,0,Cardiology
+32,1,Patient reports suffering from breathlessness for the past few hours. The patient looks distressed.,107,72,98.2,Hypertension,0,Cardiology
+77,0,Patient states they have been having breathlessness. Symptoms have been worsening.,114,76,98.5,None,0,Pulmonology
+0,1,Patient reports suffering from breathlessness for the past few hours. The condition started suddenly.,118,60,100.7,None,0,Neurology
+58,1,Patient reports suffering from breathlessness for the past few hours. The issue began earlier today.,117,98,96.4,None,0,Pulmonology
+66,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,141,116,97.3,Cardiac Issue,1,Cardiology
+12,0,The person is experiencing headache and came to the hospital.,113,74,99.9,None,0,Neurology
+51,1,The person is experiencing chest discomfort and came to the hospital. Symptoms have been worsening.,117,61,98.3,None,0,Cardiology
+15,1,Patient states they have been having severe fatigue. Symptoms have been worsening.,113,67,96.5,None,0,Cardiology
+58,0,Patient reports suffering from headache for the past few hours. The issue began earlier today.,105,72,98.8,None,0,General Medicine
+23,1,The patient reports breathlessness. There is significant discomfort.,142,59,98.9,None,0,Cardiology
+55,1,Patient states they have been having severe fatigue.,111,74,97.9,Hypertension,1,Cardiology
+74,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,105,61,99.0,None,0,Neurology
+45,1,Patient states they have been having breathlessness. There is significant discomfort.,133,72,96.8,Hypertension,1,Pulmonology
+0,0,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,110,59,97.3,None,0,Neurology
+60,0,Patient complains of headache since this morning. The condition started suddenly.,109,88,100.1,Cardiac Issue,1,Pulmonology
+55,1,The patient reports headache. The condition started suddenly.,108,75,98.6,None,0,Pulmonology
+6,1,Primary complaint: severe fatigue. There is significant discomfort.,111,62,100.1,None,0,Neurology
+44,1,The person is experiencing breathlessness and came to the hospital. Pain intensity is increasing.,114,66,102.0,Hypertension,1,Cardiology
+19,1,Individual presenting with breathlessness.,108,73,99.2,None,0,Neurology
+3,1,Patient states they have been having headache. The issue began earlier today.,117,75,97.6,None,0,Cardiology
+74,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,103,101,96.6,Hypertension,1,General Medicine
+37,0,The patient reports headache.,109,64,99.8,None,0,Neurology
+61,0,The patient reports chest discomfort.,116,107,99.5,Cardiac Issue,0,Cardiology
+7,1,Primary complaint: headache. There is significant discomfort.,110,58,96.7,None,0,Pulmonology
+74,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,100,83,97.0,None,0,General Medicine
+1,0,Primary complaint: headache. Pain intensity is increasing.,104,81,98.6,None,0,Neurology
+16,1,Individual presenting with breathlessness. The patient looks distressed.,115,57,98.3,None,0,Cardiology
+39,1,Patient states they have been having breathlessness. There is significant discomfort.,133,82,97.2,Hypertension,1,Pulmonology
+52,1,Patient complains of chest discomfort since this morning. The issue began earlier today.,115,72,100.2,None,0,Pulmonology
+47,0,The patient reports severe fatigue. There is significant discomfort.,113,81,97.2,None,1,Cardiology
+56,0,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,113,70,97.1,None,0,Pulmonology
+26,0,Patient complains of headache since this morning. Pain intensity is increasing.,102,77,99.4,None,1,Cardiology
+62,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,148,83,100.2,Hypertension,1,Pulmonology
+75,0,Patient arrived with symptoms of headache. Pain intensity is increasing.,111,79,100.1,None,2,Cardiology
+51,0,Patient complains of severe fatigue since this morning. Pain intensity is increasing.,112,70,99.2,None,0,Cardiology
+34,1,The patient reports headache.,112,68,100.3,None,1,Neurology
+45,1,The person is experiencing headache and came to the hospital.,107,73,96.2,None,0,Cardiology
+42,1,The patient reports chest discomfort.,116,77,98.3,None,1,Neurology
+40,1,Patient states they have been having headache. Symptoms have been worsening.,103,63,96.5,None,0,Cardiology
+9,1,Patient states they have been having chest discomfort. The patient looks distressed.,111,66,96.8,None,0,Neurology
+36,0,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,130,77,99.5,Hypertension,0,Neurology
+29,1,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,118,79,96.6,None,0,Pulmonology
+30,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,109,79,97.7,None,0,Cardiology
+49,0,Patient reports suffering from breathlessness for the past few hours.,106,67,98.7,None,0,Neurology
+41,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,111,76,100.1,Cardiac Issue,1,Cardiology
+0,0,Patient reports suffering from headache for the past few hours. Symptoms have been worsening.,102,84,98.0,None,0,Neurology
+49,0,Patient arrived with symptoms of breathlessness. The issue began earlier today.,108,79,99.6,None,0,General Medicine
+79,1,Primary complaint: chest discomfort. The condition started suddenly.,113,106,99.3,Cardiac Issue,1,General Medicine
+48,1,Patient complains of headache since this morning. The issue began earlier today.,115,95,98.0,Cardiac Issue,2,Pulmonology
+46,0,Patient arrived with symptoms of breathlessness. There is significant discomfort.,107,62,98.7,None,0,Cardiology
+41,0,Patient complains of chest discomfort since this morning. Pain intensity is increasing.,108,67,98.7,None,0,Pulmonology
+5,1,Patient arrived with symptoms of breathlessness. Pain intensity is increasing.,116,81,101.2,None,0,Neurology
+30,0,Individual presenting with severe fatigue. Pain intensity is increasing.,112,73,98.7,None,0,Pulmonology
+32,1,The patient reports chest discomfort. The issue began earlier today.,118,76,98.2,None,0,Pulmonology
+36,1,Patient states they have been having headache. Symptoms have been worsening.,118,60,97.4,None,0,Cardiology
+41,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,115,67,98.7,None,0,Cardiology
+36,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,117,67,97.3,None,0,Cardiology
+57,0,Primary complaint: chest discomfort. The condition started suddenly.,107,114,97.7,Cardiac Issue,1,Cardiology
+11,1,The patient reports chest discomfort. The patient looks distressed.,108,68,96.6,None,0,Neurology
+78,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,109,76,100.0,None,1,Cardiology
+55,1,Patient complains of headache since this morning. Symptoms have been worsening.,136,81,99.5,None,0,Cardiology
+46,0,Primary complaint: chest discomfort. The condition started suddenly.,109,101,99.9,Cardiac Issue,1,Cardiology
+69,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,153,65,98.0,Hypertension,1,Pulmonology
+29,0,Patient arrived with symptoms of severe fatigue. Pain intensity is increasing.,109,68,98.2,None,0,Neurology
+49,0,Patient complains of severe fatigue since this morning.,117,66,100.0,None,0,Pulmonology
+7,1,Patient states they have been having breathlessness. There is significant discomfort.,115,57,98.0,Hypertension,1,Neurology
+38,0,Patient states they have been having breathlessness. There is significant discomfort.,133,61,97.6,Hypertension,1,Pulmonology
+67,1,The person is experiencing headache and came to the hospital.,112,62,97.0,None,0,Cardiology
+44,0,Primary complaint: breathlessness. The issue began earlier today.,105,84,98.1,None,0,Pulmonology
+43,0,Primary complaint: breathlessness. Symptoms have been worsening.,115,57,97.3,None,0,Cardiology
+50,0,The patient reports breathlessness. Pain intensity is increasing.,116,69,97.1,None,0,Cardiology
+0,1,The patient reports chest discomfort. The issue began earlier today.,104,71,98.6,None,0,Pulmonology
+2,0,Primary complaint: severe fatigue. Symptoms have been worsening.,116,77,98.9,None,0,Neurology
+20,1,Patient states they have been having severe fatigue. The condition started suddenly.,107,83,96.7,None,0,Neurology
+47,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,117,69,98.0,None,0,Pulmonology
+0,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,118,83,97.4,None,1,Neurology
+73,1,Patient arrived with symptoms of chest discomfort.,103,101,97.4,Cardiac Issue,0,Cardiology
+72,1,Patient reports suffering from chest discomfort for the past few hours. Symptoms have been worsening.,104,75,97.5,Hypertension,1,General Medicine
+56,1,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,154,71,97.4,Hypertension,1,General Medicine
+43,0,The person is experiencing severe fatigue and came to the hospital. Symptoms have been worsening.,114,71,101.1,None,0,Cardiology
+43,0,Patient states they have been having chest discomfort. Pain intensity is increasing.,104,81,99.6,None,0,Neurology
+58,1,Patient complains of headache since this morning. Symptoms have been worsening.,109,73,97.9,None,0,General Medicine
+37,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,101,68,99.1,None,0,Neurology
+8,0,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,116,59,98.4,None,0,Neurology
+46,1,The patient reports chest discomfort. Symptoms have been worsening.,120,73,97.5,None,0,Pulmonology
+44,1,Primary complaint: headache. The issue began earlier today.,111,74,98.0,None,0,Neurology
+57,1,The person is experiencing chest discomfort and came to the hospital. The issue began earlier today.,115,60,99.5,None,2,Pulmonology
+48,0,Primary complaint: headache. There is significant discomfort.,105,76,99.6,None,1,Cardiology
+73,1,Patient complains of breathlessness since this morning. Pain intensity is increasing.,108,116,98.5,Heart Disease,1,General Medicine
+19,1,Patient arrived with symptoms of severe fatigue. The condition started suddenly.,109,71,101.0,None,0,Cardiology
+81,0,Primary complaint: chest discomfort. The patient looks distressed.,106,101,99.1,Cardiac Issue,2,Cardiology
+51,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,114,71,96.8,None,0,Cardiology
+44,1,The person is experiencing headache and came to the hospital.,105,78,98.1,None,0,Cardiology
+39,1,Patient arrived with symptoms of chest discomfort. Symptoms have been worsening.,105,70,96.8,None,0,Pulmonology
+29,0,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,110,70,99.7,None,0,Cardiology
+63,1,Patient arrived with symptoms of severe fatigue. Symptoms have been worsening.,143,112,98.3,Cardiac Issue,2,Cardiology
+40,0,The person is experiencing headache and came to the hospital. The patient looks distressed.,111,78,98.9,None,0,Cardiology
+61,1,Patient states they have been having headache. Symptoms have been worsening.,116,62,96.8,None,0,Cardiology
+42,1,Patient complains of chest discomfort since this morning. The condition started suddenly.,140,71,97.3,Hypertension,1,General Medicine
+27,1,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,111,69,97.0,None,0,Neurology
+48,1,Patient complains of chest discomfort since this morning. The patient looks distressed.,121,62,100.8,None,0,Neurology
+52,0,The person is experiencing breathlessness and came to the hospital. The issue began earlier today.,106,75,97.7,None,0,Pulmonology
+13,0,Individual presenting with chest discomfort. The condition started suddenly.,103,79,99.1,None,1,Cardiology
+7,1,Patient reports suffering from breathlessness for the past few hours. Symptoms have been worsening.,107,66,97.7,None,0,Neurology
+27,1,Patient states they have been having breathlessness.,107,68,99.2,None,1,Pulmonology
+47,0,The patient reports breathlessness. Symptoms have been worsening.,117,79,97.6,None,0,Cardiology
+29,0,Patient reports suffering from breathlessness for the past few hours. Pain intensity is increasing.,111,76,98.7,None,0,General Medicine
+57,1,Primary complaint: chest discomfort. The patient looks distressed.,112,61,100.7,Cardiac Issue,2,General Medicine
+21,1,Patient reports suffering from headache for the past few hours. The issue began earlier today.,115,65,97.9,None,0,Neurology
+60,0,Patient arrived with symptoms of headache. The condition started suddenly.,139,69,97.0,Hypertension,2,Cardiology
+50,0,Patient states they have been having chest discomfort. The issue began earlier today.,106,71,96.3,Hypertension,1,Cardiology
+0,1,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,118,59,98.7,None,0,Neurology
+37,1,The patient reports chest discomfort. The condition started suddenly.,116,76,97.9,Hypertension,0,Neurology
+3,0,Primary complaint: headache. Pain intensity is increasing.,116,76,100.1,None,0,Neurology
+74,1,The patient reports breathlessness. The issue began earlier today.,117,61,98.8,None,0,Cardiology
+44,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,115,58,99.6,None,0,Neurology
+33,0,Patient states they have been having severe fatigue. The issue began earlier today.,110,81,97.3,None,0,Neurology
+71,1,Patient complains of headache since this morning. The condition started suddenly.,106,65,99.7,None,1,Cardiology
+58,0,Primary complaint: chest discomfort. The condition started suddenly.,118,92,98.1,Cardiac Issue,0,Cardiology
+61,0,The person is experiencing chest discomfort and came to the hospital.,106,93,98.4,Cardiac Issue,2,Cardiology
+43,1,Patient arrived with symptoms of headache. The condition started suddenly.,133,65,99.5,None,0,Neurology
+39,1,Patient complains of severe fatigue since this morning.,112,62,97.2,None,1,Neurology
+40,0,Patient arrived with symptoms of headache.,111,70,97.8,None,0,Neurology
+49,0,Patient complains of breathlessness since this morning. Symptoms have been worsening.,104,71,98.5,None,0,Cardiology
+52,0,Individual presenting with breathlessness. The condition started suddenly.,116,81,98.0,None,0,Neurology
+49,1,Patient complains of breathlessness since this morning.,106,96,97.0,Heart Disease,1,Cardiology
+5,0,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,106,72,98.0,None,0,Neurology
+29,0,Primary complaint: chest discomfort. Pain intensity is increasing.,113,71,98.7,None,0,Neurology
+43,0,The patient reports chest discomfort. Symptoms have been worsening.,116,71,98.5,None,0,Neurology
+61,0,Patient complains of breathlessness since this morning. Pain intensity is increasing.,105,99,98.1,Heart Disease,2,Cardiology
+52,1,Individual presenting with chest discomfort. Symptoms have been worsening.,141,61,100.1,Hypertension,0,Pulmonology
+38,0,Individual presenting with breathlessness. The issue began earlier today.,112,70,99.7,None,0,Cardiology
+57,0,Patient reports suffering from headache for the past few hours. The issue began earlier today.,112,62,97.6,None,0,Neurology
+28,1,Patient states they have been having chest discomfort. Pain intensity is increasing.,108,57,101.4,None,0,Neurology
+6,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,120,75,99.6,None,0,Cardiology
+46,1,Patient complains of headache since this morning.,117,59,97.0,None,1,Neurology
+30,0,Patient reports suffering from chest discomfort for the past few hours.,116,68,98.5,None,0,General Medicine
+74,0,Patient reports suffering from chest discomfort for the past few hours.,116,81,100.5,None,0,General Medicine
+12,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,119,66,98.2,None,0,Neurology
+47,1,Primary complaint: headache.,116,69,97.6,None,0,Neurology
+72,1,Individual presenting with headache. The patient looks distressed.,139,68,98.1,Hypertension,1,General Medicine
+79,0,The person is experiencing breathlessness and came to the hospital.,101,78,101.5,None,0,Cardiology
+33,0,Patient states they have been having breathlessness. Pain intensity is increasing.,113,68,100.0,None,0,Cardiology
+52,1,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,144,81,98.3,Hypertension,2,Pulmonology
+69,1,Individual presenting with breathlessness. The patient looks distressed.,114,63,98.7,Cardiac Issue,1,Cardiology
+37,1,The patient reports headache. The condition started suddenly.,107,61,99.1,None,0,Pulmonology
+56,1,The patient reports headache. The condition started suddenly.,105,85,100.1,None,0,Pulmonology
+18,1,Individual presenting with headache. The patient looks distressed.,110,67,98.8,None,0,Neurology
+45,1,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,117,75,97.3,None,1,Cardiology
+40,0,Patient states they have been having breathlessness. Pain intensity is increasing.,100,100,97.7,Cardiac Issue,0,Cardiology
+76,0,Primary complaint: chest discomfort. The condition started suddenly.,103,109,97.9,Cardiac Issue,1,General Medicine
+67,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,104,77,98.3,None,1,Cardiology
+7,0,Primary complaint: severe fatigue.,109,72,98.7,None,0,Cardiology
+40,1,Patient complains of headache since this morning. Symptoms have been worsening.,117,74,97.9,None,0,Neurology
+75,1,Patient states they have been having chest discomfort. The condition started suddenly.,107,77,96.6,None,0,Neurology
+72,0,Primary complaint: chest discomfort. The issue began earlier today.,112,81,99.5,Heart Disease,0,General Medicine
+29,0,Patient complains of severe fatigue since this morning.,112,81,99.1,None,0,Neurology
+54,0,Primary complaint: breathlessness. Pain intensity is increasing.,112,58,100.7,Cardiac Issue,0,General Medicine
+0,0,Patient arrived with symptoms of chest discomfort. The condition started suddenly.,115,74,96.7,None,0,Neurology
+41,1,Patient states they have been having severe fatigue.,117,59,97.9,None,0,Cardiology
+43,1,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,102,81,100.0,None,1,Cardiology
+9,0,The patient reports headache. The condition started suddenly.,117,67,97.8,None,0,Pulmonology
+25,1,The patient reports headache. The issue began earlier today.,118,80,98.7,None,0,Neurology
+40,0,Patient states they have been having severe fatigue. The issue began earlier today.,108,76,96.9,None,0,Cardiology
+60,1,Patient complains of headache since this morning. Symptoms have been worsening.,110,95,97.9,None,1,General Medicine
+35,0,Patient reports suffering from breathlessness for the past few hours.,103,79,99.1,Hypertension,2,Cardiology
+57,0,Patient states they have been having breathlessness.,110,80,100.7,None,0,Cardiology
+51,1,Patient complains of breathlessness since this morning. There is significant discomfort.,114,83,97.9,None,0,Cardiology
+29,1,Individual presenting with breathlessness. The issue began earlier today.,100,79,99.0,None,0,Neurology
+33,1,Patient states they have been having severe fatigue. The issue began earlier today.,111,63,98.2,None,0,Neurology
+0,1,Primary complaint: headache.,116,72,100.1,None,0,Neurology
+77,0,Primary complaint: chest discomfort. The issue began earlier today.,143,109,98.6,Heart Disease,2,Cardiology
+48,1,The patient reports breathlessness. Symptoms have been worsening.,111,71,98.2,None,0,Pulmonology
+16,1,Patient states they have been having headache. The condition started suddenly.,119,74,97.0,None,0,Cardiology
+46,0,Patient complains of chest discomfort since this morning. The issue began earlier today.,107,59,98.5,None,0,Pulmonology
+46,1,Patient reports suffering from breathlessness for the past few hours.,113,74,98.2,Hypertension,0,Neurology
+55,0,Patient arrived with symptoms of breathlessness. Symptoms have been worsening.,109,72,96.5,None,2,Pulmonology
+39,0,Patient complains of breathlessness since this morning. Pain intensity is increasing.,115,68,99.2,Heart Disease,1,Pulmonology
+70,0,Primary complaint: chest discomfort. The condition started suddenly.,102,98,98.9,Cardiac Issue,0,Cardiology
+77,0,Primary complaint: breathlessness. The condition started suddenly.,146,92,99.2,Cardiac Issue,1,Cardiology
+73,1,Patient states they have been having chest discomfort.,135,84,96.9,Heart Disease,2,Cardiology
+74,0,Patient complains of severe fatigue since this morning. There is significant discomfort.,104,76,98.3,None,0,Neurology
+45,1,Primary complaint: breathlessness. The condition started suddenly.,143,61,97.9,Hypertension,0,Pulmonology
+52,0,Patient reports suffering from breathlessness for the past few hours. Pain intensity is increasing.,111,78,98.2,None,0,Pulmonology
+74,1,Primary complaint: breathlessness. The condition started suddenly.,142,57,98.8,Hypertension,1,General Medicine
+46,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,117,70,98.1,Hypertension,0,Pulmonology
+44,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,109,66,98.8,None,0,Pulmonology
+74,0,Individual presenting with chest discomfort. The patient looks distressed.,150,81,98.7,Cardiac Issue,2,Cardiology
+34,0,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,117,67,98.5,None,0,Neurology
+15,1,Patient states they have been having headache. Symptoms have been worsening.,116,59,99.4,None,0,Neurology
+58,0,The patient reports breathlessness.,103,61,97.6,Cardiac Issue,0,Cardiology
+47,1,Patient reports suffering from headache for the past few hours. The patient looks distressed.,116,68,96.1,None,0,Neurology
+42,1,Patient states they have been having breathlessness. There is significant discomfort.,141,64,96.9,Hypertension,1,Cardiology
+4,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,116,80,96.4,None,0,Neurology
+56,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,102,103,99.7,Cardiac Issue,2,Cardiology
+77,0,Patient complains of breathlessness since this morning. The condition started suddenly.,128,91,100.2,Cardiac Issue,2,Cardiology
+14,0,Patient complains of chest discomfort since this morning. The issue began earlier today.,113,57,99.2,None,0,Neurology
+0,1,Patient reports suffering from breathlessness for the past few hours. There is significant discomfort.,117,60,97.6,None,0,Neurology
+40,0,The patient reports chest discomfort. The patient looks distressed.,113,72,98.9,Hypertension,0,Neurology
+45,0,Patient reports suffering from chest discomfort for the past few hours. The condition started suddenly.,112,71,98.1,None,0,Neurology
+66,1,Patient complains of breathlessness since this morning. There is significant discomfort.,104,65,98.9,None,0,Cardiology
+66,0,The person is experiencing chest discomfort and came to the hospital. Pain intensity is increasing.,117,73,97.6,None,1,Cardiology
+8,0,Patient states they have been having severe fatigue. The issue began earlier today.,106,72,99.6,None,0,Neurology
+3,1,Individual presenting with chest discomfort. The condition started suddenly.,109,75,99.2,None,0,Neurology
+69,1,Primary complaint: severe fatigue. There is significant discomfort.,116,67,97.8,None,0,Pulmonology
+33,0,The person is experiencing severe fatigue and came to the hospital. Pain intensity is increasing.,110,73,98.1,Hypertension,0,Pulmonology
+77,0,Patient complains of breathlessness since this morning. The condition started suddenly.,146,108,97.5,Cardiac Issue,2,Cardiology
+0,0,The person is experiencing breathlessness and came to the hospital. The condition started suddenly.,103,79,101.1,None,0,Cardiology
+79,1,Patient complains of severe fatigue since this morning. Symptoms have been worsening.,112,71,99.1,None,0,Cardiology
+55,0,The patient reports chest discomfort. The issue began earlier today.,107,76,98.7,None,0,Neurology
+46,1,Patient states they have been having breathlessness. The issue began earlier today.,118,67,96.9,None,0,Neurology
+33,0,The patient reports headache. The patient looks distressed.,107,85,97.7,None,0,Neurology
+52,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,115,70,98.6,Hypertension,1,Cardiology
+52,0,Patient arrived with symptoms of chest discomfort. Pain intensity is increasing.,108,75,101.0,Heart Disease,1,General Medicine
+57,0,The person is experiencing severe fatigue and came to the hospital. Symptoms have been worsening.,113,80,98.2,None,0,Cardiology
+68,1,The patient reports chest discomfort. There is significant discomfort.,115,70,100.2,None,0,Cardiology
+52,0,Individual presenting with headache. The patient looks distressed.,136,76,97.4,None,1,Pulmonology
+73,1,Patient complains of headache since this morning. The issue began earlier today.,114,105,98.6,Cardiac Issue,1,Cardiology
+37,1,Patient complains of severe fatigue since this morning.,127,57,98.9,None,0,Pulmonology
+62,1,The person is experiencing headache and came to the hospital. There is significant discomfort.,102,103,100.4,Cardiac Issue,0,Neurology
+57,1,The patient reports breathlessness. Pain intensity is increasing.,115,66,97.3,None,0,Cardiology
+58,0,Primary complaint: chest discomfort. Pain intensity is increasing.,114,80,100.1,None,0,Neurology
+3,0,Individual presenting with chest discomfort. Pain intensity is increasing.,104,77,100.6,None,0,Neurology
+47,1,Primary complaint: chest discomfort.,109,68,98.3,Hypertension,1,Pulmonology
+23,1,Patient reports suffering from headache for the past few hours.,115,64,96.8,None,0,Neurology
+62,1,Primary complaint: chest discomfort. The patient looks distressed.,130,108,96.7,Cardiac Issue,2,Cardiology
+14,1,Patient complains of chest discomfort since this morning. Symptoms have been worsening.,111,66,98.4,None,0,Neurology
+41,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,136,82,97.3,Hypertension,0,Cardiology
+28,0,Patient arrived with symptoms of chest discomfort.,105,108,99.3,None,0,Neurology
+54,0,Individual presenting with chest discomfort. Pain intensity is increasing.,104,67,99.0,None,0,Cardiology
+6,1,Patient states they have been having severe fatigue. The condition started suddenly.,102,84,97.9,None,0,Neurology
+21,1,Primary complaint: headache. There is significant discomfort.,117,76,98.6,None,0,Neurology
+0,1,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,115,64,97.4,None,0,Neurology
+11,1,Patient complains of breathlessness since this morning. The patient looks distressed.,107,73,98.3,None,0,Cardiology
+77,0,Patient complains of headache since this morning. Symptoms have been worsening.,113,79,99.5,None,1,General Medicine
+0,0,Patient arrived with symptoms of headache.,116,63,98.6,None,0,Neurology
+0,0,The person is experiencing breathlessness and came to the hospital.,109,71,96.7,None,0,Neurology
+41,1,Primary complaint: headache.,115,63,98.4,None,0,Neurology
+35,1,Patient arrived with symptoms of severe fatigue. There is significant discomfort.,136,67,100.2,Hypertension,1,Cardiology
+9,1,Primary complaint: chest discomfort. The issue began earlier today.,117,78,97.4,None,0,Cardiology
+24,0,The patient reports chest discomfort. Symptoms have been worsening.,118,77,98.7,None,0,Cardiology
+0,1,Primary complaint: severe fatigue. The patient looks distressed.,106,73,99.5,None,0,Neurology
+45,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,113,70,98.3,Hypertension,0,Pulmonology
+44,1,Patient complains of chest discomfort since this morning. There is significant discomfort.,111,65,97.2,None,0,Pulmonology
+25,1,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,115,57,99.4,None,0,Cardiology
+77,1,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,108,86,98.4,Cardiac Issue,1,General Medicine
+39,1,Patient complains of chest discomfort since this morning. The issue began earlier today.,102,65,98.4,None,0,Neurology
+15,1,The person is experiencing headache and came to the hospital. Symptoms have been worsening.,112,71,98.6,None,0,Pulmonology
+45,1,Patient complains of breathlessness since this morning. Symptoms have been worsening.,108,81,96.6,None,0,Cardiology
+46,0,Individual presenting with breathlessness. The patient looks distressed.,104,75,97.8,None,0,Cardiology
+59,0,Primary complaint: chest discomfort. Pain intensity is increasing.,118,65,100.3,None,0,Cardiology
+63,1,The person is experiencing headache and came to the hospital. Pain intensity is increasing.,115,67,97.3,None,1,Cardiology
+37,0,The person is experiencing breathlessness and came to the hospital. There is significant discomfort.,119,58,97.9,None,0,Pulmonology
+12,1,The person is experiencing chest discomfort and came to the hospital. The condition started suddenly.,107,81,98.8,None,0,Cardiology
+79,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,133,84,97.5,Cardiac Issue,2,Cardiology
+48,1,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,116,57,97.5,None,0,Pulmonology
+44,0,Patient states they have been having severe fatigue. The issue began earlier today.,111,83,97.7,None,2,Cardiology
+47,1,Patient reports suffering from headache for the past few hours. Pain intensity is increasing.,118,62,98.9,None,0,Neurology
+6,0,Patient states they have been having breathlessness. The condition started suddenly.,106,79,98.3,None,0,Neurology
+37,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,112,63,97.6,None,0,Neurology
+55,1,Patient arrived with symptoms of breathlessness. The condition started suddenly.,139,79,99.1,Hypertension,2,Cardiology
+78,1,Individual presenting with chest discomfort. Symptoms have been worsening.,142,85,97.4,Hypertension,1,Pulmonology
+44,0,Patient arrived with symptoms of headache. There is significant discomfort.,114,106,97.5,Heart Disease,0,Cardiology
+37,1,Patient arrived with symptoms of chest discomfort. There is significant discomfort.,124,72,97.8,Hypertension,1,Neurology
+21,0,Patient reports suffering from chest discomfort for the past few hours. There is significant discomfort.,117,77,98.6,None,0,Pulmonology
+4,0,Primary complaint: headache. The patient looks distressed.,109,72,97.7,None,1,Cardiology
+55,1,Primary complaint: severe fatigue. The patient looks distressed.,117,58,98.4,None,0,Neurology
+80,0,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,140,100,96.8,Hypertension,1,Cardiology
+82,1,The person is experiencing breathlessness and came to the hospital. The condition started suddenly.,111,69,98.1,None,0,Cardiology
+77,0,Patient arrived with symptoms of headache. Symptoms have been worsening.,118,82,97.1,None,1,Cardiology
+44,0,The person is experiencing severe fatigue and came to the hospital. Symptoms have been worsening.,115,82,99.4,None,0,Cardiology
+37,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,106,64,99.5,Cardiac Issue,0,Neurology
+43,1,Primary complaint: severe fatigue.,118,73,97.6,None,0,Cardiology
+45,0,The person is experiencing chest discomfort and came to the hospital. There is significant discomfort.,107,59,100.3,None,0,Neurology
+57,0,Patient arrived with symptoms of breathlessness. The condition started suddenly.,109,73,99.9,None,2,Pulmonology
+57,1,The person is experiencing chest discomfort and came to the hospital. The patient looks distressed.,108,64,98.4,None,0,Pulmonology
+48,0,The patient reports breathlessness. The condition started suddenly.,103,87,98.6,Cardiac Issue,0,Cardiology
+51,1,Patient reports suffering from chest discomfort for the past few hours. The issue began earlier today.,112,80,98.3,None,0,Neurology
+37,0,Patient reports suffering from severe fatigue for the past few hours. Pain intensity is increasing.,112,100,97.9,None,1,General Medicine
+69,0,The person is experiencing headache and came to the hospital.,106,71,98.1,None,0,Neurology
+49,0,Patient complains of headache since this morning. Pain intensity is increasing.,115,78,99.6,None,0,General Medicine
+16,0,Patient reports suffering from severe fatigue for the past few hours. The issue began earlier today.,114,70,98.8,Hypertension,0,Neurology
+62,0,Patient arrived with symptoms of chest discomfort. The patient looks distressed.,106,96,97.5,Cardiac Issue,2,Cardiology
+55,1,The patient reports headache. The condition started suddenly.,110,63,96.7,None,0,Pulmonology
+42,0,Patient arrived with symptoms of chest discomfort. The issue began earlier today.,120,98,99.9,None,0,Cardiology
+70,1,Primary complaint: breathlessness. The condition started suddenly.,107,68,99.5,Hypertension,1,Cardiology
+21,1,Patient complains of severe fatigue since this morning. Pain intensity is increasing.,116,59,98.3,None,0,Neurology
+47,1,Primary complaint: headache. The condition started suddenly.,104,73,98.0,None,0,General Medicine
+53,0,Primary complaint: severe fatigue. The issue began earlier today.,135,94,98.4,Heart Disease,1,Pulmonology
+5,1,Patient reports suffering from severe fatigue for the past few hours. Symptoms have been worsening.,114,74,100.2,None,1,Pulmonology
