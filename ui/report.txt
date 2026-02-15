@@ -1,0 +1,3 @@
+i am having asthma  ;
+age : 32 
+i am a male 
