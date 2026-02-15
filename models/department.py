@@ -3,7 +3,7 @@ import xgboost as xgb
 import pickle
 
 
-def train_and_predict_xgb(X_train, y_train, use_gpu=True):
+def train_and_predict_xgb(X_train, y_train, use_gpu=False):
 
 
     model = xgb.XGBClassifier(

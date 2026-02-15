@@ -2,3 +2,5 @@ healthcare-dataset-stroke-data.csv
 real_triage_seed.csv
 .vscode
 .env
+__pycache__
+back_end/node_modules
