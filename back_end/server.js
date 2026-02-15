@@ -16,15 +16,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Create model
 const User = mongoose.model('User', userSchema);
 
-// -------------------- GET: Fetch user by userId --------------------
-app.get('/user-details/:userId', async (req, res) => {
+//////////////////////////////////////////////////////////////
+// GET USER
+//////////////////////////////////////////////////////////////
+app.get('/user-details/:name', async (req, res) => {
   try {
-    const { userId } = req.params;
-
-    const user = await User.findOne({ userId: userId });
+    const user = await User.findOne({ name: req.params.name });
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
@@ -33,31 +32,31 @@ app.get('/user-details/:userId', async (req, res) => {
     res.json(user);
 
   } catch (error) {
-    res.status(500).json({ message: "Error fetching user", error });
+    res.status(500).json({ message: "Error fetching user", error: error.message });
   }
 });
 
-// -------------------- POST: Create new user --------------------
+//////////////////////////////////////////////////////////////
+// CREATE USER
+//////////////////////////////////////////////////////////////
 app.post('/create-user', async (req, res) => {
   try {
-    const { name, age, gender, medical, symptoms, risk } = req.body;
+    const { name, age, gender, medical } = req.body;
 
-    // Validate required fields
     if (!name) {
       return res.status(400).json({ message: "Name is required" });
     }
 
-    // Create new user
     const newUser = new User({
       name,
       age,
       gender,
       medical: medical || [],
-      symptoms: symptoms || [],
-      risk
+      symptoms: [],
+      risk: "none",
+      department: null
     });
 
-    // Save to database
     const savedUser = await newUser.save();
 
     res.status(201).json({
@@ -70,38 +69,87 @@ app.post('/create-user', async (req, res) => {
   }
 });
 
-// -------------------- POST: Analyze symptoms using ML model --------------------
+//////////////////////////////////////////////////////////////
+// ANALYZE SYMPTOMS (CALL FASTAPI ML)
+//////////////////////////////////////////////////////////////
 app.post('/analyze-symptoms', async (req, res) => {
   try {
-    const { user_data, symptoms } = req.body;
+    const { userName, symptoms, medicalData } = req.body;
 
-    // Validate required fields
-    if (!user_data || !symptoms || symptoms.length === 0) {
+    if (!userName || !symptoms || !medicalData) {
       return res.status(400).json({
-        message: "user_data and symptoms are required"
+        message: "userName, symptoms, and medicalData are required"
       });
     }
 
-    // Call FastAPI prediction endpoint
-    const response = await axios.post('http://localhost:8000/predict', {
-      user_data,
-      symptoms
-    }, {
-      timeout: 30000  // 30 second timeout
+    const user = await User.findOne({ name: userName });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    ////////////////////////////////////////////////////////
+    // CALL FASTAPI /predict (Correct Payload Format)
+    ////////////////////////////////////////////////////////
+    const mlResponse = await axios.post(
+      'http://localhost:8000/predict',
+      {
+        user_data: {
+          Age: medicalData.age || 30,
+          Gender: medicalData.gender || "Male",
+          Blood_Pressure: medicalData.bp_systolic || 120,
+          Heart_Rate: medicalData.heart_beat || 72,
+          Temperature: medicalData.temperature || 98.6,
+          Pre_Existing_Conditions: "None"
+        },
+        symptoms: [symptoms]
+      },
+      { timeout: 30000 }
+    );
+
+    const mlData = mlResponse.data;
+
+    ////////////////////////////////////////////////////////
+    // SAVE RESULTS
+    ////////////////////////////////////////////////////////
+    user.risk = mlData.risk;
+    user.department = mlData.department;
+
+    user.symptoms.push({
+      description: symptoms,
+      assessedAt: new Date(),
+      riskLevel: mlData.risk,
+      department: mlData.department
     });
 
+    await user.save();
+
+    ////////////////////////////////////////////////////////
+    // RETURN RESPONSE
+    ////////////////////////////////////////////////////////
+    console.log({
+      message: "Analysis completed successfully",
+      risk: mlData.risk,
+      department: mlData.department,
+      risk_explanation: mlData.risk_explanation,
+      department_explanation: mlData.department_explanation
+    });
     res.json({
       message: "Analysis completed successfully",
-      results: response.data
+      risk: mlData.risk,
+      department: mlData.department,
+      risk_explanation: mlData.risk_explanation,
+      department_explanation: mlData.department_explanation
     });
 
   } catch (error) {
+
     if (error.code === 'ECONNREFUSED') {
       return res.status(503).json({
-        message: "ML service is unavailable. Please ensure the FastAPI server is running on port 8000.",
-        error: "Connection refused"
+        message: "ML service unavailable. Ensure FastAPI runs on port 8000."
       });
     }
+
+    console.error("Analyze symptoms error:", error.response?.data || error.message);
 
     res.status(500).json({
       message: "Error analyzing symptoms",
@@ -110,13 +158,9 @@ app.post('/analyze-symptoms', async (req, res) => {
   }
 });
 
-// -------------------- POST endpoint --------------------
-app.post('/query', (req, res) => {
-  const query = req.body;
-  res.json({ message: 'Query received', query });
-});
-
-// -------------------- Connect DB Once --------------------
+//////////////////////////////////////////////////////////////
+// CONNECT DB
+//////////////////////////////////////////////////////////////
 async function connectDB() {
   try {
     await mongoose.connect(uri, clientOptions);
@@ -128,6 +172,8 @@ async function connectDB() {
 
 connectDB();
 
-// -------------------- Start Server --------------------
+//////////////////////////////////////////////////////////////
+// START SERVER
+//////////////////////////////////////////////////////////////
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

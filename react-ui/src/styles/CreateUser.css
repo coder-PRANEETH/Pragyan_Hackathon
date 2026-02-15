@@ -1,0 +1,72 @@
+/* Page Background */
+.create-user {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e293b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: white;
+}
+
+/* Glass Card */
+.glass {
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(14px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(129, 140, 248, 0.3);
+}
+
+/* Form Layout */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.create-user input,
+.create-user select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(236, 72, 153, 0.2);
+  color: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.create-user input:focus,
+.create-user select:focus {
+  box-shadow: 0 0 10px rgba(244, 114, 182, 0.6);
+}
+
+/* Button */
+.create-user button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.create-user button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.create-user button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

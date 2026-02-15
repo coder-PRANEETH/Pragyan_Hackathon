@@ -1,42 +1,30 @@
 const mongoose = require('mongoose');
 
+const symptomSchema = new mongoose.Schema({
+  description: String,
+  assessedAt: Date,
+  riskLevel: String,
+  department: String
+}, { _id: false });
+
 const medicalSchema = new mongoose.Schema({
-    heart_beat: {
-        type: Number,
-        required: false
-    },
-    blood_group: {
-        type: String,
-        required: false
-    },
-    temperature: {
-        type: Number,
-        required: false
-    }
-});
+  heart_beat: Number,
+  temperature: Number,
+  blood_group: String,
+  bp_systolic: Number,
+  bp_diastolic: Number,
+  oxygen_level: Number,
+  bmi: Number
+}, { _id: false });
 
 const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    age: {
-        type: Number,
-        required: false
-    },
-    gender: {
-        type: String,
-        required: false
-    },
-    medical: [medicalSchema],
-    symptoms: {
-        type: [[String]],
-        default: []
-    },
-    risk: {
-        type: String,
-        required: false
-    }
+  name: { type: String, required: true },
+  age: Number,
+  gender: String,
+  medical: [medicalSchema],
+  symptoms: [symptomSchema],   // ✅ FIXED
+  risk: String,
+  department: String
 }, { timestamps: true });
 
-module.exports = { userSchema, medicalSchema };
+module.exports = { userSchema };
