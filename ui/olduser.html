@@ -6,52 +6,250 @@
     <title>Dashboard - Old User Settings</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background: linear-gradient(135deg, #b69494 0%, #2e4779 100%);
-            position: relative;
-            overflow-x: hidden;
-            transition: background 0.3s ease;
-        }
-
-        /* Animated background squares */
-        .bg-squares {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.15;
-        }
-
-        .square {
-            position: absolute;
-            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
-            border: 1px solid rgba(15, 19, 55, 0.3);
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0);
-        }
-
-        .square:hover {
-            background: linear-gradient(135deg, #01061c 0%, #818cf8 100%);
-            box-shadow: 0 0 30px rgba(16, 16, 51, 0.8);
-            transform: scale(1.1);
-            opacity: 0.8;
-            z-index: 10;
-        }
-
-        /* Bring content above squares */
-        nav, .mx-auto {
-            position: relative;
-            z-index: 1;
-        }
+      body {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        position: relative;
+        overflow-x: hidden;
+        transition: background 0.5s;
+      }
+      body.light-mode {
+        background: linear-gradient(135deg, #f9fafb 0%, #f3e8ff 100%);
+      }
+      .light-mode .bg-squares .square {
+        background: linear-gradient(135deg, #f472b6 0%, #818cf8 100%);
+        border: 1px solid rgba(244, 114, 182, 0.3);
+      }
+      .light-mode .square:hover {
+        background: linear-gradient(135deg, #f9a8d4 0%, #818cf8 100%);
+        box-shadow: 0 0 30px rgba(244, 114, 182, 0.8);
+      }
+      .light-mode nav, .light-mode .mx-auto, .light-mode .stat-card, .light-mode .content-card, .light-mode .backdrop-blur-xl, .light-mode .bg-white\/10, .light-mode .backdrop-blur-lg {
+        background: rgba(255,255,255,0.85) !important;
+        color: #312e81 !important;
+        border-color: #e0e7ff !important;
+      }
+      .light-mode .stat-card, .light-mode .content-card {
+        box-shadow: 0 8px 32px 0 rgba(244,114,182,0.10), 0 2px 8px 0 rgba(129,140,248,0.10);
+      }
+      .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+        color: #312e81 !important;
+      }
+      .light-mode p, .light-mode span, .light-mode label, .light-mode .text-white, .light-mode .text-gray-200, .light-mode .text-gray-400, .light-mode .text-gray-500 {
+        color: #312e81 !important;
+      }
+      .light-mode .border-white\/20, .light-mode .border-gray-700\/30 {
+        border-color: #e0e7ff !important;
+      }
+      .light-mode .bg-gray-700\/30, .light-mode .bg-gray-800, .light-mode .bg-gray-900 {
+        background: #f3e8ff !important;
+      }
+      .light-mode .bg-white\/10 {
+        background: rgba(244,114,182,0.08) !important;
+      }
+      .light-mode .rounded-2xl {
+        box-shadow: 0 4px 24px 0 rgba(244,114,182,0.10), 0 2px 8px 0 rgba(129,140,248,0.10);
+      }
+      .light-mode .bg-gradient-to-tr {
+        background: linear-gradient(135deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-gradient-to-r {
+        background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-gradient-to-r.from-indigo-500.to-indigo-600 {
+        background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-indigo-500\/20, .light-mode .bg-green-500\/20, .light-mode .bg-purple-500\/20, .light-mode .bg-yellow-500\/20, .light-mode .bg-blue-500\/20, .light-mode .bg-pink-500\/20 {
+        background: #f3e8ff !important;
+      }
+      .light-mode .text-indigo-400, .light-mode .text-green-400, .light-mode .text-purple-400, .light-mode .text-yellow-400, .light-mode .text-blue-400, .light-mode .text-pink-400 {
+        color: #a21caf !important;
+      }
+      .light-mode .text-red-400 {
+        color: #be123c !important;
+      }
+      .light-mode .text-green-400 {
+        color: #059669 !important;
+      }
+      .light-mode .text-blue-400 {
+        color: #2563eb !important;
+      }
+      .light-mode .text-purple-400 {
+        color: #7c3aed !important;
+      }
+      .light-mode .text-yellow-400 {
+        color: #eab308 !important;
+      }
+      .light-mode .text-pink-400 {
+        color: #db2777 !important;
+      }
+      .light-mode .text-orange-400 {
+        color: #f59e42 !important;
+      }
+      .toggle-switch {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        transform: none;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(31,41,55,0.7);
+        border-radius: 9999px;
+        padding: 0.5rem 1.25rem;
+        box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
+        transition: background 0.3s;
+      }
+      .light-mode .toggle-switch {
+        background: rgba(244,114,182,0.15);
+      }
+      .toggle-slider {
+        width: 48px;
+        height: 28px;
+        background: #818cf8;
+        border-radius: 9999px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .toggle-slider.light {
+        background: #f472b6;
+      }
+      .toggle-knob {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: left 0.3s, background 0.3s;
+      }
+      .toggle-slider.light .toggle-knob {
+        left: 23px;
+        background: #fffbe9;
+      }
+      .toggle-emoji {
+        font-size: 1.3rem;
+        transition: color 0.3s;
+      }
+      /* Animated background squares */
+      .bg-squares {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.15;
+      }
+      .square {
+        position: absolute;
+        background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+        border: 1px solid rgba(129, 140, 248, 0.3);
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0);
+      }
+      .square:hover {
+        background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+        transform: scale(1.1);
+        opacity: 0.8;
+        z-index: 10;
+      }
+      nav, .mx-auto {
+        position: relative;
+        z-index: 1;
+      }
+      .stat-card, .content-card {
+        transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), border 0.25s;
+      }
+      .stat-card:hover, .content-card:hover {
+        transform: translateY(-8px) scale(1.04) rotate(-1deg);
+        box-shadow: 0 16px 40px 0 rgba(129,140,248,0.25), 0 2px 8px 0 rgba(244,114,182,0.18);
+        border: 2px solid #818cf8;
+        z-index: 2;
+      }
+      .modern-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .modern-scroll::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+      }
+      .modern-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #818cf8 0%, #6366f1 100%);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .modern-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #a5b4fc 0%, #818cf8 100%);
+        box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+      }
+      .modern-scroll {
+        scrollbar-color: #818cf8 transparent;
+        scrollbar-width: thin;
+      }
     </style>
 </head>
 <body>
+        <!-- Light/Dark Mode Toggle Switch -->
+        <div class="toggle-switch" id="toggle-switch">
+          <span class="toggle-emoji" id="toggle-emoji">🌙</span>
+          <div class="toggle-slider" id="toggle-slider">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
+        </div>
     <!-- Animated Background Squares -->
-
     <div class="bg-squares" id="bg-squares"></div>
+        <script>
+        // Light/Dark Mode Toggle
+        const toggleSwitch = document.getElementById('toggle-switch');
+        const toggleSlider = document.getElementById('toggle-slider');
+        const body = document.body;
+        const emojiMoon = document.getElementById('toggle-emoji');
+        const emojiSun = document.getElementById('toggle-emoji-sun');
+        function setTheme(isLight) {
+          if (isLight) {
+            body.classList.add('light-mode');
+            toggleSlider.classList.add('light');
+            emojiMoon.style.opacity = '0.4';
+            emojiSun.style.opacity = '1';
+          } else {
+            body.classList.remove('light-mode');
+            toggleSlider.classList.remove('light');
+            emojiMoon.style.opacity = '1';
+            emojiSun.style.opacity = '0.4';
+          }
+          // Update all cards and text for theme
+          const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+          textEls.forEach(el => {
+            if (isLight) {
+              el.style.color = '#312e81';
+              el.style.background = '';
+            } else {
+              el.style.color = '';
+              el.style.background = '';
+            }
+          });
+        }
+        toggleSwitch.addEventListener('click', function() {
+          const isLight = !body.classList.contains('light-mode');
+          setTheme(isLight);
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+        // On load, set theme from localStorage
+        if (localStorage.getItem('theme') === 'light') {
+          setTheme(true);
+        } else {
+          setTheme(false);
+        }
+
+        // Animated Background Squares
+        </script>
     <!-- Hero Section -->
     <section class="relative z-10 flex flex-col items-center justify-center text-center py-16">
       <div class="backdrop-blur-xl bg-white/10 rounded-3xl shadow-2xl px-8 py-10 max-w-2xl mx-auto border border-white/20 animate-fade-in">

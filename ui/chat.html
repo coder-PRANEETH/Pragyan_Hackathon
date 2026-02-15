@@ -1,6 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+            <style>
+                .toggle-switch {
+                    position: fixed;
+                    top: 24px;
+                    right: 24px;
+                    z-index: 50;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    background: rgba(31,41,55,0.7);
+                    border-radius: 9999px;
+                    padding: 0.5rem 1.25rem;
+                    box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
+                    transition: background 0.3s;
+                }
+                .light-mode .toggle-switch {
+                    background: rgba(244,114,182,0.15);
+                }
+                .toggle-slider {
+                    width: 48px;
+                    height: 28px;
+                    background: #818cf8;
+                    border-radius: 9999px;
+                    position: relative;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(129,140,248,0.10);
+                }
+                .toggle-slider.light {
+                    background: #f472b6;
+                }
+                .toggle-knob {
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 22px;
+                    height: 22px;
+                    background: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+                    transition: left 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, box-shadow 0.2s;
+                }
+                .toggle-slider.light .toggle-knob {
+                    left: 23px;
+                    background: #fffbe9;
+                }
+                .toggle-slider:active .toggle-knob {
+                    box-shadow: 0 0 0 8px rgba(129,140,248,0.15);
+                    transition: box-shadow 0.2s;
+                }
+                .toggle-knob.ripple {
+                    animation: ripple-effect 0.4s;
+                }
+                @keyframes ripple-effect {
+                    0% { box-shadow: 0 0 0 0 rgba(129,140,248,0.25); }
+                    100% { box-shadow: 0 0 0 16px rgba(129,140,248,0); }
+                }
+                .toggle-emoji {
+                    font-size: 1.3rem;
+                    transition: color 0.3s, transform 0.3s;
+                }
+                .toggle-emoji.active {
+                    transform: scale(1.2) rotate(-10deg);
+                    color: #fbbf24;
+                    filter: drop-shadow(0 2px 8px #fbbf24aa);
+                }
+            </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat - Dashboard Assistant</title>
@@ -46,6 +114,75 @@
     </style>
 </head>
 <body>
+            <!-- Light/Dark Mode Toggle Switch -->
+            <div class="toggle-switch" id="toggle-switch">
+                <span class="toggle-emoji" id="toggle-emoji">🌙</span>
+                <div class="toggle-slider" id="toggle-slider">
+                    <div class="toggle-knob"></div>
+                </div>
+                <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
+            </div>
+            <script>
+            // Light/Dark Mode Toggle
+            const toggleSwitch = document.getElementById('toggle-switch');
+            const toggleSlider = document.getElementById('toggle-slider');
+            const body = document.body;
+            const emojiMoon = document.getElementById('toggle-emoji');
+            const emojiSun = document.getElementById('toggle-emoji-sun');
+            function setTheme(isLight) {
+                if (isLight) {
+                    body.classList.add('light-mode');
+                    toggleSlider.classList.add('light');
+                    emojiMoon.style.opacity = '0.4';
+                    emojiSun.style.opacity = '1';
+                } else {
+                    body.classList.remove('light-mode');
+                    toggleSlider.classList.remove('light');
+                    emojiMoon.style.opacity = '1';
+                    emojiSun.style.opacity = '0.4';
+                }
+                // Update all cards and text for theme
+                const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+                textEls.forEach(el => {
+                    if (isLight) {
+                        el.style.color = '#312e81';
+                        el.style.background = '';
+                    } else {
+                        el.style.color = '';
+                        el.style.background = '';
+                    }
+                });
+            }
+            toggleSwitch.addEventListener('click', function() {
+                const isLight = !body.classList.contains('light-mode');
+                setTheme(isLight);
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                // Animate knob ripple
+                const knob = toggleSlider.querySelector('.toggle-knob');
+                knob.classList.remove('ripple');
+                void knob.offsetWidth; // force reflow
+                knob.classList.add('ripple');
+                // Animate emoji
+                if (isLight) {
+                    emojiSun.classList.add('active');
+                    emojiMoon.classList.remove('active');
+                } else {
+                    emojiMoon.classList.add('active');
+                    emojiSun.classList.remove('active');
+                }
+                setTimeout(() => {
+                    knob.classList.remove('ripple');
+                }, 400);
+            });
+            // Set initial emoji effect
+            if (body.classList.contains('light-mode')) {
+                emojiSun.classList.add('active');
+                emojiMoon.classList.remove('active');
+            } else {
+                emojiMoon.classList.add('active');
+                emojiSun.classList.remove('active');
+            }
+            </script>
     <!-- Floating Profile and Hamburger Menu -->
     <div class="fixed top-6 left-6 z-50 flex items-center gap-4">
         <button id="hamburger-btn" class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-full shadow-lg hover:scale-110 transition duration-300">

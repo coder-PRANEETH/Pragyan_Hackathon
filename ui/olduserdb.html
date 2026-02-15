@@ -1,6 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <style>
+                /* Animated background gradient hover effect */
+                body::before {
+                  content: '';
+                  position: fixed;
+                  top: 0; left: 0; right: 0; bottom: 0;
+                  z-index: 0;
+                  pointer-events: none;
+                  opacity: 0;
+                  transition: opacity 0.5s, background 0.5s;
+                  background: radial-gradient(circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(129,140,248,0.18) 0%, rgba(244,114,182,0.12) 40%, transparent 80%);
+                }
+                body.bg-glow::before {
+                  opacity: 1;
+                }
+          .toggle-switch {
+            position: fixed;
+            top: 24px;
+            left: 24px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(31,41,55,0.7);
+            border-radius: 9999px;
+            padding: 0.5rem 1.25rem;
+            box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
+            transition: background 0.3s;
+          }
+          .light-mode .toggle-switch {
+            background: rgba(244,114,182,0.15);
+          }
+          .toggle-slider {
+            width: 48px;
+            height: 28px;
+            background: #818cf8;
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(129,140,248,0.10);
+          }
+          .toggle-slider.light {
+            background: #f472b6;
+          }
+          .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 22px;
+            height: 22px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: left 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, box-shadow 0.2s;
+          }
+          .toggle-slider.light .toggle-knob {
+            left: 23px;
+            background: #fffbe9;
+          }
+          .toggle-slider:active .toggle-knob {
+            box-shadow: 0 0 0 8px rgba(129,140,248,0.15);
+            transition: box-shadow 0.2s;
+          }
+          .toggle-knob.ripple {
+            animation: ripple-effect 0.4s;
+          }
+          @keyframes ripple-effect {
+            0% { box-shadow: 0 0 0 0 rgba(129,140,248,0.25); }
+            100% { box-shadow: 0 0 0 16px rgba(129,140,248,0); }
+          }
+          .toggle-emoji {
+            font-size: 1.3rem;
+            transition: color 0.3s, transform 0.3s;
+          }
+          .toggle-emoji.active {
+            transform: scale(1.2) rotate(-10deg);
+            color: #fbbf24;
+            filter: drop-shadow(0 2px 8px #fbbf24aa);
+          }
+        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - User Analytics</title>
@@ -91,93 +173,7 @@
       .light-mode .bg-gradient-to-r.from-indigo-500.to-indigo-600 {
         background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
       }
-      .toggle-switch {
-        position: fixed;
-        top: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 50;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(31,41,55,0.7);
-        border-radius: 9999px;
-        padding: 0.5rem 1.25rem;
-        box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
-        transition: background 0.3s;
-      }
-      .light-mode .toggle-switch {
-        background: rgba(244,114,182,0.15);
-      }
-      .toggle-slider {
-        width: 48px;
-        height: 28px;
-        background: #818cf8;
-        border-radius: 9999px;
-        position: relative;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .toggle-slider.light {
-        background: #f472b6;
-      }
-      .toggle-knob {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 22px;
-        height: 22px;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        transition: left 0.3s, background 0.3s;
-      }
-      .toggle-slider.light .toggle-knob {
-        left: 23px;
-        background: #fffbe9;
-      }
-      .toggle-emoji {
-        font-size: 1.3rem;
-        transition: color 0.3s;
-      }
-    const emojiMoon = document.getElementById('toggle-emoji');
-    const emojiSun = document.getElementById('toggle-emoji-sun');
-    function setTheme(isLight) {
-      if (isLight) {
-        body.classList.add('light-mode');
-        toggleSlider.classList.add('light');
-        emojiMoon.style.opacity = '0.4';
-        emojiSun.style.opacity = '1';
-      } else {
-        body.classList.remove('light-mode');
-        toggleSlider.classList.remove('light');
-        emojiMoon.style.opacity = '1';
-        emojiSun.style.opacity = '0.4';
-      }
-      // Update all cards and text for theme
-      const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
-      textEls.forEach(el => {
-        if (isLight) {
-          el.style.color = '#312e81';
-          el.style.background = '';
-        } else {
-          el.style.color = '';
-          el.style.background = '';
-        }
-      });
-    }
-    toggleSwitch.addEventListener('click', function() {
-      const isLight = !body.classList.contains('light-mode');
-      setTheme(isLight);
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
-    // On load, set theme from localStorage
-    if (localStorage.getItem('theme') === 'light') {
-      setTheme(true);
-    } else {
-      setTheme(false);
-    }
-</script>
+
 
         /* Animated background squares */
         .bg-squares {
@@ -192,19 +188,22 @@
         }
 
         .square {
-            position: absolute;
-            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
-            border: 1px solid rgba(129, 140, 248, 0.3);
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0);
+          position: absolute;
+          background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+          border: 1px solid rgba(129, 140, 248, 0.3);
+          border-radius: 0.6rem;
+          transition: all 0.22s cubic-bezier(.4,0,.2,1);
+          box-shadow: 0 0 20px rgba(99, 102, 241, 0);
+          will-change: transform, box-shadow, background, opacity, filter;
+          filter: hue-rotate(0deg) brightness(1);
         }
-
-        .square:hover {
-            background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
-            transform: scale(1.1);
-            opacity: 0.8;
-            z-index: 10;
+        .square.pulse {
+          animation: square-pulse 0.45s cubic-bezier(.4,0,.2,1);
+        }
+        @keyframes square-pulse {
+          0% { box-shadow: 0 0 0 0 rgba(244,114,182,0.18); }
+          60% { box-shadow: 0 0 32px 16px rgba(244,114,182,0.22); }
+          100% { box-shadow: 0 0 0 0 rgba(244,114,182,0); }
         }
 
         /* Bring content above squares */
@@ -247,56 +246,148 @@
     </style>
 </head>
 <body>
-        <!-- Light/Dark Mode Toggle Switch -->
-        <div class="toggle-switch" id="toggle-switch">
-          <span class="toggle-emoji" id="toggle-emoji">🌙</span>
-          <div class="toggle-slider" id="toggle-slider">
-            <div class="toggle-knob"></div>
-          </div>
-          <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
-        </div>
+                  <!-- Animated Background Squares -->
+                  <div class="bg-squares" id="bg-squares"></div>
+                <!-- Light/Dark Mode Toggle Switch -->
+                <div class="toggle-switch" id="toggle-switch" title="Toggle light/dark mode">
+                  <span class="toggle-emoji" id="toggle-emoji">🌙</span>
+                  <div class="toggle-slider" id="toggle-slider">
+                    <div class="toggle-knob" id="toggle-knob"></div>
+                  </div>
+                  <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
+                </div>
+                <script>
+                        // THEME TOGGLE LOGIC (deduplicated, robust)
+                        const toggleSwitch = document.getElementById('toggle-switch');
+                        const toggleSlider = document.getElementById('toggle-slider');
+                        const toggleKnob = document.getElementById('toggle-knob');
+                        const body = document.body;
+                        const emojiMoon = document.getElementById('toggle-emoji');
+                        const emojiSun = document.getElementById('toggle-emoji-sun');
+
+                        function setTheme(isLight) {
+                          if (isLight) {
+                            body.classList.add('light-mode');
+                            toggleSlider.classList.add('light');
+                            emojiMoon.style.opacity = '0.4';
+                            emojiSun.style.opacity = '1';
+                            emojiSun.classList.add('active');
+                            emojiMoon.classList.remove('active');
+                          } else {
+                            body.classList.remove('light-mode');
+                            toggleSlider.classList.remove('light');
+                            emojiMoon.style.opacity = '1';
+                            emojiSun.style.opacity = '0.4';
+                            emojiMoon.classList.add('active');
+                            emojiSun.classList.remove('active');
+                          }
+                          // Update all cards and text for theme
+                          const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+                          textEls.forEach(el => {
+                            if (isLight) {
+                              el.style.color = '#312e81';
+                              el.style.background = '';
+                            } else {
+                              el.style.color = '';
+                              el.style.background = '';
+                            }
+                          });
+                        }
+
+                        toggleSwitch.addEventListener('click', function() {
+                          const isLight = !body.classList.contains('light-mode');
+                          setTheme(isLight);
+                          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                          // Animate knob ripple
+                          if (toggleKnob) {
+                            toggleKnob.classList.remove('ripple');
+                            void toggleKnob.offsetWidth;
+                            toggleKnob.classList.add('ripple');
+                            setTimeout(() => toggleKnob.classList.remove('ripple'), 400);
+                          }
+                        });
+
+                        // On load, set theme from localStorage or default
+                        if (localStorage.getItem('theme') === 'light') {
+                          setTheme(true);
+                        } else {
+                          setTheme(false);
+                        }
+                        // Animated packed squares background effect
+                        const bgSquares = document.getElementById('bg-squares');
+                        const squareGrid = [];
+                        function createSquareGrid() {
+                          const cols = 14;
+                          const rows = 8;
+                          const w = window.innerWidth / cols;
+                          const h = window.innerHeight / rows;
+                          for (let i = 0; i < cols; i++) {
+                            for (let j = 0; j < rows; j++) {
+                              const square = document.createElement('div');
+                              square.className = 'square';
+                              square.style.left = (i * w) + 'px';
+                              square.style.top = (j * h) + 'px';
+                              square.style.width = w + 'px';
+                              square.style.height = h + 'px';
+                              bgSquares.appendChild(square);
+                              squareGrid.push({ element: square, x: i * w + w / 2, y: j * h + h / 2 });
+                            }
+                          }
+                        }
+                        createSquareGrid();
+
+                        document.addEventListener('mousemove', function(e) {
+                          const mouseX = e.clientX;
+                          const mouseY = e.clientY + window.scrollY;
+                          squareGrid.forEach(item => {
+                            const dx = mouseX - item.x;
+                            const dy = mouseY - item.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            const maxDistance = 140;
+                            const influence = Math.max(0, 1 - distance / maxDistance);
+                            // Dramatic scale and color shift
+                            item.element.style.transform = `scale(${1 + influence * 0.7})`;
+                            item.element.style.opacity = 0.10 + influence * 0.7;
+                            item.element.style.filter = `hue-rotate(${influence * 120}deg) brightness(${1 + influence * 0.25})`;
+                            if (influence > 0.18) {
+                              item.element.style.boxShadow = `0 0 ${24 + influence * 40}px 0 rgba(244,114,182,${0.18 + influence * 0.5})`;
+                              item.element.style.background = 'linear-gradient(135deg, #f472b6 0%, #818cf8 100%)';
+                              // Pulse effect when very close
+                              if (influence > 0.7 && !item.element.classList.contains('pulse')) {
+                                item.element.classList.add('pulse');
+                                setTimeout(() => item.element.classList.remove('pulse'), 450);
+                              }
+                            } else {
+                              item.element.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0)';
+                              item.element.style.background = 'linear-gradient(135deg, #818cf8 0%, #6366f1 100%)';
+                              item.element.classList.remove('pulse');
+                            }
+                          });
+                        });
+                        window.addEventListener('resize', function() {
+                          bgSquares.innerHTML = '';
+                          squareGrid.length = 0;
+                          createSquareGrid();
+                        });
+                        // Animated background glow effect on page hover
+                        document.addEventListener('mousemove', function(e) {
+                          document.body.classList.add('bg-glow');
+                          document.body.style.setProperty('--mouse-x', e.clientX + 'px');
+                          document.body.style.setProperty('--mouse-y', e.clientY + window.scrollY + 'px');
+                        });
+                        document.addEventListener('mouseleave', function() {
+                          document.body.classList.remove('bg-glow');
+                        });
+                    // Enhance background squares with hover/packed effect
+                    // (Assumes bgSquares, squareGrid, and createSquareGrid already exist)
+                    // (bg-hover logic removed; replaced by new effect above)
+                // Light/Dark Mode Toggle
+                </script>
+            <script>
+            // Light/Dark Mode Toggle
+            </script>
         <script>
         // Light/Dark Mode Toggle
-        const toggleSwitch = document.getElementById('toggle-switch');
-        const toggleSlider = document.getElementById('toggle-slider');
-        const body = document.body;
-        const emojiMoon = document.getElementById('toggle-emoji');
-        const emojiSun = document.getElementById('toggle-emoji-sun');
-        function setTheme(isLight) {
-          if (isLight) {
-            body.classList.add('light-mode');
-            toggleSlider.classList.add('light');
-            emojiMoon.style.opacity = '0.4';
-            emojiSun.style.opacity = '1';
-          } else {
-            body.classList.remove('light-mode');
-            toggleSlider.classList.remove('light');
-            emojiMoon.style.opacity = '1';
-            emojiSun.style.opacity = '0.4';
-          }
-          // Update all cards and text for theme
-          const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
-          textEls.forEach(el => {
-            if (isLight) {
-              el.style.color = '#312e81';
-              el.style.background = '';
-            } else {
-              el.style.color = '';
-              el.style.background = '';
-            }
-          });
-        }
-        toggleSwitch.addEventListener('click', function() {
-          const isLight = !body.classList.contains('light-mode');
-          setTheme(isLight);
-          localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
-        // On load, set theme from localStorage
-        if (localStorage.getItem('theme') === 'light') {
-          setTheme(true);
-        } else {
-          setTheme(false);
-        }
         </script>
     <!-- Animated Background Squares -->
     <div class="bg-squares" id="bg-squares"></div>
@@ -460,7 +551,6 @@
           <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
             <div id="physical-bar" class="bg-gradient-to-r from-indigo-400 to-indigo-600 h-3 rounded-full transition-all duration-300" style="width: 78%"></div>
           </div>
-          <input id="physical-input" type="range" min="0" max="100" value="78" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
         </div>
 
         <!-- Health Metric 2: Mental Health -->
@@ -472,7 +562,6 @@
           <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
             <div id="mental-bar" class="bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full transition-all duration-300" style="width: 85%"></div>
           </div>
-          <input id="mental-input" type="range" min="0" max="100" value="85" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-green-500" />
         </div>
 
         <!-- Health Metric 3: Sleep Quality -->
@@ -484,7 +573,6 @@
           <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
             <div id="sleep-bar" class="bg-gradient-to-r from-purple-400 to-purple-600 h-3 rounded-full transition-all duration-300" style="width: 72%"></div>
           </div>
-          <input id="sleep-input" type="range" min="0" max="100" value="72" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-purple-500" />
         </div>
 
         <!-- Health Metric 4: Stress Level (Inverse) -->
@@ -496,7 +584,6 @@
           <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
             <div id="stress-bar" class="bg-gradient-to-r from-red-400 to-red-600 h-3 rounded-full transition-all duration-300" style="width: 35%"></div>
           </div>
-          <input id="stress-input" type="range" min="0" max="100" value="35" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-red-500" />
         </div>
 
         <!-- Health Metric 5: Activity Level -->
@@ -508,7 +595,6 @@
           <div class="w-full bg-gray-700/30 rounded-full h-3 overflow-hidden">
             <div id="activity-bar" class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full transition-all duration-300" style="width: 68%"></div>
           </div>
-          <input id="activity-input" type="range" min="0" max="100" value="68" class="w-full mt-2 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-yellow-500" />
         </div>
 
         <!-- Overall Health Score -->
@@ -789,66 +875,7 @@
       // Red - Poor Health
       overallScoreElement.className = 'text-red-400 text-lg font-bold';
       overallBar.className = 'bg-gradient-to-r from-red-400 to-red-600 h-4 rounded-full transition-all duration-300';
-    } else if (overall < 60) {
-      // Orange - Fair Health
-      overallScoreElement.className = 'text-orange-400 text-lg font-bold';
-      overallBar.className = 'bg-gradient-to-r from-orange-400 to-orange-600 h-4 rounded-full transition-all duration-300';
-    } else if (overall < 75) {
-      // Yellow - Good Health
-      overallScoreElement.className = 'text-yellow-400 text-lg font-bold';
-      overallBar.className = 'bg-gradient-to-r from-yellow-400 to-yellow-600 h-4 rounded-full transition-all duration-300';
-    } else {
-      // Green - Excellent Health
-      overallScoreElement.className = 'text-green-400 text-lg font-bold';
-      overallBar.className = 'bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full transition-all duration-300';
-    }
-  }
-
-  // Add event listeners to all health inputs
-  Object.keys(healthInputs).forEach(key => {
-    healthInputs[key].addEventListener('input', function() {
-      const value = this.value;
-      healthBars[key].style.width = value + '%';
-      healthValues[key].textContent = value + '%';
-      updateHealthScore();
-    });
-  });
-
-  // Initialize overall score on page load
-  updateHealthScore();
-
-  // Background Squares Animation
-  const squareSize = 50;
-  const gap = 10;
-  const bgSquares = document.getElementById('bg-squares');
-  const squareGrid = [];
-
-  // Create grid of squares
-  function createSquareGrid() {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight + 200; // Add extra for scrolling
-    
-    for (let x = 0; x < screenWidth; x += squareSize + gap) {
-      for (let y = 0; y < screenHeight; y += squareSize + gap) {
-        const square = document.createElement('div');
-        square.className = 'square';
-        square.style.width = squareSize + 'px';
-        square.style.height = squareSize + 'px';
-        square.style.left = x + 'px';
-        square.style.top = y + 'px';
-        bgSquares.appendChild(square);
-        squareGrid.push({
-          element: square,
-          x: x + squareSize / 2,
-          y: y + squareSize / 2,
-          distance: 0
-        });
-      }
-    }
-  }
-
-  // Update square effects based on cursor position
-  let mouseX = window.innerWidth / 2;
+    } else if (overall < 60) {}
   let mouseY = window.innerHeight / 2;
 
   document.addEventListener('mousemove', function(e) {
