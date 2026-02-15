@@ -165,7 +165,7 @@ triage_df = df[[
 "Heart_Rate",
 "Temperature",
 "Pre-Existing_Conditions",
-"Risk_Level"
+"Risk_Level","Department"
 ]]
 
 # ----------------------------
