@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Old User Settings</title>
+    <title>Dashboard - Admin Panel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background: linear-gradient(135deg, #b69494 0%, #2e4779 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             position: relative;
             overflow-x: hidden;
-            transition: background 0.3s ease;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* Animated background squares */
@@ -50,8 +63,9 @@
 </head>
 <body>
     <!-- Animated Background Squares -->
-
     <div class="bg-squares" id="bg-squares"></div>
+
+
     <!-- Hero Section -->
     <section class="relative z-10 flex flex-col items-center justify-center text-center py-16">
       <div class="backdrop-blur-xl bg-white/10 rounded-3xl shadow-2xl px-8 py-10 max-w-2xl mx-auto border border-white/20 animate-fade-in">
@@ -59,12 +73,11 @@
           <span class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg animate-bounce-slow">
             <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zm0 0c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zm0 0v2m0 4h.01"/></svg>
           </span>
-          <h1 class="text-4xl font-extrabold text-white drop-shadow-lg">Welcome Back, Old User!</h1>
-          <p class="text-lg text-gray-200 max-w-xl">Manage your account, update your details, and enjoy a personalized experience with our beautiful dashboard.</p>
+          <h1 class="text-4xl font-extrabold text-white drop-shadow-lg">Welcome Admin!</h1>
+          <p class="text-lg text-gray-200 max-w-xl">Manage your administrative settings and system configurations with a beautiful, modern dashboard.</p>
         </div>
       </div>
     </section>
-
 
 <!-- Floating Profile Button -->
 <div class="fixed top-6 right-6 z-30">
@@ -91,9 +104,9 @@
     </div>
   </button>
   <div id="mobile-menu" class="hidden absolute left-0 mt-4 w-56 rounded-2xl bg-white/90 shadow-2xl ring-1 ring-black/10 backdrop-blur-lg py-4 z-40">
-    <a href="#" aria-current="page" class="block px-6 py-3 text-lg font-bold text-indigo-700 hover:bg-indigo-100 rounded">Old User</a>
+    <a href="#" aria-current="page" class="block px-6 py-3 text-lg font-bold text-indigo-700 hover:bg-indigo-100 rounded">Admin Page</a>
     <a href="#" class="block px-6 py-3 text-lg text-gray-700 hover:bg-indigo-100 rounded">Dashboard</a>
-    <a href="#" class="block px-6 py-3 text-lg text-gray-700 hover:bg-indigo-100 rounded">History</a>
+    <a href="#" class="block px-6 py-3 text-lg text-gray-700 hover:bg-indigo-100 rounded">Users</a>
     <a href="#" class="block px-6 py-3 text-lg text-gray-700 hover:bg-indigo-100 rounded">Settings</a>
   </div>
 </div>
@@ -102,21 +115,21 @@
 <form class="bg-white/10 backdrop-blur-lg shadow-2xl rounded-3xl p-10 border border-white/20 animate-fade-in-up">
   <div class="space-y-12">
     <div class="border-b border-white/10 pb-12">
-      <h2 class="text-2xl font-bold text-indigo-200 mb-2">Edit your Account Information</h2>
-      <p class="mt-1 text-base text-indigo-100">Manage your existing account details and settings.</p>
+      <h2 class="text-2xl font-bold text-indigo-200 mb-2">Admin Panel Settings</h2>
+      <p class="mt-1 text-base text-indigo-100">Manage administrative settings and configurations.</p>
 
       <div class="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
-          <label for="username" class="block text-sm/6 font-medium text-white">Username</label>
+          <label for="admin-name" class="block text-sm/6 font-medium text-white">Administrator Name</label>
           <div class="mt-2">
-            <input id="username" type="text" name="username" placeholder="Enter your username" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <input id="admin-name" type="text" name="admin-name" placeholder="Enter admin name" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="member-id" class="block text-sm/6 font-medium text-white">Member ID</label>
+          <label for="admin-id" class="block text-sm/6 font-medium text-white">Admin ID</label>
           <div class="mt-2">
-            <input id="member-id" type="text" name="member-id" placeholder="Your unique member ID" disabled class="block w-full rounded-xl bg-white/10 px-4 py-2 text-base text-gray-400 shadow-inner placeholder:text-indigo-200 cursor-not-allowed" />
+            <input id="admin-id" type="text" name="admin-id" placeholder="Your unique admin ID" disabled class="block w-full rounded-xl bg-white/10 px-4 py-2 text-base text-gray-400 shadow-inner placeholder:text-indigo-200 cursor-not-allowed" />
           </div>
         </div>
 
@@ -127,86 +140,65 @@
     </div>
 
     <div class="border-b border-white/10 pb-12">
-      <h2 class="text-2xl font-bold text-indigo-200 mb-2">Contact Information</h2>
-      <p class="mt-1 text-base text-indigo-100">Update your contact details.</p>
+      <h2 class="text-2xl font-bold text-indigo-200 mb-2">System Configuration</h2>
+      <p class="mt-1 text-base text-indigo-100">Configure system-wide settings and preferences.</p>
 
       <div class="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
-          <label for="first-name" class="block text-sm/6 font-medium text-white">First name</label>
+          <label for="system-name" class="block text-sm/6 font-medium text-white">System Name</label>
           <div class="mt-2">
-            <input id="first-name" type="text" name="first-name" autocomplete="given-name" placeholder="First name" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <input id="system-name" type="text" name="system-name" placeholder="System name" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="last-name" class="block text-sm/6 font-medium text-white">Last name</label>
+          <label for="version" class="block text-sm/6 font-medium text-white">Version</label>
           <div class="mt-2">
-            <input id="last-name" type="text" name="last-name" autocomplete="family-name" placeholder="Last name" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <input id="version" type="text" name="version" placeholder="System version" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
           </div>
         </div>
 
         <div class="sm:col-span-4">
-          <label for="email" class="block text-sm/6 font-medium text-white">Email address</label>
+          <label for="admin-email" class="block text-sm/6 font-medium text-white">Admin Email</label>
           <div class="mt-2">
-            <input id="email" type="email" name="email" autocomplete="email" placeholder="your@example.com" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <input id="admin-email" type="email" name="admin-email" placeholder="admin@example.com" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
           </div>
         </div>
 
         <div class="sm:col-span-3">
-          <label for="phone" class="block text-sm/6 font-medium text-white">Phone number</label>
+          <label for="support-email" class="block text-sm/6 font-medium text-white">Support Email</label>
           <div class="mt-2">
-            <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <input id="support-email" type="email" name="support-email" placeholder="support@example.com" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
           </div>
         </div>
 
         <div class="col-span-full">
-          <label for="address" class="block text-sm/6 font-medium text-white">Street address</label>
+          <label for="description" class="block text-sm/6 font-medium text-white">System Description</label>
           <div class="mt-2">
-            <input id="address" type="text" name="address" autocomplete="street-address" placeholder="Street address" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
-          </div>
-        </div>
-
-        <div class="sm:col-span-2 sm:col-start-1">
-          <label for="city" class="block text-sm/6 font-medium text-white">City</label>
-          <div class="mt-2">
-            <input id="city" type="text" name="city" autocomplete="address-level2" placeholder="City" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="state" class="block text-sm/6 font-medium text-white">State / Province</label>
-          <div class="mt-2">
-            <input id="state" type="text" name="state" autocomplete="address-level1" placeholder="State" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="zip" class="block text-sm/6 font-medium text-white">ZIP / Postal code</label>
-          <div class="mt-2">
-            <input id="zip" type="text" name="zip" autocomplete="postal-code" placeholder="12345" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200" />
+            <textarea id="description" name="description" placeholder="System description" rows="4" class="block w-full rounded-xl bg-white/20 px-4 py-2 text-base text-white shadow-inner placeholder:text-indigo-200 focus:ring-2 focus:ring-indigo-400 transition-all duration-200"></textarea>
           </div>
         </div>
       </div>
     </div>
 
     <div class="border-b border-white/10 pb-12">
-      <h2 class="text-2xl font-bold text-indigo-200 mb-2">Privacy & Security</h2>
-      <p class="mt-1 text-base text-indigo-100">Manage your privacy settings and security preferences.</p>
+      <h2 class="text-2xl font-bold text-indigo-200 mb-2">Security & Permissions</h2>
+      <p class="mt-1 text-base text-indigo-100">Manage system security and user permissions.</p>
 
       <div class="mt-10 space-y-6">
         <div class="flex items-center gap-x-3">
-          <input id="profile-public" type="checkbox" name="profile-public" class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
-          <label for="profile-public" class="block text-sm/6 font-medium text-white">Make profile public</label>
+          <input id="enforce-2fa" type="checkbox" name="enforce-2fa" class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
+          <label for="enforce-2fa" class="block text-sm/6 font-medium text-white">Enforce two-factor authentication</label>
         </div>
 
         <div class="flex items-center gap-x-3">
-          <input id="email-notifications" type="checkbox" name="email-notifications" checked class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
-          <label for="email-notifications" class="block text-sm/6 font-medium text-white">Receive email notifications</label>
+          <input id="maintenance-mode" type="checkbox" name="maintenance-mode" class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
+          <label for="maintenance-mode" class="block text-sm/6 font-medium text-white">Enable maintenance mode</label>
         </div>
 
         <div class="flex items-center gap-x-3">
-          <input id="two-factor" type="checkbox" name="two-factor" class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
-          <label for="two-factor" class="block text-sm/6 font-medium text-white">Enable two-factor authentication</label>
+          <input id="backup-enabled" type="checkbox" name="backup-enabled" checked class="relative size-4 appearance-none rounded-sm border border-white/10 bg-white/5 checked:border-indigo-500 checked:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" />
+          <label for="backup-enabled" class="block text-sm/6 font-medium text-white">Enable automatic backups</label>
         </div>
       </div>
     </div>
@@ -251,8 +243,8 @@
       mobileMenuBtn.classList.remove('open');
     }
   });
-  // Profile dropdown toggle (floating)
 
+  // Profile dropdown toggle (floating)
   const profileBtn = document.getElementById('profile-btn');
   const profileMenu = document.getElementById('profile-menu');
   profileBtn.addEventListener('click', function(e) {
@@ -273,9 +265,9 @@
 
   // Sample notifications data (you can replace this with actual data from API)
   let notifications = [
-    { id: 1, message: 'Your profile has been updated successfully', time: '5 minutes ago' },
-    { id: 2, message: 'New security alert: Sign in from new device', time: '1 hour ago' },
-    { id: 3, message: 'Your account settings have been changed', time: '2 hours ago' }
+    { id: 1, message: 'System backup completed successfully', time: '30 minutes ago' },
+    { id: 2, message: 'New user registration alert', time: '1 hour ago' },
+    { id: 3, message: 'System update available', time: '3 hours ago' }
   ];
 
   // Function to render notifications
@@ -329,12 +321,10 @@
     }
   });
 
-  // Profile dropdown toggle
-
   // Form submission
   document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Changes saved successfully!');
+    alert('Admin settings saved successfully!');
   });
 
   // Background Squares Animation
