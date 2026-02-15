@@ -95,9 +95,9 @@ y_test = testset["Risk_Level"]
 y_test2 = testset["Department"]
 # Train department 
 
+model,pred = train_random_forest(x_train, y_train)
 
 model2, pred2 = train_and_predict_xgb(x_train, y_train2)
-model,pred = train_random_forest(x_train, y_train)
 
 
 feature_names = x_train.columns[:6].tolist()

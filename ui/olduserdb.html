@@ -6,11 +6,178 @@
     <title>Dashboard - User Analytics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-            position: relative;
-            overflow-x: hidden;
+      body {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        position: relative;
+        overflow-x: hidden;
+        transition: background 0.5s;
+      }
+      body.light-mode {
+        background: linear-gradient(135deg, #f9fafb 0%, #f3e8ff 100%);
+      }
+      .light-mode .bg-squares .square {
+        background: linear-gradient(135deg, #f472b6 0%, #818cf8 100%);
+        border: 1px solid rgba(244, 114, 182, 0.3);
+      }
+      .light-mode .square:hover {
+        background: linear-gradient(135deg, #f9a8d4 0%, #818cf8 100%);
+        box-shadow: 0 0 30px rgba(244, 114, 182, 0.8);
+      }
+      .light-mode nav, .light-mode .mx-auto, .light-mode .stat-card, .light-mode .content-card, .light-mode .backdrop-blur-xl, .light-mode .bg-white\/10, .light-mode .backdrop-blur-lg {
+        background: rgba(255,255,255,0.85) !important;
+        color: #312e81 !important;
+        border-color: #e0e7ff !important;
+      }
+      .light-mode .stat-card, .light-mode .content-card {
+        box-shadow: 0 8px 32px 0 rgba(244,114,182,0.10), 0 2px 8px 0 rgba(129,140,248,0.10);
+      }
+      .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+        color: #312e81 !important;
+      }
+      .light-mode p, .light-mode span, .light-mode label, .light-mode .text-white, .light-mode .text-gray-200, .light-mode .text-gray-400, .light-mode .text-gray-500 {
+        color: #312e81 !important;
+      }
+      .light-mode .border-white\/20, .light-mode .border-gray-700\/30 {
+        border-color: #e0e7ff !important;
+      }
+      .light-mode .bg-gray-700\/30, .light-mode .bg-gray-800, .light-mode .bg-gray-900 {
+        background: #f3e8ff !important;
+      }
+      .light-mode .bg-white\/10 {
+        background: rgba(244,114,182,0.08) !important;
+      }
+      .light-mode .rounded-2xl {
+        box-shadow: 0 4px 24px 0 rgba(244,114,182,0.10), 0 2px 8px 0 rgba(129,140,248,0.10);
+      }
+      .light-mode .bg-gradient-to-tr {
+        background: linear-gradient(135deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-gradient-to-r {
+        background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-gradient-to-r.from-indigo-500.to-indigo-600 {
+        background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .light-mode .bg-indigo-500\/20, .light-mode .bg-green-500\/20, .light-mode .bg-purple-500\/20, .light-mode .bg-yellow-500\/20, .light-mode .bg-blue-500\/20, .light-mode .bg-pink-500\/20 {
+        background: #f3e8ff !important;
+      }
+      .light-mode .text-indigo-400, .light-mode .text-green-400, .light-mode .text-purple-400, .light-mode .text-yellow-400, .light-mode .text-blue-400, .light-mode .text-pink-400 {
+        color: #a21caf !important;
+      }
+      .light-mode .text-red-400 {
+        color: #be123c !important;
+      }
+      .light-mode .text-green-400 {
+        color: #059669 !important;
+      }
+      .light-mode .text-blue-400 {
+        color: #2563eb !important;
+      }
+      .light-mode .text-purple-400 {
+        color: #7c3aed !important;
+      }
+      .light-mode .text-yellow-400 {
+        color: #eab308 !important;
+      }
+      .light-mode .text-pink-400 {
+        color: #db2777 !important;
+      }
+      .light-mode .text-orange-400 {
+        color: #f59e42 !important;
+      }
+      .light-mode .bg-indigo-500\/20, .light-mode .bg-green-500\/20, .light-mode .bg-purple-500\/20, .light-mode .bg-yellow-500\/20, .light-mode .bg-blue-500\/20, .light-mode .bg-pink-500\/20 {
+        background: #f3e8ff !important;
+      }
+      .light-mode .bg-gradient-to-r.from-indigo-500.to-indigo-600 {
+        background: linear-gradient(90deg, #f472b6 0%, #818cf8 100%) !important;
+      }
+      .toggle-switch {
+        position: fixed;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(31,41,55,0.7);
+        border-radius: 9999px;
+        padding: 0.5rem 1.25rem;
+        box-shadow: 0 4px 24px 0 rgba(129,140,248,0.10);
+        transition: background 0.3s;
+      }
+      .light-mode .toggle-switch {
+        background: rgba(244,114,182,0.15);
+      }
+      .toggle-slider {
+        width: 48px;
+        height: 28px;
+        background: #818cf8;
+        border-radius: 9999px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .toggle-slider.light {
+        background: #f472b6;
+      }
+      .toggle-knob {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: left 0.3s, background 0.3s;
+      }
+      .toggle-slider.light .toggle-knob {
+        left: 23px;
+        background: #fffbe9;
+      }
+      .toggle-emoji {
+        font-size: 1.3rem;
+        transition: color 0.3s;
+      }
+    const emojiMoon = document.getElementById('toggle-emoji');
+    const emojiSun = document.getElementById('toggle-emoji-sun');
+    function setTheme(isLight) {
+      if (isLight) {
+        body.classList.add('light-mode');
+        toggleSlider.classList.add('light');
+        emojiMoon.style.opacity = '0.4';
+        emojiSun.style.opacity = '1';
+      } else {
+        body.classList.remove('light-mode');
+        toggleSlider.classList.remove('light');
+        emojiMoon.style.opacity = '1';
+        emojiSun.style.opacity = '0.4';
+      }
+      // Update all cards and text for theme
+      const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+      textEls.forEach(el => {
+        if (isLight) {
+          el.style.color = '#312e81';
+          el.style.background = '';
+        } else {
+          el.style.color = '';
+          el.style.background = '';
         }
+      });
+    }
+    toggleSwitch.addEventListener('click', function() {
+      const isLight = !body.classList.contains('light-mode');
+      setTheme(isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+    // On load, set theme from localStorage
+    if (localStorage.getItem('theme') === 'light') {
+      setTheme(true);
+    } else {
+      setTheme(false);
+    }
+</script>
 
         /* Animated background squares */
         .bg-squares {
@@ -46,21 +213,14 @@
             z-index: 1;
         }
 
-        .stat-card {
-            transition: transform 0.2s, box-shadow 0.2s;
+        .stat-card, .content-card {
+          transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), border 0.25s;
         }
-        .stat-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Card hover effects for content boxes */
-        .content-card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .content-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        .stat-card:hover, .content-card:hover {
+          transform: translateY(-8px) scale(1.04) rotate(-1deg);
+          box-shadow: 0 16px 40px 0 rgba(129,140,248,0.25), 0 2px 8px 0 rgba(244,114,182,0.18);
+          border: 2px solid #818cf8;
+          z-index: 2;
         }
         /* Modern scrollbar styling */
         .modern-scroll::-webkit-scrollbar {
@@ -87,6 +247,57 @@
     </style>
 </head>
 <body>
+        <!-- Light/Dark Mode Toggle Switch -->
+        <div class="toggle-switch" id="toggle-switch">
+          <span class="toggle-emoji" id="toggle-emoji">🌙</span>
+          <div class="toggle-slider" id="toggle-slider">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="toggle-emoji" id="toggle-emoji-sun">☀️</span>
+        </div>
+        <script>
+        // Light/Dark Mode Toggle
+        const toggleSwitch = document.getElementById('toggle-switch');
+        const toggleSlider = document.getElementById('toggle-slider');
+        const body = document.body;
+        const emojiMoon = document.getElementById('toggle-emoji');
+        const emojiSun = document.getElementById('toggle-emoji-sun');
+        function setTheme(isLight) {
+          if (isLight) {
+            body.classList.add('light-mode');
+            toggleSlider.classList.add('light');
+            emojiMoon.style.opacity = '0.4';
+            emojiSun.style.opacity = '1';
+          } else {
+            body.classList.remove('light-mode');
+            toggleSlider.classList.remove('light');
+            emojiMoon.style.opacity = '1';
+            emojiSun.style.opacity = '0.4';
+          }
+          // Update all cards and text for theme
+          const textEls = document.querySelectorAll('body, p, span, label, h1, h2, h3, h4, h5, h6, .stat-card, .content-card');
+          textEls.forEach(el => {
+            if (isLight) {
+              el.style.color = '#312e81';
+              el.style.background = '';
+            } else {
+              el.style.color = '';
+              el.style.background = '';
+            }
+          });
+        }
+        toggleSwitch.addEventListener('click', function() {
+          const isLight = !body.classList.contains('light-mode');
+          setTheme(isLight);
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+        // On load, set theme from localStorage
+        if (localStorage.getItem('theme') === 'light') {
+          setTheme(true);
+        } else {
+          setTheme(false);
+        }
+        </script>
     <!-- Animated Background Squares -->
     <div class="bg-squares" id="bg-squares"></div>
 
@@ -140,106 +351,97 @@
   <!-- Header -->
   <!-- ...existing code... -->
 
-  <!-- Statistics Cards -->
+  <!-- Health Statistics Cards -->
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
-    <!-- Card 1 -->
-    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105">
+    <!-- Card 1: Blood Pressure Readings -->
+    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl">
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-gray-400 text-sm">Total Users</p>
-          <p class="text-white text-3xl font-bold mt-2">2,456</p>
-          <p class="text-green-400 text-xs mt-2">↑ 12% from last month</p>
+          <p class="text-gray-400 text-sm">Blood Pressure <span class="ml-1">🩺</span></p>
+          <p class="text-white text-3xl font-bold mt-2">120/80</p>
+          <p class="text-blue-400 text-xs mt-2">Normal</p>
         </div>
-        <div class="bg-indigo-500/20 rounded-lg p-3">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-indigo-400">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-          </svg>
-        </div>
+        <div class="bg-blue-500/20 rounded-lg p-3 flex items-center justify-center text-2xl">🩺</div>
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105">
+    <!-- Card 2: Heart Rate -->
+    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl">
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-gray-400 text-sm">Active Sessions</p>
-          <p class="text-white text-3xl font-bold mt-2">458</p>
-          <p class="text-green-400 text-xs mt-2">↑ 8% from last week</p>
+          <p class="text-gray-400 text-sm">Heart Rate <span class="ml-1">❤️</span></p>
+          <p class="text-white text-3xl font-bold mt-2">76 bpm</p>
+          <p class="text-green-400 text-xs mt-2">Good</p>
         </div>
-        <div class="bg-green-500/20 rounded-lg p-3">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-green-400">
-            <path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zm0-2V4c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v7h2V5h12v7h2z" />
-          </svg>
-        </div>
+        <div class="bg-green-500/20 rounded-lg p-3 flex items-center justify-center text-2xl">❤️</div>
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105">
+    <!-- Card 3: Sleep Hours -->
+    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl">
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-gray-400 text-sm">Revenue</p>
-          <p class="text-white text-3xl font-bold mt-2">$12,450</p>
-          <p class="text-red-400 text-xs mt-2">↓ 3% from last month</p>
+          <p class="text-gray-400 text-sm">Sleep Hours <span class="ml-1">😴</span></p>
+          <p class="text-white text-3xl font-bold mt-2">7.2 hrs</p>
+          <p class="text-purple-400 text-xs mt-2">Optimal</p>
         </div>
-        <div class="bg-yellow-500/20 rounded-lg p-3">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-yellow-400">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
-          </svg>
-        </div>
+        <div class="bg-purple-500/20 rounded-lg p-3 flex items-center justify-center text-2xl">😴</div>
       </div>
     </div>
 
-    <!-- Card 4 -->
-    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105">
+    <!-- Card 4: Steps -->
+    <div class="stat-card bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl">
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-gray-400 text-sm">Conversion Rate</p>
-          <p class="text-white text-3xl font-bold mt-2">3.24%</p>
-          <p class="text-green-400 text-xs mt-2">↑ 0.5% from last month</p>
+          <p class="text-gray-400 text-sm">Steps <span class="ml-1">👟</span></p>
+          <p class="text-white text-3xl font-bold mt-2">8,500</p>
+          <p class="text-yellow-400 text-xs mt-2">Active</p>
         </div>
-        <div class="bg-purple-500/20 rounded-lg p-3">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="size-8 text-purple-400">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2V17zm4 0h-2V7h2V17zm4 0h-2v-4h2V17z" />
-          </svg>
-        </div>
+        <div class="bg-yellow-500/20 rounded-lg p-3 flex items-center justify-center text-2xl">👟</div>
       </div>
     </div>
   </div>
 
   <!-- Data Tables Section -->
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-    <!-- Recent Activity -->
+    <!-- Previous Health Records -->
     <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl content-card">
-      <h2 class="text-lg font-semibold text-white mb-4">Recent Activity</h2>
+      <h2 class="text-lg font-semibold text-white mb-4">Previous Health Records</h2>
       <div class="space-y-4">
         <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
           <div>
-            <p class="text-white text-sm">User Registration</p>
-            <p class="text-gray-500 text-xs">2 hours ago</p>
+            <p class="text-white text-sm">Blood Pressure: 120/80 mmHg</p>
+            <p class="text-gray-500 text-xs">Today, 8:00 AM</p>
           </div>
-          <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">New</span>
+          <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Normal</span>
         </div>
         <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
           <div>
-            <p class="text-white text-sm">Payment Received</p>
-            <p class="text-gray-500 text-xs">5 hours ago</p>
+            <p class="text-white text-sm">Heart Rate: 76 bpm</p>
+            <p class="text-gray-500 text-xs">Yesterday, 9:30 PM</p>
           </div>
-          <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Success</span>
+          <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Good</span>
         </div>
         <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
           <div>
-            <p class="text-white text-sm">System Update</p>
-            <p class="text-gray-500 text-xs">1 day ago</p>
+            <p class="text-white text-sm">Sleep Duration: 7.2 hrs</p>
+            <p class="text-gray-500 text-xs">Yesterday, 7:00 AM</p>
           </div>
-          <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">Pending</span>
+          <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">Optimal</span>
+        </div>
+        <div class="flex items-center justify-between py-3 border-b border-gray-700/30">
+          <div>
+            <p class="text-white text-sm">Blood Sugar: 98 mg/dL</p>
+            <p class="text-gray-500 text-xs">2 days ago, 7:30 AM</p>
+          </div>
+          <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Stable</span>
         </div>
         <div class="flex items-center justify-between py-3">
           <div>
-            <p class="text-white text-sm">Database Backup</p>
-            <p class="text-gray-500 text-xs">3 days ago</p>
+            <p class="text-white text-sm">Activity: 8,500 steps</p>
+            <p class="text-gray-500 text-xs">2 days ago, 9:00 PM</p>
           </div>
-          <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">Complete</span>
+          <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">Active</span>
         </div>
       </div>
     </div>
