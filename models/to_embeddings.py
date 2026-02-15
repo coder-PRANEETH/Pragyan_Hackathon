@@ -1,22 +1,22 @@
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-# --------- CONFIG ---------
-MODEL_NAME = "emilyalsentzer/Bio_ClinicalBERT"
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# --------- LOAD MODEL ---------
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModel.from_pretrained(
-    MODEL_NAME,
-    use_safetensors=True
-)
-
-model.to(DEVICE)
-model.eval()
 
 # --------- FUNCTION TO GET EMBEDDINGS ---------
 def get_symptom_embedding(text_list):
+    # --------- CONFIG ---------
+    MODEL_NAME = "emilyalsentzer/Bio_ClinicalBERT"
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # --------- LOAD MODEL ---------
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModel.from_pretrained(
+        MODEL_NAME,
+        use_safetensors=True
+    )
+
+    model.to(DEVICE)
+    model.eval()
     """
     text_list: list of symptom strings
     returns: tensor of shape (batch_size, hidden_size)

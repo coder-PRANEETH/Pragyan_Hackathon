@@ -2,6 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 from sklearn.metrics import log_loss
+import joblib
 
 
 def train_random_forest(X_train, y_train):
@@ -20,5 +21,8 @@ def train_random_forest(X_train, y_train):
 
     probs = model.predict_proba(X_train)
     loss = log_loss(y_train, probs)
-
-    return model, loss
+    print(f"Training risk Loss: {loss:.4f}")
+    
+    joblib.dump(model, 'risk_model.pkl')
+    
+    return model, probs

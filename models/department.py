@@ -1,8 +1,9 @@
 import numpy as np
 import xgboost as xgb
+import pickle
 
 
-def train_and_predict_xgb(X_train, y_train, X_predict, use_gpu=True):
+def train_and_predict_xgb(X_train, y_train, use_gpu=True):
 
 
     model = xgb.XGBClassifier(
@@ -30,5 +31,7 @@ def train_and_predict_xgb(X_train, y_train, X_predict, use_gpu=True):
     model.fit(X_train, y_train)
 
     predictions = model.predict(X_predict)
-
+    loss = model.evals_result() if model.evals_result() else None
+    print(f"Training XGBoost Loss: {loss}")
+    pickle.dump(model, open("xg.pkl", "wb"))
     return predictions, model
