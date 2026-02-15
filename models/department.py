@@ -24,14 +24,20 @@ def train_and_predict_xgb(X_train, y_train, use_gpu=True):
         
         eval_metric="mlogloss",
         
-        tree_method="gpu_hist" if use_gpu else "hist",
+        tree_method="hist",
+device="cuda" if use_gpu else "cpu",
+
         
     )
+    print("Training XGBoost model... in ","cuda" if use_gpu else "cpu")
 
     model.fit(X_train, y_train)
 
-    predictions = model.predict(X_predict)
-    loss = model.evals_result() if model.evals_result() else None
-    print(f"Training XGBoost Loss: {loss}")
+   
+    
+    
     pickle.dump(model, open("xg.pkl", "wb"))
-    return predictions, model
+
+    
+    probs = model.predict_proba(X_train)
+    return probs, model

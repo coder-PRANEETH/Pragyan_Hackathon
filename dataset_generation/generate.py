@@ -5,7 +5,7 @@ from sdv.single_table import CTGANSynthesizer
 # STEP 1: LOAD TRAINED MODEL
 # ----------------------------
 
-model = CTGANSynthesizer.load(f"dataset_generation\ctgan_model.pkl")
+model = CTGANSynthesizer.load("dataset_generation\ctgan_model.pkl")
 
 print("Model loaded successfully!")
 
