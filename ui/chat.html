@@ -46,160 +46,109 @@
     </style>
 </head>
 <body>
-    <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <button type="button" id="mobile-menu-btn" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-                        <span class="absolute -inset-0.5"></span>
-                        <span class="sr-only">Open main menu</span>
-                        <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <svg id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 hidden">
-                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex shrink-0 items-center">
-                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
-                    </div>
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <a href="olduserdb.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Dashboard</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Analytics</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Settings</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">View notifications</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                            <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
+    <!-- Floating Profile and Hamburger Menu -->
+    <div class="fixed top-6 left-6 z-50 flex items-center gap-4">
+        <button id="hamburger-btn" class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-full shadow-lg hover:scale-110 transition duration-300">
+            <svg id="hamburger-icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Profile" class="w-12 h-12 rounded-full border-4 border-white shadow-lg hover:scale-110 transition duration-300" />
+        </div>
+    </div>
 
-                    <div class="relative ml-3">
-                        <button id="profile-btn" class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">Open user menu</span>
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+    <!-- Animated Hamburger Menu Drawer -->
+    <div id="drawer-menu" class="fixed top-0 left-0 w-64 h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-2xl z-40 transform -translate-x-full transition-transform duration-300 flex flex-col pt-20 px-6">
+        <a href="olduserdb.html" class="mb-4 text-white text-lg font-semibold hover:bg-white/10 rounded-lg px-4 py-2 transition">Dashboard</a>
+        <a href="#" class="mb-4 text-white text-lg font-semibold hover:bg-white/10 rounded-lg px-4 py-2 transition">Analytics</a>
+        <a href="#" class="mb-4 text-white text-lg font-semibold hover:bg-white/10 rounded-lg px-4 py-2 transition">Reports</a>
+        <a href="#" class="mb-4 text-white text-lg font-semibold hover:bg-white/10 rounded-lg px-4 py-2 transition">Settings</a>
+        <a href="#" class="mt-auto text-white text-base font-medium hover:bg-white/10 rounded-lg px-4 py-2 transition">Sign out</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="w-full flex flex-col items-center justify-center py-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight drop-shadow-lg">Chat Assistant</h1>
+        <p class="text-lg md:text-xl text-indigo-200 mb-8">Have a conversation with your dashboard assistant</p>
+    </section>
+
+    <!-- Glassmorphism Chat Box -->
+    <div class="flex flex-col items-center justify-center w-full px-4">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-8 max-w-2xl w-full flex flex-col">
+            <!-- Messages Container -->
+            <div id="chat-messages-full" class="flex-1 overflow-y-auto modern-scroll space-y-4 mb-6 pr-4" style="min-height:180px;">
+                <div class="flex justify-start">
+                    <div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-md">
+                        <p class="text-sm">Hi! I'm your assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Input Area -->
+            <div class="border-t border-white/20 pt-4">
+                <div class="flex items-center justify-center">
+                    <div class="flex w-full max-w-xl mx-auto items-center bg-gray-900 rounded-full px-4 py-2 shadow-lg gap-2">
+                        <input id="file-upload" type="file" class="hidden" />
+                        <button id="plus-btn" class="flex items-center justify-center text-gray-400 hover:text-white bg-transparent p-0 m-0 focus:outline-none" type="button">
+                            <span style="font-size:1.3em;">➕</span>
                         </button>
-
-                        <div id="profile-menu" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 shadow-lg">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Your profile</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Sign out</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden block sm:hidden">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-                <a href="olduserdb.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Dashboard</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Analytics</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Settings</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="chat-container flex-1 flex flex-col">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex-1 flex flex-col">
-            <!-- Chat Header -->
-            <div class="mb-8">
-                <h1 class="text-3xl font-bold text-white">Chat Assistant</h1>
-                <p class="mt-2 text-gray-400">Have a conversation with your dashboard assistant</p>
-            </div>
-
-            <!-- Chat Box -->
-            <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700/50 flex-1 flex flex-col max-w-4xl mx-auto w-full">
-                <!-- Messages Container -->
-                <div id="chat-messages-full" class="flex-1 overflow-y-auto modern-scroll space-y-4 mb-6 pr-4">
-                    <div class="flex justify-start">
-                        <div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-md">
-                            <p class="text-sm">Hi! I'm your assistant. How can I help you today?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Input Area -->
-                <div class="border-t border-gray-700/50 pt-4">
-                    <div class="flex gap-2">
-                        <input id="full-chat-input" type="text" placeholder="Type your message..." class="flex-1 bg-gray-800 text-white placeholder-gray-500 rounded-lg px-4 py-3 border border-gray-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-                        <button id="full-send-btn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg transition font-semibold">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <input id="full-chat-input" type="text" placeholder="Ask anything" class="flex-1 bg-transparent text-white placeholder-gray-400 rounded-full px-3 py-2 border-none focus:outline-none font-medium" />
+                        <button id="voice-btn" class="flex items-center justify-center text-gray-400 hover:text-white bg-transparent p-0 m-0 focus:outline-none">
+                            <span style="font-size:1em;">🎤</span>
+                        </button>
+                        <button id="full-send-btn" class="flex items-center justify-center text-gray-400 hover:text-white bg-transparent p-0 m-0 focus:outline-none">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16414422 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4312088 C3.03521743,10.5883061 3.19218622,10.7454035 3.50612381,10.7454035 L16.6915026,11.5308905 C16.6915026,11.5308905 17.1624089,11.5308905 17.1624089,12.0021827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" />
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-700/50 bg-gray-800/30 mt-8">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                <!-- Social Links -->
-                <div class="flex space-x-6 mb-4 md:mb-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8.29 20v-7.1h-2.37V9.4h2.37V7.57c0-2.33 1.43-3.6 3.5-3.6 1 0 1.85.07 2.1.1v2.43h-1.44c-1.13 0-1.35.54-1.35 1.32V9.4h2.7l-.35 3.5h-2.35V20h-2.88z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.42.2 12.6-7.14a4.5 4.5 0 00.08-.5" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.834 8.207 11.437.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Copyright -->
-                <div class="text-gray-500 text-sm">
-                    <p>&copy; 2026 Dashboard Analytics. All rights reserved.</p>
-                </div>
+    <footer class="w-full mt-12">
+        <div class="max-w-2xl mx-auto px-4 py-8 flex flex-col items-center">
+            <div class="flex space-x-6 mb-4">
+                <a href="#" class="text-white/70 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.29 20v-7.1h-2.37V9.4h2.37V7.57c0-2.33 1.43-3.6 3.5-3.6 1 0 1.85.07 2.1.1v2.43h-1.44c-1.13 0-1.35.54-1.35 1.32V9.4h2.7l-.35 3.5h-2.35V20h-2.88z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white/70 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.42.2 12.6-7.14a4.5 4.5 0 00.08-.5" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white/70 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.834 8.207 11.437.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="text-white/60 text-sm">
+                <p>&copy; 2026 Dashboard Analytics. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
+        // Hamburger menu drawer functionality
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const drawerMenu = document.getElementById('drawer-menu');
+        let drawerOpen = false;
+        hamburgerBtn.addEventListener('click', function() {
+            drawerOpen = !drawerOpen;
+            drawerMenu.style.transform = drawerOpen ? 'translateX(0)' : 'translateX(-100%)';
         });
 
-        // Profile dropdown toggle
-        const profileBtn = document.getElementById('profile-btn');
-        const profileMenu = document.getElementById('profile-menu');
-
-        profileBtn.addEventListener('click', function() {
-            profileMenu.classList.toggle('hidden');
-        });
-
-        // Close profile menu when clicking outside
+        // Close drawer when clicking outside
         document.addEventListener('click', function(event) {
-            if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
-                profileMenu.classList.add('hidden');
+            if (drawerOpen && !drawerMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+                drawerOpen = false;
+                drawerMenu.style.transform = 'translateX(-100%)';
             }
         });
 
@@ -207,6 +156,48 @@
         const chatMessagesContainer = document.getElementById('chat-messages-full');
         const fullChatInput = document.getElementById('full-chat-input');
         const fullSendBtn = document.getElementById('full-send-btn');
+        const plusBtn = document.getElementById('plus-btn');
+        const fileUpload = document.getElementById('file-upload');
+        const voiceBtn = document.getElementById('voice-btn');
+        let mediaRecorder;
+        let audioChunks = [];
+        let isRecording = false;
+
+        // Voice button triggers recording
+        voiceBtn.addEventListener('click', async function() {
+            if (!isRecording) {
+                // Start recording
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    mediaRecorder.ondataavailable = event => {
+                        if (event.data.size > 0) audioChunks.push(event.data);
+                    };
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                        // You can handle the audioBlob here (e.g., upload, playback, etc.)
+                        // For demo: show a message in chat
+                        handleChatMessage('Voice message recorded!');
+                    };
+                    mediaRecorder.start();
+                    isRecording = true;
+                    voiceBtn.style.color = '#f87171'; // highlight while recording
+                } catch (err) {
+                    alert('Microphone access denied or not available.');
+                }
+            } else {
+                // Stop recording
+                mediaRecorder.stop();
+                isRecording = false;
+                voiceBtn.style.color = '';
+            }
+        });
+
+        // Plus button triggers file upload
+        plusBtn.addEventListener('click', function() {
+            fileUpload.click();
+        });
 
         // Get initial message from URL parameter
         const urlParams = new URLSearchParams(window.location.search);
@@ -240,7 +231,7 @@
             // Add user message
             const userDiv = document.createElement('div');
             userDiv.className = 'flex justify-end';
-            userDiv.innerHTML = `<div class="bg-indigo-600 text-white px-4 py-2 rounded-lg max-w-md">
+            userDiv.innerHTML = `<div class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg max-w-md shadow-lg">
                 <p class="text-sm">${userMessage}</p>
             </div>`;
             chatMessagesContainer.appendChild(userDiv);
@@ -256,18 +247,18 @@
                 if (lowerMessage.includes('health') || lowerMessage.includes('score')) {
                     botResponse = 'Your overall health score is 77.6% which is excellent! Keep up the great work. You can adjust your health metrics in the dashboard to see real-time changes.';
                 } else if (lowerMessage.includes('dashboard') || lowerMessage.includes('home')) {
-                    botResponse = 'You can navigate back to the main dashboard by clicking the Dashboard link in the navigation menu at the top of the page.';
+                    botResponse = 'You can navigate back to the main dashboard by clicking the Dashboard link in the hamburger menu.';
                 } else if (lowerMessage.includes('help') || lowerMessage.includes('support')) {
                     botResponse = 'I can help you with health metrics, analytics, reports, and navigation. Feel free to ask me anything!';
                 } else if (lowerMessage.includes('activity') || lowerMessage.includes('recent')) {
                     botResponse = 'Your recent activity shows various user registrations, payments, and system updates. Check the Recent Activity panel to see all your latest events.';
                 } else if (lowerMessage.includes('settings') || lowerMessage.includes('preference')) {
-                    botResponse = 'You can access settings from the navigation menu at the top. Click on Settings to customize your preferences.';
+                    botResponse = 'You can access settings from the hamburger menu. Click on Settings to customize your preferences.';
                 } else {
                     botResponse = 'That\'s a great question! I\'m here to help you navigate the dashboard and understand your health metrics. Is there anything specific you\'d like to know?';
                 }
 
-                botDiv.innerHTML = `<div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-md">
+                botDiv.innerHTML = `<div class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg max-w-md shadow-lg">
                     <p class="text-sm">${botResponse}</p>
                 </div>`;
                 chatMessagesContainer.appendChild(botDiv);
