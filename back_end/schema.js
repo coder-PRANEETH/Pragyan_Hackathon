@@ -27,4 +27,10 @@ const userSchema = new mongoose.Schema({
   department: String
 }, { timestamps: true });
 
-module.exports = { userSchema };
+const doctorSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  department: { type: String, required: true },
+  patients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
+}, { timestamps: true });
+
+module.exports = { userSchema, doctorSchema };

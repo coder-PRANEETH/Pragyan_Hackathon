@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-const { userSchema } = require('./schema.js');
+const { userSchema, doctorSchema } = require('./schema.js');
 
 const uri = "mongodb+srv://surya:surya@cluster0.xyxikjy.mongodb.net/?appName=Cluster0";
 
@@ -17,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 const User = mongoose.model('User', userSchema);
+const Doctor = mongoose.model('Doctor', doctorSchema);
 
 //////////////////////////////////////////////////////////////
 // GET USER
@@ -122,6 +123,47 @@ app.post('/analyze-symptoms', async (req, res) => {
     });
 
     await user.save();
+
+    ////////////////////////////////////////////////////////
+    // ASSIGN PATIENT TO DOCTOR (SORTED BY RISK PRIORITY)
+    ////////////////////////////////////////////////////////
+    if (mlData.department) {
+      // Find a doctor with the matching department
+      const doctor = await Doctor.findOne({ department: mlData.department }).populate('patients');
+
+      if (doctor) {
+        // Check if patient is not already assigned to this doctor
+        const isAlreadyAssigned = doctor.patients.some(p => p._id.toString() === user._id.toString());
+
+        if (!isAlreadyAssigned) {
+          // Define risk priority (higher number = higher priority)
+          const riskPriority = {
+            "High Risk": 3,
+            "Medium Risk": 2,
+            "Low Risk": 1,
+            "none": 0
+          };
+
+          // Add the new patient
+          doctor.patients.push(user);
+
+          // Sort patients by risk priority (high to low)
+          doctor.patients.sort((a, b) => {
+            const priorityA = riskPriority[a.risk] || 0;
+            const priorityB = riskPriority[b.risk] || 0;
+            return priorityB - priorityA;
+          });
+
+          // Extract just the IDs for storage
+          doctor.patients = doctor.patients.map(p => p._id);
+
+          await doctor.save();
+          console.log(`Patient ${user.name} (${user.risk}) assigned to Dr. ${doctor.name} (${doctor.department})`);
+        }
+      } else {
+        console.log(`No doctor found for department: ${mlData.department}`);
+      }
+    }
 
     ////////////////////////////////////////////////////////
     // RETURN RESPONSE
