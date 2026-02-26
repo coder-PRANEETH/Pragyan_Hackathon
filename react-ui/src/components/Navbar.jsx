@@ -17,14 +17,14 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to={userName ? `/?userName=${encodeURIComponent(userName)}` : '/'}>
+          <Link to={userName ? `/dashboard?userName=${encodeURIComponent(userName)}` : '/'}>
             <span className="logo-icon">🏥</span>
             <span className="logo-text">Medical Triage</span>
           </Link>
         </div>
 
         <div className="navbar-links">
-          <Link to={userName ? `/?userName=${encodeURIComponent(userName)}` : '/'} className="nav-link">
+          <Link to={userName ? `/dashboard?userName=${encodeURIComponent(userName)}` : '/dashboard'} className="nav-link">
             Dashboard
           </Link>
           {!userName && (
@@ -45,7 +45,7 @@ function Navbar() {
             />
           </Link>
         ) : (
-          <Link to="/login" className="nav-link login-link">
+          <Link to="/" className="nav-link login-link">
             Login
           </Link>
         )}

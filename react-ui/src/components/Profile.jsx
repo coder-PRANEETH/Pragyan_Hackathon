@@ -24,14 +24,14 @@ function Profile() {
       loadUserData(userName);
     } else {
       // Redirect to dashboard if no username provided
-      navigate('/');
+      navigate('/dashboard');
     }
   }, [searchParams, navigate]);
 
   const loadUserData = async (name) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/user-details/${encodeURIComponent(name)}`);
+      const response = await fetch(`https://pragyan-hackathon.onrender.com/user-details/${encodeURIComponent(name)}`);
 
       if (!response.ok) throw new Error('User not found');
 
@@ -53,7 +53,7 @@ function Profile() {
     } catch (error) {
       setLoading(false);
       alert(`Error loading user data: ${error.message}`);
-      navigate('/');
+      navigate('/dashboard');
     }
   };
 
@@ -86,7 +86,7 @@ function Profile() {
 
     try {
       setSaving(true);
-      const response = await fetch(`http://localhost:5000/update-user/${encodeURIComponent(userData.name)}`, {
+      const response = await fetch(`https://pragyan-hackathon.onrender.com/update-user/${encodeURIComponent(userData.name)}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData)
@@ -129,7 +129,7 @@ function Profile() {
   };
 
   const handleLogout = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   if (loading) {

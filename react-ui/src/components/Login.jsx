@@ -21,7 +21,7 @@ function Login() {
 
       // Verify user exists in database
       const response = await fetch(
-        `http://localhost:5000/user-details/${encodeURIComponent(trimmedName)}`
+        `https://pragyan-hackathon.onrender.com/user-details/${encodeURIComponent(trimmedName)}`
       );
 
       if (!response.ok) {
@@ -33,7 +33,7 @@ function Login() {
       const userData = await response.json();
 
       // Redirect to dashboard with userName in URL
-      navigate(`/?userName=${encodeURIComponent(userData.name)}`);
+      navigate(`/dashboard?userName=${encodeURIComponent(userData.name)}`);
     } catch (error) {
       setLoading(false);
       alert(`Error logging in: ${error.message}`);

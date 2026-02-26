@@ -98,7 +98,7 @@ Your vital signs and reported symptoms suggest that monitoring and professional 
   const loadUserData = async (name) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/user-details/${encodeURIComponent(name)}`
+        `https://pragyan-hackathon.onrender.com/user-details/${encodeURIComponent(name)}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -150,7 +150,7 @@ User Question: ${message}
 Please provide a helpful medical response based on the patient's medical data and question.`;
 
       // Send to analyze-symptoms endpoint
-      const response = await fetch('http://localhost:5000/analyze-symptoms', {
+      const response = await fetch('https://pragyan-hackathon.onrender.com/analyze-symptoms', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

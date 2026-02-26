@@ -52,7 +52,7 @@ function CreateUser() {
     try {
       setSubmitting(true);
 
-      const response = await fetch('http://localhost:5000/create-user', {
+      const response = await fetch('https://pragyan-hackathon.onrender.com/create-user', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
@@ -62,7 +62,7 @@ function CreateUser() {
 
       if (response.ok) {
         alert(`User created successfully!\nID: ${result.user._id}`);
-        navigate(`/?userName=${encodeURIComponent(result.user.name)}`);
+        navigate(`/dashboard?userName=${encodeURIComponent(result.user.name)}`);
       } else {
         alert(`Error: ${result.message}`);
       }

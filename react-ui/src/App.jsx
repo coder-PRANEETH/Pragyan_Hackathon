@@ -12,8 +12,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<><Navbar /><UserDashboard /></>} />
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<><Navbar /><UserDashboard /></>} />
           <Route path="/create-user" element={<><Navbar /><CreateUser /></>} />
           <Route path="/chat" element={<><Navbar /><Chat /></>} />
           <Route path="/profile" element={<><Navbar /><Profile /></>} />

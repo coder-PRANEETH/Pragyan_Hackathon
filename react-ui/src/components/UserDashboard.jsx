@@ -79,7 +79,7 @@ function UserDashboard() {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/user-details/${encodeURIComponent(name)}`
+        `https://pragyan-hackathon.onrender.com/user-details/${encodeURIComponent(name)}`
       );
 
       if (!response.ok) throw new Error('User not found');
@@ -155,7 +155,7 @@ Current Symptoms: ${symptoms}
 Based on the above medical data and symptoms, please assess the health risk level (Low, Medium, High, or Critical) and provide a brief explanation.`;
 
       // Send to backend endpoint (same as chat)
-      const response = await fetch('http://localhost:5000/analyze-symptoms', {
+      const response = await fetch('https://pragyan-hackathon.onrender.com/analyze-symptoms', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -219,7 +219,7 @@ Based on the above medical data and symptoms, please assess the health risk leve
         ? userData.symptoms[userData.symptoms.length - 1].description
         : 'No symptoms recorded';
 
-    const response = await fetch('http://localhost:5000/analyze-symptoms', {
+    const response = await fetch('https://pragyan-hackathon.onrender.com/analyze-symptoms', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
